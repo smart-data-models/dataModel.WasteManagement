@@ -321,7 +321,7 @@ A JSON Schema corresponding to this data model can be found
     be used to group containers per responsible, district, neighbourhood, etc.
 
     -   Normative References:
-        [https://pending.schema.org/areaServed](https://pending.schema.org/areaServed)
+        [https://schema.org/areaServed](https://schema.org/areaServed)
     -   Optional
 
 -   `dateModified` : Last update timestamp of this entity
