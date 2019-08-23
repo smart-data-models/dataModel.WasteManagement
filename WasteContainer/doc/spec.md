@@ -15,13 +15,13 @@ A JSON Schema corresponding to this data model can be found
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Property. Text or URL
+    -   Attribute type: Property. [Text](https://schema.org/Text) or [URL](https://schema.org/URL)
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: Property. URL
+    -   Attribute type: Property. [URL](https://schema.org/URL)
     -   Optional
 
 -   `location` : Container's location represented by a GeoJSON Point.
@@ -33,6 +33,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `address`: Civic address where the container is located.
 
+    -   Attribute type: Property. [Address](https://schema.org/address)
     -   Normative References:
         [https://schema.org/address](https://schema.org/address)
     -   Mandatory if `location` is not present.
@@ -177,6 +178,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `serialNumber` : Serial number of the container.
 
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Normative References:
         [https://schema.org/serialNumber](https://schema.org/serialNumber)
     -   Optional
@@ -199,36 +201,36 @@ A JSON Schema corresponding to this data model can be found
 
 -   `dateServiceStarted` : Date at which the container started giving service.
 
-    -   Attribute Type: [Date](http://schema.org/Date)
+    -   Attribute type: Property. [Date](http://schema.org/Date)
     -   Optional
 
 -   `dateLastEmptying` : Timestamp which represents when the container was
     emptied last time.
 
-    -   Attribute Type: [DateTime](http://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](http://schema.org/DateTime)
     -   Optional
 
 -   `nextActuationDeadline` : Deadline for next actuation to be performed
     (emptying, picking up, etc.).
 
-    -   Attribute Type: [DateTime](http://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](http://schema.org/DateTime)
     -   Optional
 
 -   `actuationHours` : Hours suitable for performing actuations over the
     container.
 
-    -   Attribute Type: [Text](http://schema.org/Text)
+    -   Attribute type: Attribute. [Text](http://schema.org/Text)
     -   Normative References: Value must be compliant with
         [https://schema.org/openingHours](https://schema.org/openingHours)
 
 -   `dateLastCleaning` : When the container was cleaned last time.
 
-    -   Attribute Type: [DateTime](http://schema.org/Date)
+    -   Attribute type: Property. [DateTime](http://schema.org/Date)
     -   Optional
 
 -   `nextCleaningDeadline` : Deadline for next cleaning.
 
-    -   Attribute Type: [DateTime](http://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](http://schema.org/DateTime)
     -   Optional
 
 -   `refWasteContainerIsle` : Isle where the container is placed.
@@ -242,7 +244,7 @@ A JSON Schema corresponding to this data model can be found
     not being modelled specifically. Otherwise, `refWasteContainerIsle` should
     be used.
 
-    -   Attribute Type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Optional
 
 -   `category` : Container's category.
@@ -307,8 +309,9 @@ A JSON Schema corresponding to this data model can be found
 
 -   `description` : Description about the container.
 
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Normative References:
-        [https://schema.org/description](https://schema.org/description)
+        `https://uri.etsi.org/ngsi-ld/description` equivalent to [description](https://schema.org/description)
     -   Optional
 
 -   `annotations` : A field reserved for annotations (incidences, remarks,
