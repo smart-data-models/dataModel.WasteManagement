@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/dataModels/specs/WasteManagement/WasteContainerModel/schema.json",
-  "title": "FIWARE - Waste Management / Waste Container Model",
+  "$id": "https://smart-data-models.github.io/dataModels/specs/WasteManagement/WasteContainerModel/schema.json",
+  "title": " - Waste Management / Waste Container Model",
   "description": "A waste container model",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/PhysicalObject-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/PhysicalObject-Commons"
     },
     {
       "properties": {

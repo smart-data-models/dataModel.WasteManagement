@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/dataModels/specs/WasteManagement/WasteContainerIsle/schema.json",
-  "title": "FIWARE - Waste Management / Waste Container Isle",
+  "$id": "https://smart-data-models.github.io/dataModels/specs/WasteManagement/WasteContainerIsle/schema.json",
+  "title": " - Waste Management / Waste Container Isle",
   "description": "A waste container isle",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
@@ -34,7 +34,7 @@
         "refWasteContainer": {
           "type": "array",
           "items": {
-            "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
+            "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
           },
           "minItems": 1,
           "uniqueItems": true
