@@ -1,0 +1,2 @@
+"id", "type", "category__value", "cargoVolume__value", "modelName__value", "name__value", "compliantWith__value", "madeOf__value", "height__value", "width__value", "depth__value", "brandName__value", "features__value", "@context"
+"urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1", "WasteContainerModel", "['dumpster']", "150", "C1", "Dumpster_Brute_2009_Plastic_Green", "['UNE-EN 840-2:2013']", "plastic", "0.8", "0.5", "0.4", "Brute", "['wheels', 'lid']", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"
