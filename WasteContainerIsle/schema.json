@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/WasteManagement/WasteContainerIsle/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainerIsle/schema.json",
   "title": " - Waste Management / Waste Container Isle",
   "description": "A waste container isle",
   "type": "object",
