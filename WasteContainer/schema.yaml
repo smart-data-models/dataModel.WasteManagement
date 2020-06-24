@@ -1,0 +1,215 @@
+WasteContainer:
+  required:
+    - id
+    - type
+    - location
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: A waste container
+  properties:
+    TimeInstant:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    actuationHours:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    annotations:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    cargoWeight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    category:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - fixed
+          - underground
+          - ground
+          - portable
+          - other
+    color:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dateLastCleaning:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    dateLastEmptying:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    dateServiceStarted:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    fillingLevel:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    image:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    isleId:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    methaneConcentration:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    nextActuationDeadline:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    nextCleaningDeadline:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items: &ref_0
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    refDevice:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items: *ref_0
+    regulation:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    responsible:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    serialNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    status:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    storedWasteCode:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    storedWasteKind:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    storedWasteOrigin:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    temperature:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''

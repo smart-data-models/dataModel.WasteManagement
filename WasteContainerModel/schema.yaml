@@ -1,0 +1,171 @@
+WasteContainerModel:
+  required:
+    - id
+    - type
+    - name
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: A waste container model
+  properties:
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    annotations:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+    brandName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    cargoVolume:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    category:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - dumpster
+          - trashCan
+          - wheelieBin
+          - other
+    color:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    compliantWith:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    depth:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    features:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - wheels
+          - lid
+          - roundedLid
+          - insertHoles
+          - lockable
+          - other
+    height:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    image:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    insertHolesNumber:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    madeOf:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    madeOfCode:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    manufacturerName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    maximumLoad:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    modelName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    recommendedLoad:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    weight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    width:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
