@@ -51,11 +51,8 @@ WasteContainerModel:
       items:
         type: string
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     depth:
       x-ngsi:
         type: Property
