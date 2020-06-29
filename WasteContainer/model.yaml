@@ -5,7 +5,7 @@ WasteContainer:
     - location
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: A waste container
   properties:
@@ -24,17 +24,17 @@ WasteContainer:
       description: ''
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     annotations:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
 
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     cargoWeight:
       x-ngsi:
         type: Property
@@ -55,14 +55,14 @@ WasteContainer:
           - other
     color:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/color
 <<<<<<< Updated upstream
 
 =======
 >>>>>>> Stashed changes
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateLastCleaning:
       x-ngsi:
         type: Property
@@ -86,7 +86,7 @@ WasteContainer:
       format: date-time
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     fillingLevel:
       x-ngsi:
         type: Property
@@ -107,7 +107,7 @@ WasteContainer:
       description: ''
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     methaneConcentration:
       x-ngsi:
         type: Property
@@ -115,7 +115,7 @@ WasteContainer:
       description: ''
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     nextActuationDeadline:
       x-ngsi:
         type: Property
@@ -131,7 +131,7 @@ WasteContainer:
       description: ''
       format: date-time
     owner:
-      $ref: https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
+      $ref: https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refDevice:
       x-ngsi:
         type: Property
@@ -158,7 +158,7 @@ WasteContainer:
       description: ''
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property

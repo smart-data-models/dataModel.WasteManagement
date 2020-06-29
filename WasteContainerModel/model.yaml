@@ -5,16 +5,16 @@ WasteContainerModel:
     - name
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: A waste container model
   properties:
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     annotations:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
 
     brandName:
       x-ngsi:
@@ -41,7 +41,7 @@ WasteContainerModel:
           - other
     color:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/color
 
     compliantWith:
       x-ngsi:
@@ -52,7 +52,7 @@ WasteContainerModel:
         type: string
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     depth:
       x-ngsi:
         type: Property
@@ -60,7 +60,7 @@ WasteContainerModel:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     features:
       x-ngsi:
         type: Property
@@ -123,7 +123,7 @@ WasteContainerModel:
       description: ''
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -145,7 +145,7 @@ WasteContainerModel:
       description: ''
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     weight:
       x-ngsi:
         type: Property
