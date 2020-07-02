@@ -14,13 +14,13 @@ generic as possible, thus allowing to deal with different scenarios:
 
 The main entities identified are:
 
--   [WasteContainerIsle](./WasteContainerIsle/doc/spec.md) . Isle which holds
+-   [`WasteContainerIsle`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainerIsle/swagger.yaml) . Isle which holds
     one or more containers. On a municipal scenario they are delimited on street
     areas.
--   [WasteContainerModel](./WasteContainerModel/doc/spec.md) . It represents a
+-   [`WasteContainerModel`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainerModel/swagger.yaml) . It represents a
     model of waste container, capturing its static properties such as
     dimensions, materials or features.
--   [WasteContainer](./WasteContainer/doc/spec.md) . It represents a particular
+-   [`WasteContainer`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainer/swagger.yaml) . It represents a particular
     instance of waste container placed at a particular isle or place. All the
     dynamic properties of a container, for instance, `fillingLevel` are included
     by this entity.
