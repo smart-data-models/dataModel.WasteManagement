@@ -85,12 +85,8 @@ WasteContainerModel:
       type: number
       description: ''
     image:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
-      format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/image
     insertHolesNumber:
       x-ngsi:
         type: Property
@@ -129,19 +125,8 @@ WasteContainerModel:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     recommendedLoad:
       x-ngsi:
         type: Property
