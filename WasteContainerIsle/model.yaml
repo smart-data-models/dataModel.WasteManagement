@@ -52,13 +52,21 @@ WasteContainerIsle:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      $ref: https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refWasteContainer:
       x-ngsi:
         type: Property
       type: array
       description: ''
-      items: *ref_0
+      items:  &ref_0
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
