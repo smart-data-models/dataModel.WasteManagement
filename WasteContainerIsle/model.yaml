@@ -56,7 +56,7 @@ WasteContainerIsle:
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refWasteContainer:
       x-ngsi:
-        type: Relationship
+        type: Property
       type: array
       description: ''
       items:  &ref_0

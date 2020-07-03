@@ -131,7 +131,7 @@ WasteContainer:
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refDevice:
       x-ngsi:
-        type: Relationship
+        type: Property
       type: array
       description: ''
       items: &ref_0
