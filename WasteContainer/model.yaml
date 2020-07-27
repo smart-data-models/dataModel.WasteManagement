@@ -18,14 +18,16 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+    description: |
+       Timestamp saved by FIWARE's IoT Agent as per dynamic IoT data arrival. 
+       Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.
       format: date-time
     actuationHours:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Hours suitable for performing actuations over the container.'
     address:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/address
@@ -43,12 +45,12 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Weight of the container load.'
     category:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Container's category.'
       items:
         type: string
         enum:
@@ -68,7 +70,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: ' When the container was cleaned last time.'
       format: date-time
     dateLastEmptying:
       x-ngsi:
@@ -82,7 +84,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Date at which the container started giving service.'
       format: date-time
     description:
       $ref: >-
@@ -91,7 +93,9 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+    description: |
+       Filling level of the container (percentage, expressed in parts per one). When the container is full it must be equal to 1.0.
+       When the container is empty it must be equal to 0.0.
     image:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/image
@@ -100,15 +104,17 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
-    location:
+    description: |
+       Identifier (or name) of the isle where the container is placed.
+       This attribute should be used when entities of type WasteContainerIsle are not being modelled specifically.
+       Otherwise, refWasteContainerIsle should be used.    location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     methaneConcentration:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Methane (CH4) concentration inside the container.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -117,14 +123,14 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Deadline for next actuation to be performed (emptying, picking up, etc.).'
       format: date-time
     nextCleaningDeadline:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Deadline for next cleaning.'
       format: date-time
     owner:
       $ref: >-
@@ -133,7 +139,7 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to the device(s) used to monitor this container.'
       items: &ref_0
         anyOf:
           - type: string
@@ -147,19 +153,19 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Regulation under which the container is operating.'
     responsible:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Responsible for the container, i.e. entity in charge of actuating (emptying, collecting etc.).'
     serialNumber:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Serial number of the container.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -168,27 +174,27 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Container's status from the point of view of safety.'
     storedWasteCode:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'As per the regulation, waste codes which precisely identifies waste origin and kind.'
     storedWasteKind:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Kind/s of waste stored by the container.'
     storedWasteOrigin:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Origin of the waste stored.'
     temperature:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Temperature inside the container.'
