@@ -25,17 +25,17 @@ WasteContainerModel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Name of the brand.'
     cargoVolume:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Total volume the container can hold.'
     category:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Container’s category.'
       items:
         type: string
         enum:
@@ -51,7 +51,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' A list of standards to which the container is compliant with (ex. UNE-EN 840-2:2013)'
       items:
         type: string
     dataProvider:
@@ -61,7 +61,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Depth of the container.'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -69,7 +69,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'A list of container features.'
       items:
         type: string
         enum:
@@ -83,7 +83,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Height of the container.'
     image:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/image
@@ -91,36 +91,36 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Number of insert holes the container has.'
     madeOf:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Material the container is made of.'
     madeOfCode:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Material Code as per standard tables. TBD.'
     manufacturerName:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Name of the manufacturer.'
     maximumLoad:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Maximum load the container can hold safely.'
     modelName:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -131,7 +131,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Manufacturer recommended load for the container.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -139,9 +139,9 @@ WasteContainerModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Weight of the container.'
     width:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Width of the container.'
