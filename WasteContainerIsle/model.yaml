@@ -32,7 +32,7 @@ WasteContainerIsle:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'A list of features provided by the isle.'
       items:
         type: string
         enum:
@@ -44,7 +44,7 @@ WasteContainerIsle:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Number of insert holes the isle has.'
     location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
@@ -58,7 +58,7 @@ WasteContainerIsle:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'List of containers present in the isle.'
       items:  &ref_0
         anyOf:
           - type: string
