@@ -46,6 +46,10 @@
             ]
         }
     },
+    "temperature": {
+        "type": "Property",
+        "value": 23
+    },
     "fillingLevel": {
         "type": "Property",
         "value": 0.4
