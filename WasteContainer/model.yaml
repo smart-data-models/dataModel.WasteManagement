@@ -77,7 +77,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Timestamp which represents when the container was emptied last time.'
       format: date-time
     dateServiceStarted:
       x-ngsi:
@@ -107,7 +107,8 @@ WasteContainer:
     description: |
        Identifier (or name) of the isle where the container is placed.
        This attribute should be used when entities of type WasteContainerIsle are not being modelled specifically.
-       Otherwise, refWasteContainerIsle should be used.    location:
+       Otherwise, refWasteContainerIsle should be used.
+    location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     methaneConcentration:
