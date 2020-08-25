@@ -18,7 +18,9 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ' Timestamp saved by FIWARE's IoT Agents. Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.'
+    description: |
+       Timestamp saved by FIWARE's IoT Agent as per dynamic IoT data arrival. 
+       Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.
       format: date-time
     actuationHours:
       x-ngsi:
@@ -48,7 +50,7 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: array
-      description: 'Container's category '
+      description: 'Container's category.'
       items:
         type: string
         enum:
@@ -68,7 +70,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: 'When the container was cleaned last time.'
+      description: ' When the container was cleaned last time.'
       format: date-time
     dateLastEmptying:
       x-ngsi:
@@ -91,7 +93,9 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: number
-      description: 'Filling level of the container (percentage, expressed in parts per one). When the container is full it must be equal to 1.0. When the container is empty it must be equal to 0.0.'
+    description: |
+       Filling level of the container (percentage, expressed in parts per one). When the container is full it must be equal to 1.0.
+       When the container is empty it must be equal to 0.0.
     image:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/image
@@ -100,7 +104,10 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ' Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type WasteContainerIsle are not being modelled specifically. Otherwise, refWasteContainerIsle should be used.'
+    description: |
+       Identifier (or name) of the isle where the container is placed.
+       This attribute should be used when entities of type WasteContainerIsle are not being modelled specifically.
+       Otherwise, refWasteContainerIsle should be used.
     location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
@@ -168,7 +175,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'Container's status from the point of view of safety'
+      description: 'Container's status from the point of view of safety.'
     storedWasteCode:
       x-ngsi:
         type: Property
@@ -180,7 +187,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ' Kind/s of waste stored by the container.'
+      description: 'Kind/s of waste stored by the container.'
     storedWasteOrigin:
       x-ngsi:
         type: Property
