@@ -50,7 +50,7 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: array
-      description: 'Container's category.'
+      description: 'Containers category.'
       items:
         type: string
         enum:
@@ -175,7 +175,7 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'Container's status from the point of view of safety.'
+      description: 'Containers status from the point of view of safety.'
     storedWasteCode:
       x-ngsi:
         type: Property
