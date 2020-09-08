@@ -18,10 +18,10 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
+      format: date-time
     description: |
        Timestamp saved by FIWAREs IoT Agent as per dynamic IoT data arrival. 
        Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.
-      format: date-time
     actuationHours:
       x-ngsi:
         type: Property
