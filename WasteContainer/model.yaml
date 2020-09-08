@@ -19,7 +19,7 @@ WasteContainer:
         model: 'https://schema.org/DateTime'
       type: string
     description: |
-       Timestamp saved by FIWARE's IoT Agent as per dynamic IoT data arrival. 
+       Timestamp saved by FIWAREs IoT Agent as per dynamic IoT data arrival. 
        Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.
       format: date-time
     actuationHours:
