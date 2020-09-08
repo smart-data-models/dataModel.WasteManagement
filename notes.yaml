@@ -1,9 +1,10 @@
 notesPrevious:
-  These data models describe the main entities that are typically involved in waste management scenarios. In fact, these models have been devised to be as generic as possible, thus allowing to deal with different scenarios
+  "These data models describe the main entities that are typically involved in waste management scenarios. 
+  In fact, these models have been devised to be as generic as possible, thus allowing to deal with different scenarios
     Municipal waste management with on street / buried containers.
     Industrial waste management using specialized containers.
     Containers used occasionally on street (construction waste containers, etc.)
-    Litters placed on street or public places where waste is left by the public.
+    Litters placed on street or public places where waste is left by the public."
 
 
 notesEnd:
