@@ -19,9 +19,9 @@ WasteContainer:
         model: 'https://schema.org/DateTime'
       type: string
       format: date-time
-    description: |
-       Timestamp saved by FIWAREs IoT Agent as per dynamic IoT data arrival. 
-       Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.
+      description: |
+         Timestamp saved by FIWAREs IoT Agent as per dynamic IoT data arrival. 
+         Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.
     actuationHours:
       x-ngsi:
         type: Property
@@ -93,9 +93,9 @@ WasteContainer:
       x-ngsi:
         type: Property
       type: number
-    description: |
-       Filling level of the container (percentage, expressed in parts per one). When the container is full it must be equal to 1.0.
-       When the container is empty it must be equal to 0.0.
+      description: |
+         Filling level of the container (percentage, expressed in parts per one). When the container is full it must be equal to 1.0.
+         When the container is empty it must be equal to 0.0.
     image:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/image
@@ -104,10 +104,10 @@ WasteContainer:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-    description: |
-       Identifier (or name) of the isle where the container is placed.
-       This attribute should be used when entities of type WasteContainerIsle are not being modelled specifically.
-       Otherwise, refWasteContainerIsle should be used.
+      description: |
+         Identifier (or name) of the isle where the container is placed.
+         This attribute should be used when entities of type WasteContainerIsle are not being modelled specifically.
+         Otherwise, refWasteContainerIsle should be used.
     location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
