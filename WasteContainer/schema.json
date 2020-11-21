@@ -20,12 +20,13 @@
         "type": {
           "type": "string",
           "enum": ["WasteContainer"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         },
         "fillingLevel": {
           "type": "number",
           "minimum": 0,
-          "maximum": 1
+          "maximum": 1,
+          "description": "Property. Model:'https://schema.org/Number' Filling level of the containere"
         },
         "category": {
           "type": "array",
@@ -34,18 +35,22 @@
             "enum": ["fixed", "underground", "ground", "portable", "other"]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. Model:'https://schema.org/Text' Container's category."
         },
         "cargoWeight": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number' Weight of the container load. "
         },
         "temperature": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. "
         },
         "methaneConcentration": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number' Methane (CH4) concentration inside the container. "
         },
         "storedWasteKind": {
           "type": "string",
@@ -61,7 +66,8 @@
             "electronics",
             "hazardous",
             "other"
-          ]
+          ],
+          "description": "Property. Model:'https://schema.org/Text' Kind/s of waste stored by the container. "
         },
         "storedWasteOrigin": {
           "type": "string",
@@ -73,45 +79,56 @@
             "hostelry",
             "agriculture",
             "other"
-          ]
+          ],
+          "description": "Property. Model:'https://schema.org/Text' Origin of the waste stored. "
         },
         "storedWasteCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text' As per the regulation, waste codes which precisely identifies waste origin and kind."
         },
         "serialNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text' Serial number of the container."
         },
         "regulation": {
           "type": "string"
         },
         "responsible": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. "
         },
         "dateServiceStarted": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. "
         },
         "dateLastEmptying": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Timestamp which represents when the container was emptied last time."
         },
         "nextActuationDeadline": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Deadline for next actuation to be performed (emptying, picking up, etc.)."
         },
         "actuationHours": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Hours suitable for performing actuations over the container."
         },
         "dateLastCleaning": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. When the container was cleaned last time."
         },
         "nextCleaningDeadline": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Deadline for next cleaning."
         },
         "isleId": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Identifier (or name) of the isle where the container is placed."
         },
         "status": {
           "type": "string",
@@ -123,13 +140,16 @@
             "bandalized",
             "burning",
             "unknown"
-          ]
+          ],
+          "description": "Property. Container's status from the point of view of safety."
         },
         "refWasteContainerModel": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+          "description": "Relationship. "
         },
         "refWasteContainerIsle": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+          "description": "Relationship. "
         },
         "refDevice": {
           "type": "array",
@@ -137,11 +157,13 @@
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Relationship. "
         },
         "TimeInstant": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. "
         }
       }
     }
