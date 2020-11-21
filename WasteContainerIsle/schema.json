@@ -17,7 +17,7 @@
         "type": {
           "type": "string",
           "enum": ["WasteContainerIsle"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         },
         "features": {
           "type": "array",
@@ -26,11 +26,13 @@
             "enum": ["containerFix", "underground", "fenced", "other"]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. A list of features provided by the isle."
         },
         "insertHolesNumber": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Number of insert holes the isle has."
         },
         "refWasteContainer": {
           "type": "array",
@@ -38,7 +40,8 @@
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. List of containers present in the isle."
         }
       }
     }
