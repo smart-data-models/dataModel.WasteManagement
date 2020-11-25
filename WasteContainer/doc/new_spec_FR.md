@@ -5,9 +5,10 @@ Entité : WasteContainer
 
 ## Liste des biens  
 
-`TimeInstant`:   `actuationHours`:   `address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `cargoWeight`:   `category`:   `color`: La couleur du produit.  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateLastCleaning`:   `dateLastEmptying`:   `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateServiceStarted`:   `description`: Une description de cet article  `fillingLevel`:   `id`:   `image`: Une image de l'objet.  `isleId`:   `location`:   `methaneConcentration`:   `name`: Le nom de cet article.  `nextActuationDeadline`:   `nextCleaningDeadline`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refDevice`:   `refWasteContainerIsle`:   `refWasteContainerModel`:   `regulation`:   `responsible`:   `seeAlso`:   `serialNumber`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `status`:   `storedWasteCode`:   `storedWasteKind`:   `storedWasteOrigin`:   `temperature`:   `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `TimeInstant`:   - `actuationHours`:   - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `cargoWeight`:   - `category`:   - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateLastCleaning`:   - `dateLastEmptying`:   - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateServiceStarted`:   - `description`: Une description de cet article  - `fillingLevel`:   - `id`:   - `image`: Une image de l'objet.  - `isleId`:   - `location`:   - `methaneConcentration`:   - `name`: Le nom de cet article.  - `nextActuationDeadline`:   - `nextCleaningDeadline`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refDevice`:   - `refWasteContainerIsle`:   - `refWasteContainerModel`:   - `regulation`:   - `responsible`:   - `seeAlso`:   - `serialNumber`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `status`:   - `storedWasteCode`:   - `storedWasteKind`:   - `storedWasteOrigin`:   - `temperature`:   - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 WasteContainer:    
   description: 'A waste container'    
   properties:    
@@ -346,6 +347,9 @@ WasteContainer:
     - location    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Conteneur de déchets NGSI V2 valeurs clés Exemple  
 Voici un exemple de conteneur de déchets au format JSON en tant que valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -367,6 +371,7 @@ WasteContainer:
   "refDevice": ["device-Fleming:12a:1"]  
 }  
 ```  
+#### Conteneur de déchets NGSI V2 normalisé Exemple  
 Voici un exemple de conteneur de déchets au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -415,6 +420,7 @@ WasteContainer:
   }  
 }  
 ```  
+#### Conteneur à déchets Valeurs clés de l'INSG-LD Exemple  
 Voici un exemple de conteneur de déchets au format JSON-LD en tant que valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -435,6 +441,7 @@ WasteContainer:
  "temperature": 23,  
  "type": "WasteContainer"}  
 ```  
+#### Conteneur de déchets NGSI-LD normalisé Exemple  
 Voici un exemple de conteneur de déchets au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
