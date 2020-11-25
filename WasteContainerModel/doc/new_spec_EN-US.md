@@ -7,7 +7,8 @@ Entity: WasteContainerModel
 
 - `alternateName`: An alternative name for this item  - `annotations`:   - `brandName`:   - `cargoVolume`:   - `category`:   - `color`: The color of the product.  - `compliantWith`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `depth`:   - `description`: A description of this item  - `features`:   - `height`:   - `id`:   - `image`: An image of the item.  - `insertHolesNumber`:   - `madeOf`:   - `madeOfCode`:   - `manufacturerName`:   - `maximumLoad`:   - `modelName`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `recommendedLoad`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  - `weight`:   - `width`:   ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 WasteContainerModel:    
   description: 'A waste container model'    
   properties:    
@@ -149,6 +150,7 @@ WasteContainerModel:
     - name    
   type: object    
 ```  
+</details>    
 #### WasteContainerModel NGSI V2 key-values Example    
 Here is an example of a WasteContainerModel in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
