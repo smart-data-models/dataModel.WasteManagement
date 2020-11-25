@@ -5,9 +5,10 @@ Entité : WasteContainerModel
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `annotations`:   `brandName`:   `cargoVolume`:   `category`:   `color`: La couleur du produit.  `compliantWith`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `depth`:   `description`: Une description de cet article  `features`:   `height`:   `id`:   `image`: Une image de l'objet.  `insertHolesNumber`:   `madeOf`:   `madeOfCode`:   `manufacturerName`:   `maximumLoad`:   `modelName`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `recommendedLoad`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  `weight`:   `width`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `annotations`:   - `brandName`:   - `cargoVolume`:   - `category`:   - `color`: La couleur du produit.  - `compliantWith`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `depth`:   - `description`: Une description de cet article  - `features`:   - `height`:   - `id`:   - `image`: Une image de l'objet.  - `insertHolesNumber`:   - `madeOf`:   - `madeOfCode`:   - `manufacturerName`:   - `maximumLoad`:   - `modelName`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `recommendedLoad`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  - `weight`:   - `width`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 WasteContainerModel:    
   description: 'A waste container model'    
   properties:    
@@ -149,6 +150,9 @@ WasteContainerModel:
     - name    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### WasteContainerModel NGSI V2 key-values Example  
 Voici un exemple de modèle de conteneur de déchets au format JSON comme valeurs clés. Ce modèle est compatible avec la version 2 de l'INSG lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -167,6 +171,7 @@ WasteContainerModel:
   "category": ["dumpster"]  
 }  
 ```  
+#### WasteContainerModel NGSI V2 normalisé Exemple  
 Voici un exemple de WasteContainerModel au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -207,6 +212,7 @@ WasteContainerModel:
   }  
 }  
 ```  
+#### WasteContainerModel NGSI-LD key-values Example  
 Voici un exemple de modèle de conteneur de déchets au format JSON-LD comme valeurs clés. Ce modèle est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -225,6 +231,7 @@ WasteContainerModel:
  "type": "WasteContainerModel",  
  "width": 0.5}  
 ```  
+#### WasteContainerModel NGSI-LD normalisé Exemple  
 Voici un exemple de WasteContainerModel au format JSON-LD tel que normalisé. Ce modèle est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
