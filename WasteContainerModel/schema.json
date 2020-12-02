@@ -17,35 +17,42 @@
         "type": {
           "type": "string",
           "enum": ["WasteContainerModel"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         },
         "width": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Width of the container."
         },
         "height": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Height of the container"
         },
         "depth": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Depth of the container."
         },
         "weight": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Weight of the container"
         },
         "cargoVolume": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. NGSI Entity type"
         },
         "maximumLoad": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Maximum load the container can hold safely."
         },
         "recommendedLoad": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Manufacturer recommended load for the container."
         },
         "category": {
           "type": "array",
@@ -54,27 +61,34 @@
             "enum": ["dumpster", "trashCan", "wheelieBin", "other"]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. Container’s category."
         },
         "insertHolesNumber": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Number of insert holes the container has."
         },
         "madeOf": {
           "type": "string",
-          "enum": ["plastic", "wood", "metal", "other"]
+          "enum": ["plastic", "wood", "metal", "other"],
+          "description": "Property. Material the container is made of."
         },
         "madeOfCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Material Code as per standard tables. TBD."
         },
         "brandName": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Name of the brand."
         },
         "modelName": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Name of the model as given by the manufacturer."
         },
         "manufacturerName": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Name of the manufacturer. "
         },
         "compliantWith": {
           "type": "array",
@@ -82,7 +96,8 @@
             "type": "string"
           },
           "minItems": 0,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. A list of standards to which the container is compliant. "
         },
         "features": {
           "type": "array",
@@ -98,7 +113,8 @@
             ]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. A list of container features. "
         }
       }
     }
