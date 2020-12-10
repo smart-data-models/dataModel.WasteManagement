@@ -17,10 +17,11 @@
         "type": {
           "type": "string",
           "enum": ["WasteContainerIsle"],
-          "description": "Property. NGSI Entity type"
+          "description": "Property. NGSI Entity Type: It has to be WasteContainerIsle"
         },
         "features": {
           "type": "array",
+          "description": "Property. A list of features provided by the isle. Model:'http://schema.org/Text'. Enum:'containerFix, underground, fenced, other'. `containerFix`. Allows to fix containers to a permanent position. `fenced`. The isle is properly fenced. `underground`. The isle allows to hold buried containers. Any other value meaningful to the application.",
           "items": {
             "type": "string",
             "enum": ["containerFix", "underground", "fenced", "other"]
@@ -32,7 +33,7 @@
         "insertHolesNumber": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Number of insert holes the isle has."
+          "description": "Property. Number of insert holes the isle has. Model:'https://schema.org/Number'"
         },
         "refWasteContainer": {
           "type": "array",
@@ -41,7 +42,7 @@
           },
           "minItems": 1,
           "uniqueItems": true,
-          "description": "Property. List of containers present in the isle."
+          "description": "Property. List of containers present in the isle. Model:'http://schema.org/URL'."
         }
       }
     }

@@ -20,7 +20,7 @@
         "type": {
           "type": "string",
           "enum": ["WasteContainer"],
-          "description": "Property. NGSI Entity type"
+          "description": "Property. NGSI Entity Type: It has to be WasteContainer"
         },
         "fillingLevel": {
           "type": "number",
@@ -30,6 +30,7 @@
         },
         "category": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Text'. Enum:'fixed, underground , ground, portable, other'. fixed. Container is fixed to a wall, support or handle. underground. Container is placed underground. ground. Container is placed at ground level. portable. Container can be moved around a certain extent. Any other value which captures an aspect not covered by those referred above.",
           "items": {
             "type": "string",
             "enum": ["fixed", "underground", "ground", "portable", "other"]
@@ -45,7 +46,7 @@
         },
         "temperature": {
           "type": "number",
-          "description": "Property. "
+          "description": "Property. Temperature inside the container. Model:'http://schema.org/Number'"
         },
         "methaneConcentration": {
           "type": "number",
@@ -67,7 +68,7 @@
             "hazardous",
             "other"
           ],
-          "description": "Property. Model:'https://schema.org/Text' Kind/s of waste stored by the container. "
+          "description": "Property. Model:'https://schema.org/Text'. Kind/s of waste stored by the container. Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other'. Or any other value which does not fit within the former. "
         },
         "storedWasteOrigin": {
           "type": "string",
@@ -80,55 +81,56 @@
             "agriculture",
             "other"
           ],
-          "description": "Property. Model:'https://schema.org/Text' Origin of the waste stored. "
+          "description": "Property. Model:'https://schema.org/Text'. Origin of the waste stored. Enum:'household, municipal, industrial, construction, hostelry, agriculture, other' "
         },
         "storedWasteCode": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text' As per the regulation, waste codes which precisely identifies waste origin and kind."
+          "description": "Property. Model:'https://schema.org/Text' As per the regulation, waste codes which precisely identifies waste origin and kind. Depend on the target regulation. For Europe, check [Europe's List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm)."
         },
         "serialNumber": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text' Serial number of the container."
+          "description": "Property. Model:'https://schema.org/serialNumber' Serial number of the container."
         },
         "regulation": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Regulation under which the container is operating. Model:'http://schema.org/Text'"
         },
         "responsible": {
           "type": "string",
-          "description": "Property. "
+          "description": "Property. Responsible for the container, i.e. entity in charge of  actuating (emptying, collecting, etc). Model:'https://schema.org/Text'"
         },
         "dateServiceStarted": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. "
+          "description": "Property. Model:'https://schema.org/Date'. Date at which the container started giving service."
         },
         "dateLastEmptying": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Timestamp which represents when the container was emptied last time."
+          "description": "Property. Model:'https://schema.org/DateTime'. Timestamp which represents when the container was emptied last time."
         },
         "nextActuationDeadline": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Deadline for next actuation to be performed (emptying, picking up, etc.)."
+          "description": "Property. Model:'https://schema.org/DateTime'. Deadline for next actuation to be performed (emptying, picking up, etc.)."
         },
         "actuationHours": {
           "type": "string",
-          "description": "Property. Hours suitable for performing actuations over the container."
+          "description": "Property. Model:'openingHours'. Hours suitable for performing actuations over the container."
         },
         "dateLastCleaning": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. When the container was cleaned last time."
+          "description": "Property. When the container was cleaned last time. Model:'https://schema.org/DateTime'. "
         },
         "nextCleaningDeadline": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Deadline for next cleaning."
+          "description": "Property. Model:'https://schema.org/DateTime'. Deadline for next cleaning."
         },
         "isleId": {
           "type": "string",
-          "description": "Property. Identifier (or name) of the isle where the container is placed."
+          "description": "Property. Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used."
         },
         "status": {
           "type": "string",
@@ -137,19 +139,45 @@
             "lidOpen",
             "dropped",
             "moved",
-            "bandalized",
+            "vandalized",
             "burning",
             "unknown"
           ],
-          "description": "Property. Container's status from the point of view of safety."
+          "description": "Property. Container's status from the point of view of safety. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container's lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system."
         },
         "refWasteContainerModel": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Relationship. "
+          "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+          "description": "Property. Identifier format of any NGSI entity"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "Property. Identifier format of any NGSI entity"
+        }
+      ],
+          "description": "Relationship. Container's model. Model:'http://schema.org/URL'"
         },
         "refWasteContainerIsle": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Relationship. "
+          "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+          "description": "Property. Identifier format of any NGSI entity"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "Property. Identifier format of any NGSI entity"
+        }
+      ],
+          "description": "Relationship. Isle where the container is placed. Model:'http://schema.org/URL'"
         },
         "refDevice": {
           "type": "array",
@@ -158,12 +186,12 @@
           },
           "minItems": 1,
           "uniqueItems": true,
-          "description": "Relationship. "
+          "description": "Relationship. Reference to the device(s) used to monitor this container. Model:'http://schema.org/URL'"
         },
         "TimeInstant": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. "
+          "description": "Property. Model:'https://schema.org/DateTime'. There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`."
         }
       }
     }
