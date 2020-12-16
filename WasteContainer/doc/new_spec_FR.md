@@ -1,11 +1,13 @@
 Entité : WasteContainer  
 =======================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md)  
 Description globale : **Un conteneur de déchets**  
 
 ## Liste des biens  
 
-- `TimeInstant`:   - `actuationHours`:   - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `cargoWeight`:   - `category`:   - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateLastCleaning`:   - `dateLastEmptying`:   - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateServiceStarted`:   - `description`: Une description de cet article  - `fillingLevel`:   - `id`:   - `image`: Une image de l'objet.  - `isleId`:   - `location`:   - `methaneConcentration`:   - `name`: Le nom de cet article.  - `nextActuationDeadline`:   - `nextCleaningDeadline`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refDevice`:   - `refWasteContainerIsle`:   - `refWasteContainerModel`:   - `regulation`:   - `responsible`:   - `seeAlso`:   - `serialNumber`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `status`:   - `storedWasteCode`:   - `storedWasteKind`:   - `storedWasteOrigin`:   - `temperature`:   - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+- `TimeInstant`: Il peut y avoir des environnements de production où le type d'attribut est égal à la chaîne "ISO8601". Dans ce cas, il doit être considéré comme un synonyme de "Date/Heure".  - `actuationHours`: Heures appropriées pour effectuer des manœuvres au-dessus du conteneur.  - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`: Annotations sur le sujet  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `cargoWeight`: Poids du chargement du conteneur.  - `category`:   - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateLastCleaning`: Quand le conteneur a été nettoyé la dernière fois.  - `dateLastEmptying`: Horodatage qui représente la date à laquelle le conteneur a été vidé la dernière fois.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateServiceStarted`: Date à laquelle le conteneur a commencé à être utilisé.  - `description`: Une description de cet article  - `fillingLevel`: Niveau de remplissage du conteneur  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'objet  - `isleId`: Identificateur (ou nom) de l'île où le conteneur est placé. Cet attribut doit être utilisé lorsque les entités de type "WasteContainerIsle" ne sont pas modélisées spécifiquement. Dans le cas contraire, il convient d'utiliser "RefWasteContainerIsle".  - `location`:   - `methaneConcentration`: Concentration de méthane (CH4) à l'intérieur du récipient.  - `name`: Le nom de cet article.  - `nextActuationDeadline`: Date limite pour le prochain actionnement à effectuer (vider, ramasser, etc.).  - `nextCleaningDeadline`: Date limite pour le prochain nettoyage.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refDevice`: Référence au(x) dispositif(s) utilisé(s) pour surveiller ce conteneur  - `refWasteContainerIsle`: Île où le conteneur est placé  - `refWasteContainerModel`: Modèle de conteneur  - `regulation`: Règlement en vertu duquel le conteneur fonctionne  - `responsible`: Responsable du conteneur, c'est-à-dire l'entité chargée de l'actionner (vidange, collecte, etc.)  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `serialNumber`: Numéro de série du conteneur.  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `status`: Le statut du conteneur du point de vue de la sécurité. Enum : "ok , lidOpen , dropped , moved , vandalized , burning , unknown".  - "Ok". Le conteneur est là où il doit être et se tient correctement. "lidOpen". Le couvercle du conteneur a été ouvert et n'a pas été fermé après un certain temps. "tombé". Le conteneur est tombé pour une raison quelconque. Déplacé. Le conteneur a été déplacé de sa position normale et n'est pas revenu. "Vandalisé". Le conteneur a été endommagé ou détruit à cause du vandalisme. "brûlé". Le conteneur brûle et une action immédiate doit être prise. "Inconnu". Le statut du conteneur n'est pas connu du système.  - `storedWasteCode`: Dépend de la réglementation cible. Pour l'Europe, consultez la [Liste européenne des déchets] (http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Type(s) de déchets stockés par le conteneur. Enum : "organique, inorganique, verre, huile, plastique, métal, papier, piles, électronique, dangereux, autre". Ou toute autre valeur qui n'entre pas dans la première.  - `storedWasteOrigin`: Origine des déchets stockés. Enum : "ménagers, municipaux, industriels, construction, hôtellerie, agriculture, autres".  - `temperature`: Température à l'intérieur du récipient  - `type`: Type d'entité NGSI : Il doit s'agir de WasteContainer    
+Propriétés requises  
+- `id`  - `location`  - `type`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -13,42 +15,64 @@ WasteContainer:
   description: 'A waste container'    
   properties:    
     TimeInstant:    
+      description: 'There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     actuationHours:    
-      type: string    
+      description: 'Hours suitable for performing actuations over the container.'    
+      type: Property    
+      x-ngsi:    
+        model: openingHours    
     address:    
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     annotations:    
+      description: 'Annotations about the item'    
       items:    
         type: string    
-      type: array    
-    areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     cargoWeight:    
+      description: 'Weight of the container load.'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     category:    
+      description: ""    
       items:    
         enum:    
           - fixed    
@@ -58,11 +82,15 @@ WasteContainer:
           - other    
         type: string    
       minItems: 1    
-      type: array    
+      type: Property    
       uniqueItems: true    
+      x-ngsi:    
+        model: 'https://schema.org/Text Containers category.'    
     color:    
-      description: 'The color of the product.'    
-      type: string    
+      description: 'The color of the product'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/color    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -71,25 +99,37 @@ WasteContainer:
       format: date-time    
       type: Property    
     dateLastCleaning:    
+      description: 'When the container was cleaned last time. '    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     dateLastEmptying:    
+      description: 'Timestamp which represents when the container was emptied last time.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
       type: Property    
     dateServiceStarted:    
+      description: 'Date at which the container started giving service.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Date    
     description:    
       description: 'A description of this item'    
       type: Property    
     fillingLevel:    
+      description: 'Filling level of the container'    
       maximum: 1    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     id:    
       anyOf: &wastecontainer_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -100,12 +140,17 @@ WasteContainer:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     image:    
-      description: 'An image of the item.'    
+      description: 'An image of the item'    
       format: uri    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
     isleId:    
-      type: string    
+      description: 'Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -254,37 +299,82 @@ WasteContainer:
           type: object    
       title: 'GeoJSON Geometry'    
     methaneConcentration:    
+      description: 'Methane (CH4) concentration inside the container.'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     name:    
       description: 'The name of this item.'    
       type: Property    
     nextActuationDeadline:    
+      description: 'Deadline for next actuation to be performed (emptying, picking up, etc.).'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     nextCleaningDeadline:    
+      description: 'Deadline for next cleaning.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refDevice:    
+      description: 'Reference to the device(s) used to monitor this container'    
       items:    
         anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       minItems: 1    
-      type: array    
+      type: Relationship    
       uniqueItems: true    
+      x-ngsi:    
+        model: http://schema.org/URL    
     refWasteContainerIsle:    
-      anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Isle where the container is placed'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     refWasteContainerModel:    
-      anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Container''s model'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     regulation:    
-      type: string    
+      description: 'Regulation under which the container is operating'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
     responsible:    
-      type: string    
+      description: 'Responsible for the container, i.e. entity in charge of  actuating (emptying, collecting, etc)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -293,24 +383,33 @@ WasteContainer:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     serialNumber:    
-      type: string    
+      description: 'Serial number of the container.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/serialNumber    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     status:    
+      description: 'Container''s status from the point of view of safety. Enum:''ok , lidOpen , dropped , moved , vandalized , burning , unknown''.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container''s lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system.'    
       enum:    
         - ok    
         - lidOpen    
         - dropped    
         - moved    
-        - bandalized    
+        - vandalized    
         - burning    
         - unknown    
-      type: string    
+      type: Property    
     storedWasteCode:    
-      type: string    
+      description: 'Depend on the target regulation. For Europe, check [Europe''s List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm).'    
+      type: Property    
+      x-ngsi:    
+        model: 'https://schema.org/Text As per the regulation, waste codes which precisely identifies waste origin and kind'    
     storedWasteKind:    
+      description: 'Kind/s of waste stored by the container. Enum:''organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other''. Or any other value which does not fit within the former. '    
       enum:    
         - organic    
         - inorganic    
@@ -323,8 +422,11 @@ WasteContainer:
         - electronics    
         - hazardous    
         - other    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     storedWasteOrigin:    
+      description: 'Origin of the waste stored. Enum:''household, municipal, industrial, construction, hostelry, agriculture, other'' '    
       enum:    
         - household    
         - municipal    
@@ -333,14 +435,19 @@ WasteContainer:
         - hostelry    
         - agriculture    
         - other    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     temperature:    
-      type: number    
+      description: 'Temperature inside the container'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity Type: It has to be WasteContainer'    
       enum:    
         - WasteContainer    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -372,7 +479,7 @@ WasteContainer:
 }  
 ```  
 #### Conteneur de déchets NGSI V2 normalisé Exemple  
-Voici un exemple de conteneur de déchets au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de conteneur de déchets au format JSON normalisé. Ce format est compatible avec la version 2 de l'INSG lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "wastecontainer:Fleming:12a",  
@@ -421,7 +528,7 @@ WasteContainer:
 }  
 ```  
 #### Conteneur à déchets Valeurs clés de l'INSG-LD Exemple  
-Voici un exemple de conteneur de déchets au format JSON-LD en tant que valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de conteneur de déchets au format JSON-LD en tant que valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
