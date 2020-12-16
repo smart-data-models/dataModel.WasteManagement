@@ -26,7 +26,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Property. Model:'https://schema.org/Number' Filling level of the containere"
+          "description": "Property. Model:'https://schema.org/Number'. Filling level of the container"
         },
         "category": {
           "type": "array",
@@ -42,7 +42,7 @@
         "cargoWeight": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number' Weight of the container load. "
+          "description": "Property. Model:'https://schema.org/Number'. Weight of the container load."
         },
         "temperature": {
           "type": "number",
@@ -51,7 +51,7 @@
         "methaneConcentration": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number' Methane (CH4) concentration inside the container. "
+          "description": "Property. Model:'https://schema.org/Number'. Methane (CH4) concentration inside the container."
         },
         "storedWasteKind": {
           "type": "string",
@@ -89,7 +89,7 @@
         },
         "serialNumber": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/serialNumber' Serial number of the container."
+          "description": "Property. Model:'https://schema.org/serialNumber'. Serial number of the container."
         },
         "regulation": {
           "type": "string",
