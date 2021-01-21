@@ -8,7 +8,7 @@ The following entity types are available:
 
 - [WasteContainerIsle](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerIsle/README.md). A waste container isle
 
-- [WasteContainerModel](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerModel/README.md). A waste container model
+- [WasteContainerModel](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerModel/README.md). A model of waste container which captures the static properties of a class of containers.
 
 
 
