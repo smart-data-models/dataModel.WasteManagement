@@ -1,77 +1,75 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.WasteManagement
-
 WasteContainerModel:
-  required:
-    - id
-    - type
-    - name
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
-  type: object
-  description: A waste container model
+  description: 'A model of waste container which captures the static properties of a class of containers.'
   properties:
     alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+      description: 'An alternative name for this item'
+      type: Property
     annotations:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
-
-    brandName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Name of the brand.'
-    cargoVolume:
-      x-ngsi:
-        type: Property
-      type: number
-      description: 'Total volume the container can hold.'
-    category:
-      x-ngsi:
-        type: Property
-      type: array
-      description: 'Container’s category.'
+      description: 'Annotations about the item'
       items:
         type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    brandName:
+      description: 'Name of the brand'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/brand
+    cargoVolume:
+      description: 'Total volume the container can hold'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/cargoVolume
+    category:
+      description: 'Container’s category. Enum:''dumpster, trashCan, wheelieBin, other''.  dumpster . See [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)'
+      items:
         enum:
           - dumpster
           - trashCan
           - wheelieBin
           - other
+        type: string
+      minItems: 1
+      type: Property
+      uniqueItems: true
     color:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/color
-
+      description: 'The color of the product'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/color
     compliantWith:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ' A list of standards to which the container is compliant with (ex. UNE-EN 840-2:2013)'
+      description: 'A list of standards to which the container is compliant  with (ex. UNE-EN 840-2:2013). '
       items:
         type: string
+      minItems: 0
+      type: Property
+      uniqueItems: true
     dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
     depth:
+      description: 'Depth of the container'
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Depth of the container.'
+        model: https://schema.org/depth
+        units: Meters
     description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+      description: 'A description of this item'
+      type: Property
     features:
-      x-ngsi:
-        type: Property
-      type: array
-      description: 'A list of container features.'
+      description: 'A list of container features. Enum:''wheels, lid, roundedLid, insertHoles, lockable''. Any other value meaningful for the application.'
       items:
-        type: string
         enum:
           - wheels
           - lid
@@ -79,69 +77,114 @@ WasteContainerModel:
           - insertHoles
           - lockable
           - other
+        type: string
+      minItems: 1
+      type: Property
+      uniqueItems: true
     height:
+      description: 'Height of the container'
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Height of the container.'
+        model: https://schema.org/heigth
+        units: Meters
+    id:
+      anyOf: &wastecontainermodel_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     image:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/image
+      description: 'An image of the item'
+      format: uri
+      type: Property
+      x-ngsi:
+        model: https://schema.org/URL
     insertHolesNumber:
+      description: 'Number of insert holes the container has'
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Number of insert holes the container has.'
+        model: https://schema.org/Number
     madeOf:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Material the container is made of.'
+      description: 'Material the container is made of. Enum:'' plastic , wood, metal, other '''
+      enum:
+        - plastic
+        - wood
+        - metal
+        - other
+      type: Property
     madeOfCode:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Material Code as per standard tables. TBD.'
+      description: 'Material Code as per standard tables. '
+      type: Property
     manufacturerName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Name of the manufacturer.'
+      description: 'Name of the manufacturer. '
+      type: Property
     maximumLoad:
+      description: 'Maximum load the container can hold safely. Unit:''Kilogram'''
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Maximum load the container can hold safely.'
+        model: https://schema.org/Number
     modelName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
       description: 'Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities.'
+      type: Property
     name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+      description: 'The name of this item.'
+      type: Property
     owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *wastecontainermodel_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
     recommendedLoad:
+      description: 'Manufacturer recommended load for the container. Unit:''Kilogram'''
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Manufacturer recommended load for the container.'
+        model: https://schema.org/Number
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
     source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity Type: It has to be WasteContainerModel'
+      enum:
+        - WasteContainerModel
+      type: Property
     weight:
+      description: 'Weight of the container'
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Weight of the container.'
+        model: https://schema.org/weigth
+        units: Kilograms
     width:
+      description: 'Width of the container'
+      minimum: 0
+      type: Property
       x-ngsi:
-        type: Property
-      type: number
-      description: 'Width of the container.'
+        model: https://schema.org/width
+        units: Meters
+  required:
+    - id
+    - type
+    - name
+  type: object
