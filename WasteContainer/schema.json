@@ -66,9 +66,10 @@
             "batteries",
             "electronics",
             "hazardous",
+            "clothes",
             "other"
           ],
-          "description": "Property. Model:'https://schema.org/Text'. Kind/s of waste stored by the container. Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other'. Or any other value which does not fit within the former. "
+          "description": "Property. Model:'https://schema.org/Text'. Kind/s of waste stored by the container. Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, clothes, other'. Or any other value which does not fit within the former. "
         },
         "storedWasteOrigin": {
           "type": "string",
