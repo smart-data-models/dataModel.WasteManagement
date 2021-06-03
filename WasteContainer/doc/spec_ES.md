@@ -1,13 +1,14 @@
 Entidad: WasteContainer  
 =======================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Un contenedor de residuos**  
 
 ## Lista de propiedades  
 
-- `TimeInstant`: Puede haber ambientes de producción donde el tipo de atributo es igual a la cadena "ISO 8601". Si es así, debe ser considerado como un sinónimo de "DateTime".  - `actuationHours`: Horas adecuadas para realizar actuaciones sobre el contenedor.  - `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `cargoWeight`: El peso de la carga del contenedor.  - `category`:   - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateLastCleaning`: Cuando el contenedor fue limpiado la última vez.  - `dateLastEmptying`: Sello de tiempo que representa cuando el contenedor fue vaciado la última vez.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `dateServiceStarted`: Fecha en la que el contenedor comenzó a dar servicio.  - `description`: Una descripción de este artículo  - `fillingLevel`: Nivel de llenado del contenedor  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `isleId`: Identificador (o nombre) de la isla donde se coloca el contenedor. Este atributo debe utilizarse cuando las entidades de tipo "WasteContainerIsle" no se modelan específicamente. De lo contrario, debe utilizarse "refWasteContainerIsle".  - `location`:   - `methaneConcentration`: Concentración de metano (CH4) dentro del contenedor.  - `name`: El nombre de este artículo.  - `nextActuationDeadline`: Fecha límite para la siguiente actuación a realizar (vaciado, recogida, etc.).  - `nextCleaningDeadline`: Fecha límite para la próxima limpieza.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `refDevice`: Referencia al dispositivo o dispositivos utilizados para vigilar este contenedor  - `refWasteContainerIsle`: Isla donde se coloca el contenedor  - `refWasteContainerModel`: El modelo del contenedor  - `regulation`: Reglamento de funcionamiento del contenedor  - `responsible`: Responsable del contenedor, es decir, entidad encargada de actuar (vaciar, recoger, etc.)  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `serialNumber`: Número de serie del contenedor.  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `status`: El estado del contenedor desde el punto de vista de la seguridad. Enum:'ok , tapaAbrir , soltar , mover , vandalizar , quemar , desconocido'.  - `ok`. El contenedor está donde debe estar y se mantiene correctamente. "Tapa abierta". La tapa del contenedor se ha abierto y no se ha cerrado después de un cierto tiempo. "Se ha caído". El contenedor se ha caído por alguna razón. "movido". El contenedor ha sido movido de su posición normal y no ha vuelto. "vandalizado". El contenedor ha sido dañado o destruido debido al vandalismo. "Quemado". El contenedor se está quemando y hay que tomar una acción inmediata. "Desconocido". El estado del contenedor no es conocido por el sistema.  - `storedWasteCode`: Depende de la regulación del objetivo. Para Europa, consulte [la Lista Europea de Residuos] (http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Tipo/s de residuos almacenados por el contenedor. Enum:'orgánico, inorgánico, vidrio, aceite, plástico, metal, papel, pilas, electrónica, peligroso, otros'. O cualquier otro valor que no encaje dentro del primero.  - `storedWasteOrigin`: Origen de los residuos almacenados. Enum:'doméstico, municipal, industrial, construcción, hostelería, agricultura, otros'.  - `temperature`: La temperatura dentro del contenedor  - `type`: Tipo de entidad NGSI: Tiene que ser WasteContainer    
+- `TimeInstant`: Puede haber entornos de producción en los que el tipo de atributo sea igual a la cadena `ISO8601`. Si es así, debe considerarse como un sinónimo de `DateTime`.  - `actuationHours`: Horas adecuadas para realizar actuaciones sobre el contenedor.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `cargoWeight`: Peso de la carga del contenedor.  - `category`:   - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastCleaning`: Cuando se limpió el contenedor por última vez.  - `dateLastEmptying`: Marca de tiempo que representa cuándo se vació el contenedor por última vez.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateServiceStarted`: Fecha en la que el contenedor comenzó a dar servicio.  - `description`: Una descripción de este artículo  - `fillingLevel`: Nivel de llenado del contenedor  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `isleId`: Identificador (o nombre) de la isla donde se encuentra el contenedor. Este atributo debe utilizarse cuando las entidades de tipo `WasteContainerIsle` no están siendo modeladas específicamente. En caso contrario, debe utilizarse `refWasteContainerIsle`.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `methaneConcentration`: Concentración de metano (CH4) en el interior del contenedor.  - `name`: El nombre de este artículo.  - `nextActuationDeadline`: Fecha límite para realizar la siguiente actuación (vaciado, recogida, etc.).  - `nextCleaningDeadline`: Fecha límite para la próxima limpieza.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refDevice`: Referencia al dispositivo o dispositivos utilizados para supervisar este contenedor  - `refWasteContainerIsle`: Isla en la que se encuentra el contenedor  - `refWasteContainerModel`: Modelo de contenedor  - `regulation`: Reglamento bajo el cual opera el contenedor  - `responsible`: Responsable del contenedor, es decir, entidad encargada de actuar (vaciar, recoger, etc.)  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `serialNumber`: Número de serie del contenedor.  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `status`: Estado del contenedor desde el punto de vista de la seguridad. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  - `ok`. El contenedor está donde debe estar y se encuentra correctamente. `lidOpen`. La tapa del contenedor se ha abierto y no se ha cerrado después de un tiempo determinado. `dropped`. El contenedor se ha caído por alguna razón. `moved`. El contenedor se ha movido de su posición habitual y no ha vuelto. `vandalizado`. El contenedor ha sido dañado o destruido debido al vandalismo. `quemado`. El contenedor está ardiendo y hay que tomar una medida inmediata. `desconocido`. El sistema desconoce el estado del contenedor.  - `storedWasteCode`: Depende de la normativa de destino. Para Europa, consulte [Lista europea de residuos](http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Tipo/s de residuos almacenados por el contenedor. Enum:'orgánicos, inorgánicos, vidrio, aceite, plástico, metal, papel, pilas, electrónicos, peligrosos, otros'. O cualquier otro valor que no encaje en el anterior.  - `storedWasteOrigin`: Origen de los residuos almacenados. Enum:'doméstico, municipal, industrial, construcción, hostelería, agricultura, otros'  - `temperature`: Temperatura en el interior del contenedor  - `type`: Tipo de entidad NGSI: Tiene que ser WasteContainer    
 Propiedades requeridas  
-- `id`  - `location`  - `type`  ## Modelo de datos Descripción de las propiedades  
+- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -26,30 +27,29 @@ WasteContainer:
       x-ngsi:    
         model: openingHours    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -152,10 +152,10 @@ WasteContainer:
       description: 'Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -175,7 +175,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -198,7 +199,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -223,7 +225,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -245,7 +248,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -270,7 +274,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -297,7 +302,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     methaneConcentration:    
       description: 'Methane (CH4) concentration inside the container.'    
       minimum: 0    
@@ -377,8 +382,8 @@ WasteContainer:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -455,9 +460,9 @@ WasteContainer:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### Contenedor de residuos NGSI V2 valores clave Ejemplo  
-Aquí hay un ejemplo de un Contenedor de Residuos en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### Ejemplo de valores clave de WasteContainer NGSI-v2  
+Aquí hay un ejemplo de un WasteContainer en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "wastecontainer:Fleming:12a",  
@@ -478,8 +483,8 @@ WasteContainer:
   "refDevice": ["device-Fleming:12a:1"]  
 }  
 ```  
-#### Contenedor de desechos NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de un Contenedor de Residuos en formato JSON normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### WasteContainer NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un WasteContainer en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "wastecontainer:Fleming:12a",  
@@ -527,93 +532,108 @@ WasteContainer:
   }  
 }  
 ```  
-#### Contenedor de residuos NGSI-LD Valores clave Ejemplo  
-Aquí hay un ejemplo de un Contenedor de Residuos en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "category": ["underground"],  
- "dateLastEmptying": {"@type": "DateTime",  
-                      "@value": "2016-06-21T15:05:59.408Z"},  
- "fillingLevel": 0.4,  
- "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
- "location": {"coordinates": [-3.164485591715449, 40.62785133667262],  
-              "type": "Point"},  
- "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
- "refDevice": ["urn:ngsi-ld:Device:device-Fleming:12a:1"],  
- "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
- "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
- "serialNumber": "ab56kjl",  
- "status": "ok",  
- "temperature": 23,  
- "type": "WasteContainer"}  
-```  
-#### Contenedor de residuos NGSI-LD normalizado Ejemplo  
-Aquí hay un ejemplo de un Contenedor de Residuos en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### WasteContainer NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un WasteContainer en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
-    "type": "WasteContainer",  
-    "status": {  
-        "type": "Property",  
-        "value": "ok"  
-    },  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "underground"  
-        ]  
-    },  
-    "dateLastEmptying": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-06-21T15:05:59.408Z"  
-        }  
-    },  
-    "serialNumber": {  
-        "type": "Property",  
-        "value": "ab56kjl"  
-    },  
-    "nextActuationDeadline": {  
-        "type": "Property",  
-        "value": "2016-06-28T15:05:59.408Z"  
-    },  
-    "refWasteContainerIsle": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12"  
-    },  
-    "refDevice": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:Device:device-Fleming:12a:1"  
-        ]  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -3.164485591715449,  
-                40.62785133667262  
-            ]  
-        }  
-    },  
-    "temperature": {  
-        "type": "Property",  
-        "value": 23  
-    },  
-    "fillingLevel": {  
-        "type": "Property",  
-        "value": 0.4  
-    },  
-    "refWasteContainerModel": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+  "type": "WasteContainer",  
+  "status": {  
+    "type": "Property",  
+    "value": "ok"  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "underground"  
     ]  
+  },  
+  "dateLastEmptying": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-06-21T15:05:59.408Z"  
+    }  
+  },  
+  "serialNumber": {  
+    "type": "Property",  
+    "value": "ab56kjl"  
+  },  
+  "nextActuationDeadline": {  
+    "type": "Property",  
+    "value": "2016-06-28T15:05:59.408Z"  
+  },  
+  "refWasteContainerIsle": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12"  
+  },  
+  "refDevice": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:Device:device-Fleming:12a:1"  
+    ]  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.164485591715449,  
+        40.62785133667262  
+      ]  
+    }  
+  },  
+  "temperature": {  
+    "type": "Property",  
+    "value": 23  
+  },  
+  "fillingLevel": {  
+    "type": "Property",  
+    "value": 0.4  
+  },  
+  "refWasteContainerModel": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### WasteContainer NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un WasteContainer en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "category": [  
+    "underground"  
+  ],  
+  "dateLastEmptying": {  
+    "@type": "DateTime",  
+    "@value": "2016-06-21T15:05:59.408Z"  
+  },  
+  "fillingLevel": 0.4,  
+  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+  "location": {  
+    "coordinates": [  
+      -3.164485591715449,  
+      40.62785133667262  
+    ],  
+    "type": "Point"  
+  },  
+  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
+  "refDevice": [  
+    "urn:ngsi-ld:Device:device-Fleming:12a:1"  
+  ],  
+  "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
+  "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "serialNumber": "ab56kjl",  
+  "status": "ok",  
+  "temperature": 23,  
+  "type": "WasteContainer"  
 }  
 ```  
