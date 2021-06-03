@@ -1,11 +1,12 @@
 Entity: WasteContainerIsle  
 ==========================  
 [Open License](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerIsle/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A waste container isle**  
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `features`: A list of features provided by the isle.  - `id`: Unique identifier of the entity  - `insertHolesNumber`: Number of insert holes the isle has  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refWasteContainer`: List of containers present in the isle  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be WasteContainerIsle    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `features`: A list of features provided by the isle.  - `id`: Unique identifier of the entity  - `insertHolesNumber`: Number of insert holes the isle has  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refWasteContainer`: List of containers present in the isle  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be WasteContainerIsle    
 Required properties  
 - `id`  - `location`  - `type`    
 A geographical area which keeps one or more waste containers.  
@@ -17,30 +18,29 @@ WasteContainerIsle:
   description: 'A waste container isle'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -94,10 +94,10 @@ WasteContainerIsle:
       x-ngsi:    
         model: https://schema.org/Number    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -117,7 +117,8 @@ WasteContainerIsle:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -140,7 +141,8 @@ WasteContainerIsle:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -165,7 +167,8 @@ WasteContainerIsle:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -187,7 +190,8 @@ WasteContainerIsle:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -212,7 +216,8 @@ WasteContainerIsle:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -239,7 +244,7 @@ WasteContainerIsle:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -263,8 +268,8 @@ WasteContainerIsle:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -286,8 +291,8 @@ WasteContainerIsle:
 ```  
 </details>    
 ## Example payloads    
-#### WasteContainerIsle NGSI V2 key-values Example    
-Here is an example of a WasteContainerIsle in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### WasteContainerIsle NGSI-v2 key-values Example    
+Here is an example of a WasteContainerIsle in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "wastecontainerisle:Fleming:12",  
@@ -318,8 +323,8 @@ WasteContainerIsle:
   ]  
 }  
 ```  
-#### WasteContainerIsle NGSI V2 normalized Example    
-Here is an example of a WasteContainerIsle in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### WasteContainerIsle NGSI-v2 normalized Example    
+Here is an example of a WasteContainerIsle in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "wastecontainerisle:Fleming:12",  
@@ -365,95 +370,126 @@ WasteContainerIsle:
 #### WasteContainerIsle NGSI-LD key-values Example    
 Here is an example of a WasteContainerIsle in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "address": {"addressCountry": "ES",  
-             "addressLocality": "Guadalajara",  
-             "streetAddress": "Calle Dr. Fleming, 12",  
-             "type": "PostalAddress"},  
- "description": "Container isle located downtown",  
- "features": ["underground"],  
- "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
- "location": {"coordinates": [[[-3.164485591715449, 40.62785133667262],  
-                               [-3.164445130316209, 40.62787156737224],  
-                               [-3.164394553567159, 40.62777209976578],  
-                               [-3.164424899616589, 40.62775018317452],  
-                               [-3.164485591715449, 40.62785133667262]]],  
-              "type": "Polygon"},  
- "name": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo",  
- "refWasteContainer": ["urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
-                       "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"],  
- "type": "WasteContainerIsle"}  
+{  
+  "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
+  "type": "WasteContainerIsle",  
+  "refWasteContainer": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+      "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
+    ]  
+  },  
+  "features": {  
+    "type": "Property",  
+    "value": [  
+      "underground"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Container isle located downtown"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          [  
+            -3.164485591715449,  
+            40.62785133667262  
+          ],  
+          [  
+            -3.164445130316209,  
+            40.62787156737224  
+          ],  
+          [  
+            -3.164394553567159,  
+            40.62777209976578  
+          ],  
+          [  
+            -3.164424899616589,  
+            40.62775018317452  
+          ],  
+          [  
+            -3.164485591715449,  
+            40.62785133667262  
+          ]  
+        ]  
+      ]  
+    }  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Guadalajara",  
+      "addressCountry": "ES",  
+      "streetAddress": "Calle Dr. Fleming, 12",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### WasteContainerIsle NGSI-LD normalized Example    
 Here is an example of a WasteContainerIsle in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
-    "type": "WasteContainerIsle",  
-    "refWasteContainer": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
-            "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Guadalajara",  
+    "streetAddress": "Calle Dr. Fleming, 12",  
+    "type": "PostalAddress"  
+  },  
+  "description": "Container isle located downtown",  
+  "features": [  
+    "underground"  
+  ],  
+  "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
+  "location": {  
+    "coordinates": [  
+      [  
+        [  
+          -3.164485591715449,  
+          40.62785133667262  
+        ],  
+        [  
+          -3.164445130316209,  
+          40.62787156737224  
+        ],  
+        [  
+          -3.164394553567159,  
+          40.62777209976578  
+        ],  
+        [  
+          -3.164424899616589,  
+          40.62775018317452  
+        ],  
+        [  
+          -3.164485591715449,  
+          40.62785133667262  
         ]  
-    },  
-    "features": {  
-        "type": "Property",  
-        "value": [  
-            "underground"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Container isle located downtown"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Polygon",  
-            "coordinates": [  
-                [  
-                    [  
-                        -3.164485591715449,  
-                        40.62785133667262  
-                    ],  
-                    [  
-                        -3.164445130316209,  
-                        40.62787156737224  
-                    ],  
-                    [  
-                        -3.164394553567159,  
-                        40.62777209976578  
-                    ],  
-                    [  
-                        -3.164424899616589,  
-                        40.62775018317452  
-                    ],  
-                    [  
-                        -3.164485591715449,  
-                        40.62785133667262  
-                    ]  
-                ]  
-            ]  
-        }  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressLocality": "Guadalajara",  
-            "addressCountry": "ES",  
-            "streetAddress": "Calle Dr. Fleming, 12",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+      ]  
+    ],  
+    "type": "Polygon"  
+  },  
+  "name": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo",  
+  "refWasteContainer": [  
+    "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+    "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
+  ],  
+  "type": "WasteContainerIsle"  
 }  
 ```  
