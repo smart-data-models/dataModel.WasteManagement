@@ -1,11 +1,12 @@
 Entität: WasteContainer  
 =======================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Ein Abfallbehälter**  
 
 ## Liste der Eigenschaften  
 
-- `TimeInstant`: Es kann Produktionsumgebungen geben, in denen der Attributtyp gleich der Zeichenkette `ISO8601` ist. Wenn dies der Fall ist, muss es als Synonym für `DateTime` betrachtet werden.  - `actuationHours`: Stunden, die für die Durchführung von Betätigungen über dem Behälter geeignet sind.  - `address`: Die Postanschrift.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `cargoWeight`: Gewicht der Containerladung.  - `category`:   - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateLastCleaning`: Wann der Behälter das letzte Mal gereinigt wurde.  - `dateLastEmptying`: Zeitstempel, der darstellt, wann der Container das letzte Mal geleert wurde.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateServiceStarted`: Datum, an dem der Container seinen Dienst aufgenommen hat.  - `description`: Eine Beschreibung dieses Artikels  - `fillingLevel`: Füllstand des Behälters  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `isleId`: Bezeichner (oder Name) der Insel, auf der sich der Container befindet. Dieses Attribut sollte verwendet werden, wenn Entitäten vom Typ `WasteContainerIsle` nicht speziell modelliert werden. Andernfalls sollte `refWasteContainerIsle` verwendet werden.  - `location`:   - `methaneConcentration`: Methan (CH4)-Konzentration im Inneren des Behälters.  - `name`: Der Name dieses Elements.  - `nextActuationDeadline`: Termin für die nächste auszuführende Betätigung (Entleeren, Aufnehmen, etc.).  - `nextCleaningDeadline`: Deadline für die nächste Reinigung.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refDevice`: Verweis auf das/die Gerät(e), das/die zur Überwachung dieses Containers verwendet wird/werden  - `refWasteContainerIsle`: Insel, auf der der Behälter platziert ist  - `refWasteContainerModel`: Modell des Containers  - `regulation`: Regelung, unter der der Container betrieben wird  - `responsible`: Verantwortlich für den Behälter, d.h. Instanz, die für die Betätigung (Entleerung, Abholung, etc.) zuständig ist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `serialNumber`: Seriennummer des Containers.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status des Containers unter dem Gesichtspunkt der Sicherheit. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  - `ok`. Container ist da, wo er sein muss und steht richtig. `lidOpen`. Der Deckel des Containers wurde geöffnet und nach einer bestimmten Zeit nicht wieder geschlossen. Heruntergefallen`. Container wurde aus irgendeinem Grund fallen gelassen. verschoben`. Container wurde aus seiner regulären Position bewegt und ist nicht zurückgekommen. vandalisiert`. Der Container wurde durch Vandalismus beschädigt oder zerstört. brennend`. Container brennt und es muss eine sofortige Maßnahme ergriffen werden. Unbekannt`. Der Status des Containers ist dem System nicht bekannt.  - `storedWasteCode`: Abhängig von der Zielvorschrift. Für Europa, siehe [Europäisches Abfallverzeichnis] (http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Art(en) des vom Container gelagerten Abfalls. Enum:'Organisch, anorganisch, Glas, Öl, Kunststoff, Metall, Papier, Batterien, Elektronik, Sondermüll, Sonstiges'. Oder jeder andere Wert, der nicht in den erstgenannten Bereich passt.  - `storedWasteOrigin`: Herkunft des gelagerten Abfalls. Enum:'Haushalt, Kommunal, Industrie, Bau, Gastgewerbe, Landwirtschaft, Sonstige'.  - `temperature`: Temperatur im Inneren des Behälters  - `type`: NGSI Entity Type: Es muss WasteContainer sein    
+- `TimeInstant`: Es kann Produktionsumgebungen geben, in denen der Attributtyp gleich der Zeichenkette `ISO8601` ist. Wenn dies der Fall ist, muss es als Synonym für `DateTime` betrachtet werden.  - `actuationHours`: Stunden, die für die Durchführung von Betätigungen über dem Behälter geeignet sind.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `cargoWeight`: Gewicht der Containerladung.  - `category`:   - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateLastCleaning`: Wann der Behälter das letzte Mal gereinigt wurde.  - `dateLastEmptying`: Zeitstempel, der darstellt, wann der Container das letzte Mal geleert wurde.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateServiceStarted`: Datum, an dem der Container seinen Dienst aufgenommen hat.  - `description`: Eine Beschreibung dieses Artikels  - `fillingLevel`: Füllstand des Behälters  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `isleId`: Bezeichner (oder Name) der Insel, auf der sich der Container befindet. Dieses Attribut sollte verwendet werden, wenn Entitäten vom Typ `WasteContainerIsle` nicht speziell modelliert werden. Andernfalls sollte `refWasteContainerIsle` verwendet werden.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `methaneConcentration`: Methan (CH4)-Konzentration im Inneren des Behälters.  - `name`: Der Name dieses Elements.  - `nextActuationDeadline`: Termin für die nächste auszuführende Betätigung (Entleeren, Aufnehmen, etc.).  - `nextCleaningDeadline`: Deadline für die nächste Reinigung.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refDevice`: Verweis auf das/die Gerät(e), das/die zur Überwachung dieses Containers verwendet wird/werden  - `refWasteContainerIsle`: Insel, auf der der Behälter platziert ist  - `refWasteContainerModel`: Modell des Containers  - `regulation`: Regelung, unter der der Container betrieben wird  - `responsible`: Verantwortlich für den Behälter, d.h. Instanz, die für die Betätigung (Entleerung, Abholung, etc.) zuständig ist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `serialNumber`: Seriennummer des Containers.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status des Containers unter dem Gesichtspunkt der Sicherheit. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  - `ok`. Container ist da, wo er sein muss und steht richtig. `lidOpen`. Der Deckel des Containers wurde geöffnet und nach einer bestimmten Zeit nicht wieder geschlossen. Heruntergefallen`. Container wurde aus irgendeinem Grund fallen gelassen. verschoben`. Container wurde aus seiner regulären Position bewegt und ist nicht zurückgekommen. vandalisiert`. Der Container wurde durch Vandalismus beschädigt oder zerstört. brennend`. Container brennt und es muss eine sofortige Maßnahme ergriffen werden. Unbekannt`. Der Status des Containers ist dem System nicht bekannt.  - `storedWasteCode`: Abhängig von der Zielvorschrift. Für Europa, siehe [Europäisches Abfallverzeichnis] (http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Art(en) des vom Container gelagerten Abfalls. Enum:'Organisch, anorganisch, Glas, Öl, Kunststoff, Metall, Papier, Batterien, Elektronik, Sondermüll, Sonstiges'. Oder jeder andere Wert, der nicht in den erstgenannten Bereich passt.  - `storedWasteOrigin`: Herkunft des gelagerten Abfalls. Enum:'Haushalt, Kommunal, Industrie, Bau, Gastgewerbe, Landwirtschaft, Sonstige'.  - `temperature`: Temperatur im Inneren des Behälters  - `type`: NGSI Entity Type: Es muss WasteContainer sein    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -26,30 +27,29 @@ WasteContainer:
       x-ngsi:    
         model: openingHours    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -152,10 +152,10 @@ WasteContainer:
       description: 'Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -175,7 +175,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -198,7 +199,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -223,7 +225,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -245,7 +248,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -270,7 +274,8 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -297,7 +302,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     methaneConcentration:    
       description: 'Methane (CH4) concentration inside the container.'    
       minimum: 0    
@@ -377,8 +382,8 @@ WasteContainer:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
