@@ -1,13 +1,14 @@
 Entidad: WasteContainerModel  
 ============================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md)  
-Descripción global: **Un modelo de contenedor de residuos que capta las propiedades estáticas de una clase de contenedores.  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **Un modelo de contenedor de residuos que captura las propiedades estáticas de una clase de contenedores.**  
 
 ## Lista de propiedades  
 
-- `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `brandName`: El nombre de la marca  - `cargoVolume`: El volumen total que puede contener el contenedor  - `category`: La categoría del contenedor. Enum:'contenedor de basura, cubo de basura, cubo de ruedas, otro'. contenedor de basura. Véase [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color`: El color del producto  - `compliantWith`: Una lista de normas a las que el contenedor cumple (por ejemplo, UNE-EN 840-2:2013).  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `depth`: La profundidad del contenedor  - `description`: Una descripción de este artículo  - `features`: Una lista de características del contenedor. Enum:'ruedas, tapa, tapa redondeada, agujeros de inserción, cerrable'. Cualquier otro valor significativo para la aplicación.  - `height`: La altura del contenedor  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `insertHolesNumber`: Número de agujeros de inserción que tiene el contenedor  - `madeOf`: Material del que está hecho el contenedor. Enum:' plástico, madera, metal, otros'.  - `madeOfCode`: Código de material según las tablas estándar.  - `manufacturerName`: Nombre del fabricante.  - `maximumLoad`: La carga máxima que el contenedor puede soportar con seguridad. Unidad:'Kilogramo'.  - `modelName`: Nombre del modelo según lo indicado por el fabricante. Este atributo es diferente del nombre que es sólo un nombre en clave dado normalmente por los municipios.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `recommendedLoad`: La carga recomendada por el fabricante para el contenedor. Unidad:'Kilogramo'.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI: Tiene que ser WasteContainerModel  - `weight`: El peso del contenedor  - `width`: Ancho del contenedor    
+- `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `brandName`: Nombre de la marca  - `cargoVolume`: Volumen total que puede contener el contenedor  - `category`: Categoría del contenedor. Enum:'dumpster, trashCan, wheelieBin, other'. dumpster . Ver [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color`: El color del producto  - `compliantWith`: Una lista de las normas que cumple el contenedor (ej. UNE-EN 840-2:2013).  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth`: Profundidad del contenedor  - `description`: Una descripción de este artículo  - `features`: Una lista de características del contenedor. Enum:'ruedas, tapa, roundedLid, insertHoles, lockable'. Cualquier otro valor significativo para la aplicación.  - `height`: Altura del contenedor  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `insertHolesNumber`: Número de orificios de inserción que tiene el contenedor  - `madeOf`: Material del que está hecho el contenedor. Enum:' plástico , madera, metal, otros '  - `madeOfCode`: Código de material según tablas estándar.  - `manufacturerName`: Nombre del fabricante.  - `maximumLoad`: Carga máxima que el contenedor puede soportar con seguridad. Unidad:'Kilogramo'  - `modelName`: Nombre del modelo tal y como lo indica el fabricante. Este atributo es diferente del nombre, que es sólo un nombre en clave que suelen dar los municipios.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `recommendedLoad`: Carga recomendada por el fabricante para el contenedor. Unidad:'Kilogramo'  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser WasteContainerModel  - `weight`: Peso del contenedor  - `width`: Anchura del contenedor    
 Propiedades requeridas  
-- `id`  - `name`  - `type`  ## Modelo de datos Descripción de las propiedades  
+- `id`  - `name`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -167,8 +168,8 @@ WasteContainerModel:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -203,9 +204,9 @@ WasteContainerModel:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### WasteContainerModel NGSI V2 valores clave Ejemplo  
-Aquí hay un ejemplo de un WasteContainerModel en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### WasteContainerModel NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un WasteContainerModel en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -223,8 +224,8 @@ WasteContainerModel:
   "category": ["dumpster"]  
 }  
 ```  
-#### WasteContainerModel NGSI V2 normalizado Ejemplo  
-He aquí un ejemplo de un WasteContainerModel en formato JSON normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### WasteContainerModel NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un WasteContainerModel en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -264,85 +265,96 @@ WasteContainerModel:
   }  
 }  
 ```  
-#### WasteContainerModelo NGSI-LD valores clave Ejemplo  
-Aquí hay un ejemplo de un WasteContainerModel en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "brandName": "Brute",  
- "cargoVolume": 150,  
- "category": ["dumpster"],  
- "compliantWith": ["UNE-EN 840-2:2013"],  
- "depth": 0.4,  
- "features": ["wheels", "lid"],  
- "height": 0.8,  
- "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
- "madeOf": "plastic",  
- "modelName": "C1",  
- "name": "Dumpster_Brute_2009_Plastic_Green",  
- "type": "WasteContainerModel",  
- "width": 0.5}  
-```  
-#### WasteContainerModel NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de un WasteContainerModel en formato JSON-LD normalizado. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### WasteContainerModel NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un WasteContainerModel en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-    "type": "WasteContainerModel",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "dumpster"  
-        ]  
-    },  
-    "cargoVolume": {  
-        "type": "Property",  
-        "value": 150  
-    },  
-    "modelName": {  
-        "type": "Property",  
-        "value": "C1"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Dumpster_Brute_2009_Plastic_Green"  
-    },  
-    "compliantWith": {  
-        "type": "Property",  
-        "value": [  
-            "UNE-EN 840-2:2013"  
-        ]  
-    },  
-    "madeOf": {  
-        "type": "Property",  
-        "value": "plastic"  
-    },  
-    "height": {  
-        "type": "Property",  
-        "value": 0.8  
-    },  
-    "width": {  
-        "type": "Property",  
-        "value": 0.5  
-    },  
-    "depth": {  
-        "type": "Property",  
-        "value": 0.4  
-    },  
-    "brandName": {  
-        "type": "Property",  
-        "value": "Brute"  
-    },  
-    "features": {  
-        "type": "Property",  
-        "value": [  
-            "wheels",  
-            "lid"  
-        ]  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "type": "WasteContainerModel",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "dumpster"  
     ]  
+  },  
+  "cargoVolume": {  
+    "type": "Property",  
+    "value": 150  
+  },  
+  "modelName": {  
+    "type": "Property",  
+    "value": "C1"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Dumpster_Brute_2009_Plastic_Green"  
+  },  
+  "compliantWith": {  
+    "type": "Property",  
+    "value": [  
+      "UNE-EN 840-2:2013"  
+    ]  
+  },  
+  "madeOf": {  
+    "type": "Property",  
+    "value": "plastic"  
+  },  
+  "height": {  
+    "type": "Property",  
+    "value": 0.8  
+  },  
+  "width": {  
+    "type": "Property",  
+    "value": 0.5  
+  },  
+  "depth": {  
+    "type": "Property",  
+    "value": 0.4  
+  },  
+  "brandName": {  
+    "type": "Property",  
+    "value": "Brute"  
+  },  
+  "features": {  
+    "type": "Property",  
+    "value": [  
+      "wheels",  
+      "lid"  
+    ]  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### WasteContainerModel NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un WasteContainerModel en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "brandName": "Brute",  
+  "cargoVolume": 150,  
+  "category": [  
+    "dumpster"  
+  ],  
+  "compliantWith": [  
+    "UNE-EN 840-2:2013"  
+  ],  
+  "depth": 0.4,  
+  "features": [  
+    "wheels",  
+    "lid"  
+  ],  
+  "height": 0.8,  
+  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "madeOf": "plastic",  
+  "modelName": "C1",  
+  "name": "Dumpster_Brute_2009_Plastic_Green",  
+  "type": "WasteContainerModel",  
+  "width": 0.5  
 }  
 ```  
