@@ -1,6 +1,7 @@
 Entity: WasteContainerModel  
 ===========================  
 [Open License](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A model of waste container which captures the static properties of a class of containers.**  
 
 ## List of properties  
@@ -167,8 +168,8 @@ WasteContainerModel:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -204,8 +205,8 @@ WasteContainerModel:
 ```  
 </details>    
 ## Example payloads    
-#### WasteContainerModel NGSI V2 key-values Example    
-Here is an example of a WasteContainerModel in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### WasteContainerModel NGSI-v2 key-values Example    
+Here is an example of a WasteContainerModel in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -223,8 +224,8 @@ WasteContainerModel:
   "category": ["dumpster"]  
 }  
 ```  
-#### WasteContainerModel NGSI V2 normalized Example    
-Here is an example of a WasteContainerModel in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### WasteContainerModel NGSI-v2 normalized Example    
+Here is an example of a WasteContainerModel in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -267,82 +268,93 @@ WasteContainerModel:
 #### WasteContainerModel NGSI-LD key-values Example    
 Here is an example of a WasteContainerModel in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "brandName": "Brute",  
- "cargoVolume": 150,  
- "category": ["dumpster"],  
- "compliantWith": ["UNE-EN 840-2:2013"],  
- "depth": 0.4,  
- "features": ["wheels", "lid"],  
- "height": 0.8,  
- "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
- "madeOf": "plastic",  
- "modelName": "C1",  
- "name": "Dumpster_Brute_2009_Plastic_Green",  
- "type": "WasteContainerModel",  
- "width": 0.5}  
+{  
+  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "type": "WasteContainerModel",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "dumpster"  
+    ]  
+  },  
+  "cargoVolume": {  
+    "type": "Property",  
+    "value": 150  
+  },  
+  "modelName": {  
+    "type": "Property",  
+    "value": "C1"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Dumpster_Brute_2009_Plastic_Green"  
+  },  
+  "compliantWith": {  
+    "type": "Property",  
+    "value": [  
+      "UNE-EN 840-2:2013"  
+    ]  
+  },  
+  "madeOf": {  
+    "type": "Property",  
+    "value": "plastic"  
+  },  
+  "height": {  
+    "type": "Property",  
+    "value": 0.8  
+  },  
+  "width": {  
+    "type": "Property",  
+    "value": 0.5  
+  },  
+  "depth": {  
+    "type": "Property",  
+    "value": 0.4  
+  },  
+  "brandName": {  
+    "type": "Property",  
+    "value": "Brute"  
+  },  
+  "features": {  
+    "type": "Property",  
+    "value": [  
+      "wheels",  
+      "lid"  
+    ]  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### WasteContainerModel NGSI-LD normalized Example    
 Here is an example of a WasteContainerModel in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-    "type": "WasteContainerModel",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "dumpster"  
-        ]  
-    },  
-    "cargoVolume": {  
-        "type": "Property",  
-        "value": 150  
-    },  
-    "modelName": {  
-        "type": "Property",  
-        "value": "C1"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Dumpster_Brute_2009_Plastic_Green"  
-    },  
-    "compliantWith": {  
-        "type": "Property",  
-        "value": [  
-            "UNE-EN 840-2:2013"  
-        ]  
-    },  
-    "madeOf": {  
-        "type": "Property",  
-        "value": "plastic"  
-    },  
-    "height": {  
-        "type": "Property",  
-        "value": 0.8  
-    },  
-    "width": {  
-        "type": "Property",  
-        "value": 0.5  
-    },  
-    "depth": {  
-        "type": "Property",  
-        "value": 0.4  
-    },  
-    "brandName": {  
-        "type": "Property",  
-        "value": "Brute"  
-    },  
-    "features": {  
-        "type": "Property",  
-        "value": [  
-            "wheels",  
-            "lid"  
-        ]  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "brandName": "Brute",  
+  "cargoVolume": 150,  
+  "category": [  
+    "dumpster"  
+  ],  
+  "compliantWith": [  
+    "UNE-EN 840-2:2013"  
+  ],  
+  "depth": 0.4,  
+  "features": [  
+    "wheels",  
+    "lid"  
+  ],  
+  "height": 0.8,  
+  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "madeOf": "plastic",  
+  "modelName": "C1",  
+  "name": "Dumpster_Brute_2009_Plastic_Green",  
+  "type": "WasteContainerModel",  
+  "width": 0.5  
 }  
 ```  
