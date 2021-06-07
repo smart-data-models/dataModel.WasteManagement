@@ -1,0 +1,263 @@
+{
+    "@id": "dtmi:com:ngsi-ld:WasteContainerModel;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": " - Waste Management / Waste Container Model adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/WasteContainerModel/schema.json",
+    "description": "A model of waste container which captures the static properties of a class of containers.",
+    "displayName": "WasteContainerModel",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "brandName",
+            "writable": true,
+            "displayName": "brandName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the brand"
+        },
+        {
+            "name": "cargoVolume",
+            "writable": true,
+            "displayName": "cargoVolume",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total volume the container can hold"
+        },
+        {
+            "name": "color",
+            "writable": true,
+            "displayName": "color",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The color of the product"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "depth",
+            "writable": true,
+            "displayName": "depth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Depth of the container"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "height",
+            "writable": true,
+            "displayName": "height",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Height of the container"
+        },
+        {
+            "name": "image",
+            "writable": true,
+            "displayName": "image",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An image of the item"
+        },
+        {
+            "name": "insertHolesNumber",
+            "writable": true,
+            "displayName": "insertHolesNumber",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of insert holes the container has"
+        },
+        {
+            "name": "madeOfCode",
+            "writable": true,
+            "displayName": "madeOfCode",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Material Code as per standard tables. "
+        },
+        {
+            "name": "manufacturerName",
+            "writable": true,
+            "displayName": "manufacturerName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the manufacturer. "
+        },
+        {
+            "name": "maximumLoad",
+            "writable": true,
+            "displayName": "maximumLoad",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum load the container can hold safely. Unit:'Kilogram'"
+        },
+        {
+            "name": "modelName",
+            "writable": true,
+            "displayName": "modelName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "recommendedLoad",
+            "writable": true,
+            "displayName": "recommendedLoad",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Manufacturer recommended load for the container. Unit:'Kilogram'"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "weight",
+            "writable": true,
+            "displayName": "weight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Weight of the container"
+        },
+        {
+            "name": "width",
+            "writable": true,
+            "displayName": "width",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Width of the container"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "annotations",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Annotations about the item",
+            "displayName": "annotations"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "category",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Container\u2019s category. Enum:'dumpster, trashCan, wheelieBin, other'.  dumpster . See [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)",
+            "displayName": "category"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "compliantWith",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A list of standards to which the container is compliant  with (ex. UNE-EN 840-2:2013). ",
+            "displayName": "compliantWith"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "features",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A list of container features. Enum:'wheels, lid, roundedLid, insertHoles, lockable'. Any other value meaningful for the application.",
+            "displayName": "features"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "madeOf",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "plastic",
+                        "displayName": "plastic",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "wood",
+                        "displayName": "wood",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "metal",
+                        "displayName": "metal",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        }
+    ]
+}
