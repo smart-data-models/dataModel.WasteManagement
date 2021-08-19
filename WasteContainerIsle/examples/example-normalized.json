@@ -6,9 +6,11 @@
     "value": ["wastecontainer:Fleming:12a", "wastecontainer:Fleming:12b"]
   },
   "features": {
+    "type": "array",
     "value": ["underground"]
   },
   "description": {
+    "type": "Text",
     "value": "Container isle located downtown"
   },
   "location": {
@@ -35,6 +37,7 @@
     }
   },
   "name": {
+    "type": "Text",
     "value": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo"
   }
 }

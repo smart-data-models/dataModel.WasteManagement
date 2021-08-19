@@ -2,36 +2,54 @@
   "id": "wastecontainermodel:c1",
   "type": "WasteContainerModel",
   "category": {
-    "value": ["dumpster"]
+    "type": "array",
+    "value": [
+      "dumpster"
+    ]
   },
   "cargoVolume": {
+    "type": "Number",
     "value": 150
   },
   "modelName": {
+    "type": "Text",
     "value": "C1"
   },
   "name": {
+    "type": "Text",
     "value": "Dumpster_Brute_2009_Plastic_Green"
   },
   "compliantWith": {
-    "value": ["UNE-EN 840-2:2013"]
+    "type": "array>",
+    "value": [
+      "UNE-EN 840-2:2013"
+    ]
   },
   "madeOf": {
+    "type": "Text",
     "value": "plastic"
   },
   "height": {
+    "type": "Number",
     "value": 0.8
   },
   "width": {
+    "type": "Number",
     "value": 0.5
   },
   "depth": {
+    "type": "Number",
     "value": 0.4
   },
   "brandName": {
+    "type": "Text",
     "value": "Brute"
   },
   "features": {
-    "value": ["wheels", "lid"]
+    "type": "array",
+    "value": [
+      "wheels",
+      "lid"
+    ]
   }
 }

@@ -1,2 +1,0 @@
-"@context__0_", "@context__1_", "brandName_", "cargoVolume_", "category__0_", "compliantWith__0_", "depth_", "features__0_", "features__1_", "height_", "id_", "madeOf_", "modelName_", "name_", "type_", "width_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "Brute", "150", "dumpster", "UNE-EN 840-2:2013", "0.4", "wheels", "lid", "0.8", "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1", "plastic", "C1", "Dumpster_Brute_2009_Plastic_Green", "WasteContainerModel", "0.5"
