@@ -1,0 +1,2 @@
+"id_", "type_", "width_", "height_", "depth_", "cargoVolume_", "brandName_", "name_", "modelName_", "compliantWith__0_", "madeOf_", "features__0_", "features__1_", "category__0_"
+"wastecontainermodel:c1", "WasteContainerModel", "0.5", "0.8", "0.4", "150", "Brute", "Dumpster_Brute_2009_Plastic_Green", "C1", "UNE-EN 840-2:2013", "plastic", "wheels", "lid", "dumpster"
