@@ -18,14 +18,16 @@ WasteContainer:
     TimeInstant:    
       description: 'There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     actuationHours:    
       description: 'Hours suitable for performing actuations over the container.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: openingHours    
+        type: Property    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -47,30 +49,36 @@ WasteContainer:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     annotations:    
       description: 'Annotations about the item'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     cargoWeight:    
       description: 'Weight of the container load.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     category:    
       description: ""    
       items:    
@@ -82,54 +90,68 @@ WasteContainer:
           - other    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: 'https://schema.org/Text Containers category.'    
+        type: Property    
     color:    
       description: 'The color of the product'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/color    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateLastCleaning:    
       description: 'When the container was cleaned last time. '    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateLastEmptying:    
       description: 'Timestamp which represents when the container was emptied last time.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateServiceStarted:    
       description: 'Date at which the container started giving service.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Date    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     fillingLevel:    
       description: 'Filling level of the container'    
       maximum: 1    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     id:    
       anyOf: &wastecontainer_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -141,16 +163,20 @@ WasteContainer:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     image:    
       description: 'An image of the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     isleId:    
       description: 'Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -302,44 +328,53 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     methaneConcentration:    
       description: 'Methane (CH4) concentration inside the container.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     nextActuationDeadline:    
       description: 'Deadline for next actuation to be performed (emptying, picking up, etc.).'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     nextCleaningDeadline:    
       description: 'Deadline for next cleaning.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refDevice:    
       description: 'Reference to the device(s) used to monitor this container'    
       items:    
         anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       minItems: 1    
-      type: Relationship    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     refWasteContainerIsle:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -351,9 +386,9 @@ WasteContainer:
           format: uri    
           type: string    
       description: 'Isle where the container is placed'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     refWasteContainerModel:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -365,19 +400,21 @@ WasteContainer:
           format: uri    
           type: string    
       description: 'Container''s model'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     regulation:    
       description: 'Regulation under which the container is operating'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Text    
+        type: Property    
     responsible:    
       description: 'Responsible for the container, i.e. entity in charge of  actuating (emptying, collecting, etc)'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -388,15 +425,19 @@ WasteContainer:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     serialNumber:    
       description: 'Serial number of the container.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/serialNumber    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     status:    
       description: 'Container''s status from the point of view of safety. Enum:''ok , lidOpen , dropped , moved , vandalized , burning , unknown''.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container''s lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system.'    
       enum:    
@@ -407,12 +448,15 @@ WasteContainer:
         - vandalized    
         - burning    
         - unknown    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     storedWasteCode:    
       description: 'Depend on the target regulation. For Europe, check [Europe''s List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm).'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: 'https://schema.org/Text As per the regulation, waste codes which precisely identifies waste origin and kind'    
+        type: Property    
     storedWasteKind:    
       description: 'Kind/s of waste stored by the container. Enum:''organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other''. Or any other value which does not fit within the former. '    
       enum:    
@@ -427,9 +471,10 @@ WasteContainer:
         - electronics    
         - hazardous    
         - other    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     storedWasteOrigin:    
       description: 'Origin of the waste stored. Enum:''household, municipal, industrial, construction, hostelry, agriculture, other'' '    
       enum:    
@@ -440,19 +485,23 @@ WasteContainer:
         - hostelry    
         - agriculture    
         - other    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     temperature:    
       description: 'Temperature inside the container'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be WasteContainer'    
       enum:    
         - WasteContainer    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -490,19 +539,25 @@ WasteContainer:
   "id": "wastecontainer:Fleming:12a",  
   "type": "WasteContainer",  
   "status": {  
+    "type": "Text",  
     "value": "ok"  
   },  
   "category": {  
-    "value": ["underground"]  
+    "type": "array",  
+    "value": [  
+      "underground"  
+    ]  
   },  
   "dateLastEmptying": {  
     "type": "DateTime",  
     "value": "2016-06-21T15:05:59.408Z"  
   },  
   "serialNumber": {  
+    "type": "Text",  
     "value": "ab56kjl"  
   },  
   "nextActuationDeadline": {  
+    "type": "DateTime",  
     "value": "2016-06-28T15:05:59.408Z"  
   },  
   "refWasteContainerIsle": {  
@@ -511,19 +566,26 @@ WasteContainer:
   },  
   "refDevice": {  
     "type": "Relationship",  
-    "value": ["device-Fleming:12a:1"]  
+    "value": [  
+      "device-Fleming:12a:1"  
+    ]  
   },  
   "location": {  
     "type": "geo:json",  
     "value": {  
       "type": "Point",  
-      "coordinates": [-3.164485591715449, 40.62785133667262]  
+      "coordinates": [  
+        -3.164485591715449,  
+        40.62785133667262  
+      ]  
     }  
   },  
   "temperature": {  
+    "type": "Number",  
     "value": 23  
   },  
   "fillingLevel": {  
+    "type": "Number",  
     "value": 0.4  
   },  
   "refWasteContainerModel": {  
@@ -534,6 +596,42 @@ WasteContainer:
 ```  
 #### WasteContainer NGSI-LD key-values Example    
 Here is an example of a WasteContainer in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "category": [  
+    "underground"  
+  ],  
+  "dateLastEmptying": {  
+    "@type": "DateTime",  
+    "@value": "2016-06-21T15:05:59.408Z"  
+  },  
+  "fillingLevel": 0.4,  
+  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+  "location": {  
+    "coordinates": [  
+      -3.164485591715449,  
+      40.62785133667262  
+    ],  
+    "type": "Point"  
+  },  
+  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
+  "refDevice": [  
+    "urn:ngsi-ld:Device:device-Fleming:12a:1"  
+  ],  
+  "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
+  "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "serialNumber": "ab56kjl",  
+  "status": "ok",  
+  "temperature": 23,  
+  "type": "WasteContainer"  
+}  
+```  
+#### WasteContainer NGSI-LD normalized Example    
+Here is an example of a WasteContainer in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
@@ -599,41 +697,5 @@ WasteContainer:
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
-}  
-```  
-#### WasteContainer NGSI-LD normalized Example    
-Here is an example of a WasteContainer in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "underground"  
-  ],  
-  "dateLastEmptying": {  
-    "@type": "DateTime",  
-    "@value": "2016-06-21T15:05:59.408Z"  
-  },  
-  "fillingLevel": 0.4,  
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
-  "location": {  
-    "coordinates": [  
-      -3.164485591715449,  
-      40.62785133667262  
-    ],  
-    "type": "Point"  
-  },  
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
-  "refDevice": [  
-    "urn:ngsi-ld:Device:device-Fleming:12a:1"  
-  ],  
-  "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
-  "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "serialNumber": "ab56kjl",  
-  "status": "ok",  
-  "temperature": 23,  
-  "type": "WasteContainer"  
 }  
 ```  
