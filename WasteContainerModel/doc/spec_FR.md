@@ -17,25 +17,30 @@ WasteContainerModel:
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     annotations:    
       description: 'Annotations about the item'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     brandName:    
       description: 'Name of the brand'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/brand    
+        type: Property    
     cargoVolume:    
       description: 'Total volume the container can hold'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/cargoVolume    
+        type: Property    
     category:    
       description: 'Container’s category. Enum:''dumpster, trashCan, wheelieBin, other''.  dumpster . See [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)'    
       items:    
@@ -46,41 +51,55 @@ WasteContainerModel:
           - other    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     color:    
       description: 'The color of the product'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/color    
+        type: Property    
     compliantWith:    
       description: 'A list of standards to which the container is compliant  with (ex. UNE-EN 840-2:2013). '    
       items:    
         type: string    
       minItems: 0    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     depth:    
       description: 'Depth of the container'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/depth    
+        type: Property    
         units: Meters    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     features:    
       description: 'A list of container features. Enum:''wheels, lid, roundedLid, insertHoles, lockable''. Any other value meaningful for the application.'    
       items:    
@@ -93,14 +112,17 @@ WasteContainerModel:
           - other    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     height:    
       description: 'Height of the container'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/heigth    
+        type: Property    
         units: Meters    
     id:    
       anyOf: &wastecontainermodel_-_properties_-_owner_-_items_-_anyof    
@@ -113,19 +135,22 @@ WasteContainerModel:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     image:    
       description: 'An image of the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     insertHolesNumber:    
       description: 'Number of insert holes the container has'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     madeOf:    
       description: 'Material the container is made of. Enum:'' plastic , wood, metal, other '''    
       enum:    
@@ -133,37 +158,51 @@ WasteContainerModel:
         - wood    
         - metal    
         - other    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     madeOfCode:    
       description: 'Material Code as per standard tables. '    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     manufacturerName:    
       description: 'Name of the manufacturer. '    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     maximumLoad:    
       description: 'Maximum load the container can hold safely. Unit:''Kilogram'''    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     modelName:    
       description: 'Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *wastecontainermodel_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     recommendedLoad:    
       description: 'Manufacturer recommended load for the container. Unit:''Kilogram'''    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -174,28 +213,35 @@ WasteContainerModel:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be WasteContainerModel'    
       enum:    
         - WasteContainerModel    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     weight:    
       description: 'Weight of the container'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/weigth    
+        type: Property    
         units: Kilograms    
     width:    
       description: 'Width of the container'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/width    
+        type: Property    
         units: Meters    
   required:    
     - id    
@@ -231,42 +277,90 @@ WasteContainerModel:
   "id": "wastecontainermodel:c1",  
   "type": "WasteContainerModel",  
   "category": {  
-    "value": ["dumpster"]  
+    "type": "array",  
+    "value": [  
+      "dumpster"  
+    ]  
   },  
   "cargoVolume": {  
+    "type": "Number",  
     "value": 150  
   },  
   "modelName": {  
+    "type": "Text",  
     "value": "C1"  
   },  
   "name": {  
+    "type": "Text",  
     "value": "Dumpster_Brute_2009_Plastic_Green"  
   },  
   "compliantWith": {  
-    "value": ["UNE-EN 840-2:2013"]  
+    "type": "array>",  
+    "value": [  
+      "UNE-EN 840-2:2013"  
+    ]  
   },  
   "madeOf": {  
+    "type": "Text",  
     "value": "plastic"  
   },  
   "height": {  
+    "type": "Number",  
     "value": 0.8  
   },  
   "width": {  
+    "type": "Number",  
     "value": 0.5  
   },  
   "depth": {  
+    "type": "Number",  
     "value": 0.4  
   },  
   "brandName": {  
+    "type": "Text",  
     "value": "Brute"  
   },  
   "features": {  
-    "value": ["wheels", "lid"]  
+    "type": "array",  
+    "value": [  
+      "wheels",  
+      "lid"  
+    ]  
   }  
 }  
 ```  
-#### WasteContainerModel Valeurs-clés NGSI-LD Exemple  
+#### WasteContainerModel Valeurs clés NGSI-LD Exemple  
 Voici un exemple d'un WasteContainerModel au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "brandName": "Brute",  
+  "cargoVolume": 150,  
+  "category": [  
+    "dumpster"  
+  ],  
+  "compliantWith": [  
+    "UNE-EN 840-2:2013"  
+  ],  
+  "depth": 0.4,  
+  "features": [  
+    "wheels",  
+    "lid"  
+  ],  
+  "height": 0.8,  
+  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+  "madeOf": "plastic",  
+  "modelName": "C1",  
+  "name": "Dumpster_Brute_2009_Plastic_Green",  
+  "type": "WasteContainerModel",  
+  "width": 0.5  
+}  
+```  
+#### WasteContainerModel NGSI-LD normalisé Exemple  
+Voici un exemple de WasteContainerModel au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
@@ -326,35 +420,5 @@ WasteContainerModel:
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
-}  
-```  
-#### WasteContainerModel NGSI-LD normalisé Exemple  
-Voici un exemple de WasteContainerModel au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "brandName": "Brute",  
-  "cargoVolume": 150,  
-  "category": [  
-    "dumpster"  
-  ],  
-  "compliantWith": [  
-    "UNE-EN 840-2:2013"  
-  ],  
-  "depth": 0.4,  
-  "features": [  
-    "wheels",  
-    "lid"  
-  ],  
-  "height": 0.8,  
-  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "madeOf": "plastic",  
-  "modelName": "C1",  
-  "name": "Dumpster_Brute_2009_Plastic_Green",  
-  "type": "WasteContainerModel",  
-  "width": 0.5  
 }  
 ```  
