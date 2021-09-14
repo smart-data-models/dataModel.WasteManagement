@@ -1,8 +1,14 @@
 WasteContainer:
   description: 'A waste container'
   properties:
+    RFID:
+      description: 'Gives the ID of the RFID reader.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
     TimeInstant:
-      description: 'There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'
+      description: 'There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'
       format: date-time
       type: string
       x-ngsi:
@@ -58,6 +64,49 @@ WasteContainer:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
+    binCapacity:
+      description: 'Total capacity in terms of the volume of waste the bin can hold.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    binColor:
+      description: 'Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    binFullnessThreshold:
+      description: 'The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    binId:
+      description: 'Id of the waste carrying bin'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    binLoggedTime:
+      description: 'Time when the bin''s level was last logged.'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    binMaxLoad:
+      description: 'Maximum load (weight) that the waste bin can hold.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    binRecommendedLoad:
+      description: 'Recommended load (weight) that the waste bin corresponding to this observation can hold.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
     cargoWeight:
       description: 'Weight of the container load.'
       minimum: 0
@@ -66,20 +115,20 @@ WasteContainer:
         model: https://schema.org/Number
         type: Property
     category:
-      description: ""
+      description: 'Enum:'' fixed, ground, other, portable, underground'''
       items:
         enum:
           - fixed
-          - underground
           - ground
-          - portable
           - other
+          - portable
+          - underground
         type: string
       minItems: 1
       type: array
       uniqueItems: true
       x-ngsi:
-        model: 'https://schema.org/Text Containers category.'
+        model: 'https://schema.org/Text Containers category'
         type: Property
     color:
       description: 'The color of the product'
@@ -162,6 +211,12 @@ WasteContainer:
       description: 'Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.'
       type: string
       x-ngsi:
+        type: Property
+    license_plate:
+      description: "Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)"
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
         type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
@@ -488,8 +543,15 @@ WasteContainer:
       type: string
       x-ngsi:
         type: Property
+    wardId:
+      description: 'Ward Id of the entity corresponding to this observation.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
   required:
     - id
     - type
     - location
   type: object
+  version: 0.2.0
