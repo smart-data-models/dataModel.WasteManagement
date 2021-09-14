@@ -3,10 +3,11 @@ Entity: WasteContainer
 [Open License](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A waste container**  
+version: 0.2.0  
 
 ## List of properties  
 
-- `TimeInstant`: There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.  - `actuationHours`: Hours suitable for performing actuations over the container.  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `annotations`: Annotations about the item  - `areaServed`: The geographic area where a service or offered item is provided  - `cargoWeight`: Weight of the container load.  - `category`:   - `color`: The color of the product  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateLastCleaning`: When the container was cleaned last time.   - `dateLastEmptying`: Timestamp which represents when the container was emptied last time.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateServiceStarted`: Date at which the container started giving service.  - `description`: A description of this item  - `fillingLevel`: Filling level of the container  - `id`: Unique identifier of the entity  - `image`: An image of the item  - `isleId`: Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `methaneConcentration`: Methane (CH4) concentration inside the container.  - `name`: The name of this item.  - `nextActuationDeadline`: Deadline for next actuation to be performed (emptying, picking up, etc.).  - `nextCleaningDeadline`: Deadline for next cleaning.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refDevice`: Reference to the device(s) used to monitor this container  - `refWasteContainerIsle`: Isle where the container is placed  - `refWasteContainerModel`: Container's model  - `regulation`: Regulation under which the container is operating  - `responsible`: Responsible for the container, i.e. entity in charge of  actuating (emptying, collecting, etc)  - `seeAlso`: list of uri pointing to additional resources about the item  - `serialNumber`: Serial number of the container.  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Container's status from the point of view of safety. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container's lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system.  - `storedWasteCode`: Depend on the target regulation. For Europe, check [Europe's List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Kind/s of waste stored by the container. Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other'. Or any other value which does not fit within the former.   - `storedWasteOrigin`: Origin of the waste stored. Enum:'household, municipal, industrial, construction, hostelry, agriculture, other'   - `temperature`: Temperature inside the container  - `type`: NGSI Entity Type: It has to be WasteContainer    
+- `RFID`: Gives the ID of the RFID reader.  - `TimeInstant`: There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.  - `actuationHours`: Hours suitable for performing actuations over the container.  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `annotations`: Annotations about the item  - `areaServed`: The geographic area where a service or offered item is provided  - `binCapacity`: Total capacity in terms of the volume of waste the bin can hold.  - `binColor`: Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located.  - `binFullnessThreshold`: The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.  - `binId`: Id of the waste carrying bin  - `binLoggedTime`: Time when the bin's level was last logged.  - `binMaxLoad`: Maximum load (weight) that the waste bin can hold.  - `binRecommendedLoad`: Recommended load (weight) that the waste bin corresponding to this observation can hold.  - `cargoWeight`: Weight of the container load.  - `category`: Enum:' fixed, ground, other, portable, underground'  - `color`: The color of the product  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateLastCleaning`: When the container was cleaned last time.   - `dateLastEmptying`: Timestamp which represents when the container was emptied last time.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateServiceStarted`: Date at which the container started giving service.  - `description`: A description of this item  - `fillingLevel`: Filling level of the container  - `id`: Unique identifier of the entity  - `image`: An image of the item  - `isleId`: Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.  - `license_plate`: Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `methaneConcentration`: Methane (CH4) concentration inside the container.  - `name`: The name of this item.  - `nextActuationDeadline`: Deadline for next actuation to be performed (emptying, picking up, etc.).  - `nextCleaningDeadline`: Deadline for next cleaning.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refDevice`: Reference to the device(s) used to monitor this container  - `refWasteContainerIsle`: Isle where the container is placed  - `refWasteContainerModel`: Container's model  - `regulation`: Regulation under which the container is operating  - `responsible`: Responsible for the container, i.e. entity in charge of  actuating (emptying, collecting, etc)  - `seeAlso`: list of uri pointing to additional resources about the item  - `serialNumber`: Serial number of the container.  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Container's status from the point of view of safety. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container's lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system.  - `storedWasteCode`: Depend on the target regulation. For Europe, check [Europe's List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Kind/s of waste stored by the container. Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other'. Or any other value which does not fit within the former.   - `storedWasteOrigin`: Origin of the waste stored. Enum:'household, municipal, industrial, construction, hostelry, agriculture, other'   - `temperature`: Temperature inside the container  - `type`: NGSI Entity Type: It has to be WasteContainer  - `wardId`: Ward Id of the entity corresponding to this observation.    
 Required properties  
 - `id`  - `location`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -15,8 +16,14 @@ Entity: WasteContainer
 WasteContainer:    
   description: 'A waste container'    
   properties:    
+    RFID:    
+      description: 'Gives the ID of the RFID reader.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     TimeInstant:    
-      description: 'There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'    
+      description: 'There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -72,6 +79,49 @@ WasteContainer:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    binCapacity:    
+      description: 'Total capacity in terms of the volume of waste the bin can hold.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    binColor:    
+      description: 'Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    binFullnessThreshold:    
+      description: 'The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    binId:    
+      description: 'Id of the waste carrying bin'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    binLoggedTime:    
+      description: 'Time when the bin''s level was last logged.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    binMaxLoad:    
+      description: 'Maximum load (weight) that the waste bin can hold.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    binRecommendedLoad:    
+      description: 'Recommended load (weight) that the waste bin corresponding to this observation can hold.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
     cargoWeight:    
       description: 'Weight of the container load.'    
       minimum: 0    
@@ -80,20 +130,20 @@ WasteContainer:
         model: https://schema.org/Number    
         type: Property    
     category:    
-      description: ""    
+      description: 'Enum:'' fixed, ground, other, portable, underground'''    
       items:    
         enum:    
           - fixed    
-          - underground    
           - ground    
-          - portable    
           - other    
+          - portable    
+          - underground    
         type: string    
       minItems: 1    
       type: array    
       uniqueItems: true    
       x-ngsi:    
-        model: 'https://schema.org/Text Containers category.'    
+        model: 'https://schema.org/Text Containers category'    
         type: Property    
     color:    
       description: 'The color of the product'    
@@ -176,6 +226,12 @@ WasteContainer:
       description: 'Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used.'    
       type: string    
       x-ngsi:    
+        type: Property    
+    license_plate:    
+      description: "Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)"    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
@@ -502,11 +558,18 @@ WasteContainer:
       type: string    
       x-ngsi:    
         type: Property    
+    wardId:    
+      description: 'Ward Id of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
   required:    
     - id    
     - type    
     - location    
   type: object    
+  version: 0.2.0    
 ```  
 </details>    
 ## Example payloads    
@@ -514,83 +577,97 @@ WasteContainer:
 Here is an example of a WasteContainer in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "wastecontainer:Fleming:12a",  
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
   "type": "WasteContainer",  
-  "refWasteContainerModel": "wastecontainermodel:c1",  
-  "refWasteContainerIsle": "wastecontainerisle:Fleming:12",  
-  "serialNumber": "ab56kjl",  
   "location": {  
-    "type": "Point",  
-    "coordinates": [-3.164485591715449, 40.62785133667262]  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ],  
+    "type": "Point"  
   },  
-  "temperature": 23,  
-  "fillingLevel": 0.4,  
-  "dateLastEmptying": "2016-06-21T15:05:59.408Z",  
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
-  "status": "ok",  
-  "category": ["underground"],  
-  "refDevice": ["device-Fleming:12a:1"]  
+  "binCapacity": 43,  
+  "binColor": "Green",  
+  "binClearedTime": "2021-03-11T15:51:02+05:30",  
+  "wardId": "21",  
+  "binCategory": "Household Bin",  
+  "license_plate": "KA23F2345",  
+  "RFID": "67855734",  
+  "binFillingLevel": 0.65,  
+  "binFullnessThreshold": 80,  
+  "binRecommendedLoad": 30,  
+  "binId": "12",  
+  "binMaxLoad": 75,  
+  "binLoggedTime": "2021-03-01T15:51:02+05:30"  
 }  
 ```  
 #### WasteContainer NGSI-v2 normalized Example    
 Here is an example of a WasteContainer in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "wastecontainer:Fleming:12a",  
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
   "type": "WasteContainer",  
-  "status": {  
-    "type": "Text",  
-    "value": "ok"  
-  },  
-  "category": {  
-    "type": "array",  
-    "value": [  
-      "underground"  
-    ]  
-  },  
-  "dateLastEmptying": {  
-    "type": "DateTime",  
-    "value": "2016-06-21T15:05:59.408Z"  
-  },  
-  "serialNumber": {  
-    "type": "Text",  
-    "value": "ab56kjl"  
-  },  
-  "nextActuationDeadline": {  
-    "type": "DateTime",  
-    "value": "2016-06-28T15:05:59.408Z"  
-  },  
-  "refWasteContainerIsle": {  
-    "type": "Relationship",  
-    "value": "wastecontainerisle:Fleming:12"  
-  },  
-  "refDevice": {  
-    "type": "Relationship",  
-    "value": [  
-      "device-Fleming:12a:1"  
-    ]  
-  },  
   "location": {  
     "type": "geo:json",  
     "value": {  
-      "type": "Point",  
       "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
+        -8.768460000000001,  
+        42.60214472222222  
+      ],  
+      "type": "Point"  
     }  
   },  
-  "temperature": {  
-    "type": "Number",  
-    "value": 23  
+  "binCapacity": {  
+    "type": "number",  
+    "value": 43  
   },  
-  "fillingLevel": {  
-    "type": "Number",  
-    "value": 0.4  
+  "binColor": {  
+    "type": "Text",  
+    "value": "Green"  
   },  
-  "refWasteContainerModel": {  
-    "type": "Relationship",  
-    "value": "wastecontainermodel:c1"  
+  "binClearedTime": {  
+    "type": "DateTime",  
+    "value": "2021-03-11T15:51:02+05:30"  
+  },  
+  "wardId": {  
+    "type": "Text",  
+    "value": "21"  
+  },  
+  "binCategory": {  
+    "type": "Text",  
+    "value": "Household Bin"  
+  },  
+  "license_plate": {  
+    "type": "Text",  
+    "value": "KA23F2345"  
+  },  
+  "RFID": {  
+    "type": "Text",  
+    "value": "67855734"  
+  },  
+  "binFillingLevel": {  
+    "type": "number",  
+    "value": 0.65  
+  },  
+  "binFullnessThreshold": {  
+    "type": "number",  
+    "value": 80  
+  },  
+  "binRecommendedLoad": {  
+    "type": "number",  
+    "value": 30  
+  },  
+  "binId": {  
+    "type": "Text",  
+    "value": "12"  
+  },  
+  "binMaxLoad": {  
+    "type": "number",  
+    "value": 75  
+  },  
+  "binLoggedTime": {  
+    "type": "DateTime",  
+    "value": "2021-03-01T15:51:02+05:30"  
   }  
 }  
 ```  
@@ -598,104 +675,111 @@ WasteContainer:
 Here is an example of a WasteContainer in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
   "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    "iudx:WmgmtBin",  
+    "https://smartdatamodels.org/context.jsonld"  
   ],  
-  "category": [  
-    "underground"  
-  ],  
-  "dateLastEmptying": {  
-    "@type": "DateTime",  
-    "@value": "2016-06-21T15:05:59.408Z"  
-  },  
-  "fillingLevel": 0.4,  
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+  "type": "WasteContainer",  
   "location": {  
     "coordinates": [  
-      -3.164485591715449,  
-      40.62785133667262  
+      -8.768460000000001,  
+      42.60214472222222  
     ],  
     "type": "Point"  
   },  
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
-  "refDevice": [  
-    "urn:ngsi-ld:Device:device-Fleming:12a:1"  
-  ],  
-  "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
-  "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "serialNumber": "ab56kjl",  
-  "status": "ok",  
-  "temperature": 23,  
-  "type": "WasteContainer"  
+  "binCapacity": 43,  
+  "binColor": "Green",  
+  "binClearedTime": "2021-03-11T15:51:02+05:30",  
+  "wardId": "21",  
+  "binCategory": "Household Bin",  
+  "license_plate": "KA23F2345",  
+  "RFID": "67855734",  
+  "binFillingLevel": 0.65,  
+  "binFullnessThreshold": 80,  
+  "binRecommendedLoad": 30,  
+  "binId": "12",  
+  "binMaxLoad": 75,  
+  "binLoggedTime": "2021-03-01T15:51:02+05:30"  
 }  
 ```  
 #### WasteContainer NGSI-LD normalized Example    
 Here is an example of a WasteContainer in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
   "type": "WasteContainer",  
-  "status": {  
-    "type": "Property",  
-    "value": "ok"  
+  "location": {  
+    "type": "Geoproperty",  
+    "value": {  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ],  
+      "type": "Point"  
+    }  
   },  
-  "category": {  
+  "binCapacity": {  
     "type": "Property",  
-    "value": [  
-      "underground"  
-    ]  
+    "value": 43  
   },  
-  "dateLastEmptying": {  
+  "binColor": {  
+    "type": "Text",  
+    "value": "Green"  
+  },  
+  "binClearedTime": {  
     "type": "Property",  
     "value": {  
       "@type": "DateTime",  
-      "@value": "2016-06-21T15:05:59.408Z"  
+      "@value": "2021-03-11T15:51:02+05:30"  
     }  
   },  
-  "serialNumber": {  
+  "wardId": {  
     "type": "Property",  
-    "value": "ab56kjl"  
+    "value": "21"  
   },  
-  "nextActuationDeadline": {  
+  "binCategory": {  
     "type": "Property",  
-    "value": "2016-06-28T15:05:59.408Z"  
+    "value": "Household Bin"  
   },  
-  "refWasteContainerIsle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12"  
+  "license_plate": {  
+    "type": "Property",  
+    "value": "KA23F2345"  
   },  
-  "refDevice": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Device:device-Fleming:12a:1"  
-    ]  
+  "RFID": {  
+    "type": "Property",  
+    "value": "67855734"  
   },  
-  "location": {  
-    "type": "GeoProperty",  
+  "binFillingLevel": {  
+    "type": "Property",  
+    "value": 0.65  
+  },  
+  "binFullnessThreshold": {  
+    "type": "Property",  
+    "value": 80  
+  },  
+  "binRecommendedLoad": {  
+    "type": "Property",  
+    "value": 30  
+  },  
+  "binId": {  
+    "type": "Property",  
+    "value": "12"  
+  },  
+  "binMaxLoad": {  
+    "type": "Property",  
+    "value": 75  
+  },  
+  "binLoggedTime": {  
+    "type": "Property",  
     "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
+      "@type": "DateTime",  
+      "@value": "2021-03-11T15:51:02+05:30"  
     }  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 23  
-  },  
-  "fillingLevel": {  
-    "type": "Property",  
-    "value": 0.4  
-  },  
-  "refWasteContainerModel": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1"  
   },  
   "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    "iudx:WmgmtBin",  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
