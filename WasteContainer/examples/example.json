@@ -1,18 +1,24 @@
 {
-  "id": "wastecontainer:Fleming:12a",
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",
   "type": "WasteContainer",
-  "refWasteContainerModel": "wastecontainermodel:c1",
-  "refWasteContainerIsle": "wastecontainerisle:Fleming:12",
-  "serialNumber": "ab56kjl",
   "location": {
-    "type": "Point",
-    "coordinates": [-3.164485591715449, 40.62785133667262]
+    "coordinates": [
+      -8.768460000000001,
+      42.60214472222222
+    ],
+    "type": "Point"
   },
-  "temperature": 23,
-  "fillingLevel": 0.4,
-  "dateLastEmptying": "2016-06-21T15:05:59.408Z",
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",
-  "status": "ok",
-  "category": ["underground"],
-  "refDevice": ["device-Fleming:12a:1"]
+  "binCapacity": 43,
+  "binColor": "Green",
+  "binClearedTime": "2021-03-11T15:51:02+05:30",
+  "wardId": "21",
+  "binCategory": "Household Bin",
+  "license_plate": "KA23F2345",
+  "RFID": "67855734",
+  "binFillingLevel": 0.65,
+  "binFullnessThreshold": 80,
+  "binRecommendedLoad": 30,
+  "binId": "12",
+  "binMaxLoad": 75,
+  "binLoggedTime": "2021-03-01T15:51:02+05:30"
 }

@@ -1,65 +1,76 @@
 {
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",
   "type": "WasteContainer",
-  "status": {
-    "type": "Property",
-    "value": "ok"
+  "location": {
+    "type": "Geoproperty",
+    "value": {
+      "coordinates": [
+        -8.768460000000001,
+        42.60214472222222
+      ],
+      "type": "Point"
+    }
   },
-  "category": {
+  "binCapacity": {
     "type": "Property",
-    "value": [
-      "underground"
-    ]
+    "value": 43
   },
-  "dateLastEmptying": {
+  "binColor": {
+    "type": "Text",
+    "value": "Green"
+  },
+  "binClearedTime": {
     "type": "Property",
     "value": {
       "@type": "DateTime",
-      "@value": "2016-06-21T15:05:59.408Z"
+      "@value": "2021-03-11T15:51:02+05:30"
     }
   },
-  "serialNumber": {
+  "wardId": {
     "type": "Property",
-    "value": "ab56kjl"
+    "value": "21"
   },
-  "nextActuationDeadline": {
+  "binCategory": {
     "type": "Property",
-    "value": "2016-06-28T15:05:59.408Z"
+    "value": "Household Bin"
   },
-  "refWasteContainerIsle": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12"
+  "license_plate": {
+    "type": "Property",
+    "value": "KA23F2345"
   },
-  "refDevice": {
-    "type": "Relationship",
-    "object": [
-      "urn:ngsi-ld:Device:device-Fleming:12a:1"
-    ]
+  "RFID": {
+    "type": "Property",
+    "value": "67855734"
   },
-  "location": {
-    "type": "GeoProperty",
+  "binFillingLevel": {
+    "type": "Property",
+    "value": 0.65
+  },
+  "binFullnessThreshold": {
+    "type": "Property",
+    "value": 80
+  },
+  "binRecommendedLoad": {
+    "type": "Property",
+    "value": 30
+  },
+  "binId": {
+    "type": "Property",
+    "value": "12"
+  },
+  "binMaxLoad": {
+    "type": "Property",
+    "value": 75
+  },
+  "binLoggedTime": {
+    "type": "Property",
     "value": {
-      "type": "Point",
-      "coordinates": [
-        -3.164485591715449,
-        40.62785133667262
-      ]
+      "@type": "DateTime",
+      "@value": "2021-03-11T15:51:02+05:30"
     }
-  },
-  "temperature": {
-    "type": "Property",
-    "value": 23
-  },
-  "fillingLevel": {
-    "type": "Property",
-    "value": 0.4
-  },
-  "refWasteContainerModel": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1"
   },
   "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    "iudx:WmgmtBin",
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }

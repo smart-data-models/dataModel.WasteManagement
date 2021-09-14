@@ -1,32 +1,28 @@
 {
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",
   "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    "iudx:WmgmtBin",
+    "https://smartdatamodels.org/context.jsonld"
   ],
-  "category": [
-    "underground"
-  ],
-  "dateLastEmptying": {
-    "@type": "DateTime",
-    "@value": "2016-06-21T15:05:59.408Z"
-  },
-  "fillingLevel": 0.4,
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",
+  "type": "WasteContainer",
   "location": {
     "coordinates": [
-      -3.164485591715449,
-      40.62785133667262
+      -8.768460000000001,
+      42.60214472222222
     ],
     "type": "Point"
   },
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",
-  "refDevice": [
-    "urn:ngsi-ld:Device:device-Fleming:12a:1"
-  ],
-  "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",
-  "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",
-  "serialNumber": "ab56kjl",
-  "status": "ok",
-  "temperature": 23,
-  "type": "WasteContainer"
+  "binCapacity": 43,
+  "binColor": "Green",
+  "binClearedTime": "2021-03-11T15:51:02+05:30",
+  "wardId": "21",
+  "binCategory": "Household Bin",
+  "license_plate": "KA23F2345",
+  "RFID": "67855734",
+  "binFillingLevel": 0.65,
+  "binFullnessThreshold": 80,
+  "binRecommendedLoad": 30,
+  "binId": "12",
+  "binMaxLoad": 75,
+  "binLoggedTime": "2021-03-01T15:51:02+05:30"
 }
