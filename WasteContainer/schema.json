@@ -3,5 +3,6 @@
     "$schemaVersion": "0.2.0",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainer/schema.json",
-    "title": " - Waste Management / Waste Container"
+    "title": " - Waste Management / Waste Container",
+    "description": "A waste container"
 }
