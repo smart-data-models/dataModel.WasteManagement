@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainer/schema.json",
     "title": " - Waste Management / Waste Container",
-    "description": "A waste container"
+    "description": "A waste container",
+    "type": "object"
 }
