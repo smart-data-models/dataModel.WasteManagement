@@ -7,13 +7,6 @@ WasteContainer:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-    TimeInstant:
-      description: 'There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'
-      format: date-time
-      type: string
-      x-ngsi:
-        model: https://schema.org/DateTime
-        type: Property
     actuationHours:
       description: 'Hours suitable for performing actuations over the container.'
       type: string
@@ -536,6 +529,13 @@ WasteContainer:
       x-ngsi:
         model: http://schema.org/Number
         type: Property
+    timeInstant:
+      description: 'Timestamp of the payload . There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. This attribute is kept for backwards compatibility with old FIWARE reference implementations.'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/Datetime
+        type: Property
     type:
       description: 'NGSI Entity Type: It has to be WasteContainer'
       enum:
@@ -554,4 +554,4 @@ WasteContainer:
     - type
     - location
   type: object
-  version: 0.2.0
+  version: 0.3.0
