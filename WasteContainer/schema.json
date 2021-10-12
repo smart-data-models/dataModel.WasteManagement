@@ -196,10 +196,8 @@
                     "uniqueItems": true,
                     "description": "Relationship. Reference to the device(s) used to monitor this container. Model:'http://schema.org/URL'"
                 },
-                "TimeInstant": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`."
+                "timeInstant": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/timeInstant"
                 },
                 "binCapacity": {
                     "type": "number",
