@@ -6,7 +6,7 @@ Version: 0.0.1
 A model of waste container which captures the static properties of a class of containers.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerModel/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/WasteContainerModel/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerModel/doc/spec.md)
 
