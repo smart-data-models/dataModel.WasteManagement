@@ -6,7 +6,7 @@ Version: 0.0.1
 A waste container isle
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerIsle/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/WasteContainerIsle/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerIsle/doc/spec.md)
 
