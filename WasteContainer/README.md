@@ -6,7 +6,7 @@ Version: 0.3.0
 A waste container
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainer/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/WasteContainer/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainer/doc/spec.md)
 
