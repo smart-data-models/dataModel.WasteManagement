@@ -48,6 +48,7 @@
         "name": "https://smartdatamodels.org/name",
         "nextActuationDeadline": "https://smartdatamodels.org/dataModel.WasteManagement/nextActuationDeadline",
         "nextCleaningDeadline": "https://smartdatamodels.org/dataModel.WasteManagement/nextCleaningDeadline",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
         "recommendedLoad": "https://smartdatamodels.org/dataModel.WasteManagement/recommendedLoad",
         "refDevice": "https://smartdatamodels.org/dataModel.WasteManagement/refDevice",
