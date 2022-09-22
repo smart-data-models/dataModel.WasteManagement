@@ -1,44 +1,37 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Jose M.
- surname: Cantera
- mail: jmcanterafonseca4github@gmail.com
- organization: CanteraFonseca.EU
- project: 
- comments: 
--
- name: Mathias
- surname: Colpaert
- mail: colpaert.mathias@gmail.com
- organization: None
- project: 
- comments: 
--
- name: Dmitrii
- surname: Demin
- mail: mail@demin.co
- organization:
- project: 
- comments: 
--
- name: Jason
- surname: Fox
- mail:
- organization: FIWARE Foundation
- project: 
- comments: 
--
- name: Joud
- surname: Sayed Issa
- mail: joudsayedissa@gmail.com
- organization: 
- project: 
- comments: 
- -
- name: Srikrishnan
- surname: 
- mail: shyam28598@gmail.com
- organization: IUDX
- project: 
- comments: 
+- name: Jose M.
+  surname: Cantera
+  mail: jmcanterafonseca4github@gmail.com
+  organization: CanteraFonseca.EU
+  project: 
+  comments: 
+  year: 2022
+- name: Mathias
+  surname: Colpaert
+  mail: colpaert.mathias@gmail.com
+  organization: 
+  project: 
+  comments: 
+  year: 2022
+- name: Dmitrii
+  surname: Demin
+  mail: mail@demin.co
+  organization: 
+  project: 
+  comments: 
+  year: 2022
+- name: Jason
+  surname: Fox
+  mail: 
+  organization: FIWARE Foundation
+  project: 
+  comments: 
+  year: 2022
+- name: Srikrishnan
+  surname: 
+  mail: shyam28598@gmail.com
+  organization: IUDX
+  project: 
+  comments: 
+  year: 2022
