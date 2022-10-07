@@ -70,6 +70,7 @@
         "value": "21"
     },
     "@context": [
-        "iudx:WmgmtBin"
+        "iudx:WmgmtBin",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
     ]
 }
