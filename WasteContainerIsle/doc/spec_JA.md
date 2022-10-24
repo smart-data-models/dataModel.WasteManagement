@@ -1,17 +1,32 @@
-エンティティウエス トコンテナーアイル  
-===================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティWasteContainerIsle  
+========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerIsle/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**ゴミ箱のある島  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**ゴミ箱の島**  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `features`: アイルが提供する機能の一覧です。  - `id`: エンティティのユニークな識別子  - `insertHolesNumber`: アイルが持っているインサートホールの数  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refWasteContainer`: アイルに存在する容器の一覧  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。WasteContainerIsleである必要があります。    
-必須項目  
-- `id`  - `location`  - `type`    
-1つ以上の廃棄物容器を保持する地理的領域。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `features[array]`: アイルが提供する機能の一覧です。  - `id[*]`: エンティティの一意な識別子  - `insertHolesNumber[number]`: アイルの挿入穴の数  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `refWasteContainer[array]`: アイルに存在する容器のリスト  . Model: [http://schema.org/URL.](http://schema.org/URL.)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI エンティティタイプ。WasteContainerIsleである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+1つまたは複数の廃棄物容器を保管している地理的なエリア。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WasteContainerIsle:    
@@ -323,9 +338,14 @@ WasteContainerIsle:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### WasteContainerIsle NGSI-v2 キー・バリューの例  
-ここではWasteContainerIsleをkey-valuesとしてJSON-LD形式にした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WasteContainerIsle NGSI-v2 key-value の例。  
+以下はWasteContainerIsleをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "wastecontainerisle:Fleming:12",  
@@ -356,8 +376,10 @@ WasteContainerIsle:
   ]  
 }  
 ```  
+</details>  
 #### WasteContainerIsle NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のWasteContainerIsleの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、WasteContainerIsleをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "wastecontainerisle:Fleming:12",  
@@ -403,130 +425,142 @@ WasteContainerIsle:
   }  
 }  
 ```  
-#### WasteContainerIsle NGSI-LD のキーバリューの例。  
-ここではWasteContainerIsleをkey-valuesとしてJSON-LD形式にした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainerIsle NGSI-LD キー値例  
+WasteContainerIsleをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Guadalajara",  
-    "streetAddress": "Calle Dr. Fleming, 12",  
-    "type": "PostalAddress"  
-  },  
-  "description": "Container isle located downtown",  
-  "features": [  
-    "underground"  
-  ],  
-  "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
-  "location": {  
-    "coordinates": [  
-      [  
-        [  
-          -3.164485591715449,  
-          40.62785133667262  
-        ],  
-        [  
-          -3.164445130316209,  
-          40.62787156737224  
-        ],  
-        [  
-          -3.164394553567159,  
-          40.62777209976578  
-        ],  
-        [  
-          -3.164424899616589,  
-          40.62775018317452  
-        ],  
-        [  
-          -3.164485591715449,  
-          40.62785133667262  
-        ]  
-      ]  
+    "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
+    "type": "WasteContainerIsle",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Guadalajara",  
+        "streetAddress": "Calle Dr. Fleming, 12",  
+        "type": "PostalAddress"  
+    },  
+    "description": "Container isle located downtown",  
+    "features": [  
+        "underground"  
     ],  
-    "type": "Polygon"  
-  },  
-  "name": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo",  
-  "refWasteContainer": [  
-    "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
-    "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
-  ],  
-  "type": "WasteContainerIsle"  
+    "location": {  
+        "coordinates": [  
+            [  
+                [  
+                    -3.164485591715449,  
+                    40.62785133667262  
+                ],  
+                [  
+                    -3.164445130316209,  
+                    40.62787156737224  
+                ],  
+                [  
+                    -3.164394553567159,  
+                    40.62777209976578  
+                ],  
+                [  
+                    -3.164424899616589,  
+                    40.62775018317452  
+                ],  
+                [  
+                    -3.164485591715449,  
+                    40.62785133667262  
+                ]  
+            ]  
+        ],  
+        "type": "Polygon"  
+    },  
+    "name": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo",  
+    "refWasteContainer": [  
+        "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+        "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### WasteContainerIsle NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のWasteContainerIsleの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainerIsle NGSI-LD 正規化例  
+以下は、WasteContainerIsleをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
-  "type": "WasteContainerIsle",  
-  "refWasteContainer": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
-      "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
-    ]  
-  },  
-  "features": {  
-    "type": "Property",  
-    "value": [  
-      "underground"  
-    ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Container isle located downtown"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            -3.164485591715449,  
-            40.62785133667262  
-          ],  
-          [  
-            -3.164445130316209,  
-            40.62787156737224  
-          ],  
-          [  
-            -3.164394553567159,  
-            40.62777209976578  
-          ],  
-          [  
-            -3.164424899616589,  
-            40.62775018317452  
-          ],  
-          [  
-            -3.164485591715449,  
-            40.62785133667262  
-          ]  
+    "id": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
+    "type": "WasteContainerIsle",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Guadalajara",  
+            "addressCountry": "ES",  
+            "streetAddress": "Calle Dr. Fleming, 12",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Container isle located downtown"  
+    },  
+    "features": {  
+        "type": "Property",  
+        "value": [  
+            "underground"  
         ]  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Guadalajara",  
-      "addressCountry": "ES",  
-      "streetAddress": "Calle Dr. Fleming, 12",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        -3.164485591715449,  
+                        40.62785133667262  
+                    ],  
+                    [  
+                        -3.164445130316209,  
+                        40.62787156737224  
+                    ],  
+                    [  
+                        -3.164394553567159,  
+                        40.62777209976578  
+                    ],  
+                    [  
+                        -3.164424899616589,  
+                        40.62775018317452  
+                    ],  
+                    [  
+                        -3.164485591715449,  
+                        40.62785133667262  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Dr. Fleming 12, Esquina Manuel Paez Xaramillo"  
+    },  
+    "refWasteContainer": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+            "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12b"  
+        ]  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
