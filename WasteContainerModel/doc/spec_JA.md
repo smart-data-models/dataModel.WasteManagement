@@ -1,15 +1,31 @@
-エンティティ。WasteContainerModel  
-==========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティWasteContainerModel  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**廃棄物処理容器のモデルで、容器のクラスの静的な特性を表現しています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**コンテナのクラスの静的なプロパティをキャプチャする廃棄物コンテナのモデル**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `brandName`: ブランド名  - `cargoVolume`: 容器に入れられる総量  - `category`: コンテナのカテゴリ。Enum:'dumpster, trashCan, wheelieBin, other'. ダンプスター .https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)参照  - `color`: 商品の色について  - `compliantWith`: 容器が準拠している規格のリスト（例：UNE-EN 840-2:2013）。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `depth`: 容器の深さ  - `description`: このアイテムの説明  - `features`: コンテナの機能のリストです。Enum:'wheel, lid, roundedLid, insertHoles, lockable'.その他、用途に応じて意味のある値を指定します。  - `height`: コンテナの高さ  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `insertHolesNumber`: 容器にある挿入口の数  - `madeOf`: コンテナの材質。Enum:' プラスチック , 木材 , 金属 , その他 '  - `madeOfCode`: 材料コードは標準的な表の通りです。  - `manufacturerName`: メーカー名です。  - `maximumLoad`: コンテナが安全に保持できる最大荷重。単位:'キログラム'  - `modelName`: 製造者によって与えられたモデルの名前。この属性は、通常自治体で与えられる単なるコードネームであるnameとは異なります。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `recommendedLoad`: コンテナのメーカー推奨荷重。単位:'キログラム'  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。WasteContainerModelでなければならない。  - `weight`: コンテナの重量  - `width`: コンテナの幅    
-必須項目  
-- `id`  - `name`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: ブランド名  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: 容器の総容量  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `category[array]`: コンテナのカテゴリ。Enum:'dumpster, trashCan, wheelieBin, other'. dumpster .参照[https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `compliantWith[array]`: 容器が準拠している規格の一覧（例：UNE-EN 840-2:2013）。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `depth[number]`: 容器の深さ  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: このアイテムの説明  - `features[array]`: コンテナの特徴のリスト。Enum:'wheels, lid, roundedLid, insertHoles, lockable'.アプリケーションにとって意味のあるその他の値。  - `height[number]`: 容器の高さ  . Model: [https://schema.org/heigth](https://schema.org/heigth)- `id[*]`: エンティティの一意な識別子  - `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `insertHolesNumber[number]`: 容器の挿入穴の数  . Model: [https://schema.org/Number](https://schema.org/Number)- `madeOf[string]`: 容器の材質。Enum:' プラスチック , 木 , 金属 , その他 '  - `madeOfCode[string]`: 材料コードは標準表による。  - `manufacturerName[string]`: メーカー名  - `maximumLoad[number]`: コンテナが安全に保持できる最大荷重。単位：「キログラム  . Model: [https://schema.org/Number](https://schema.org/Number)- `modelName[string]`: 製造者によって与えられたモデルの名前。この属性は、通常自治体によって与えられる単なるコードネームであるnameとは異なります。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `recommendedLoad[number]`: コンテナのメーカー推奨荷重。単位：「キログラム  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI エンティティタイプ。WasteContainerModelである必要があります。  - `weight[number]`: 容器の重量  . Model: [https://schema.org/weigth](https://schema.org/weigth)- `width[number]`: 容器の幅  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WasteContainerModel:    
@@ -256,9 +272,14 @@ WasteContainerModel:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### WasteContainerModel NGSI-v2 key-valuesの例。  
-ここでは、WasteContainerModelをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WasteContainerModel NGSI-v2 key-value の例。  
+WasteContainerModelをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -276,8 +297,10 @@ WasteContainerModel:
   "category": ["dumpster"]  
 }  
 ```  
-#### WasteContainerModel NGSI-v2 正規化された例。  
-ここでは、正規化されたJSON-LD形式のWasteContainerModelの例を示します。これはオプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainerModel NGSI-v2 正規化例  
+以下は、WasteContainerModelをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -335,97 +358,109 @@ WasteContainerModel:
   }  
 }  
 ```  
-#### WasteContainerModel NGSI-LDのキーバリューの例  
-ここでは、WasteContainerModelをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainerModel NGSI-LD キー値例  
+WasteContainerModelをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "brandName": "Brute",  
-  "cargoVolume": 150,  
-  "category": [  
-    "dumpster"  
-  ],  
-  "compliantWith": [  
-    "UNE-EN 840-2:2013"  
-  ],  
-  "depth": 0.4,  
-  "features": [  
-    "wheels",  
-    "lid"  
-  ],  
-  "height": 0.8,  
-  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "madeOf": "plastic",  
-  "modelName": "C1",  
-  "name": "Dumpster_Brute_2009_Plastic_Green",  
-  "type": "WasteContainerModel",  
-  "width": 0.5  
+    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+    "type": "WasteContainerModel",  
+    "brandName": "Brute",  
+    "cargoVolume": 150,  
+    "category": [  
+        "dumpster"  
+    ],  
+    "compliantWith": [  
+        "UNE-EN 840-2:2013"  
+    ],  
+    "depth": 0.4,  
+    "features": [  
+        "wheels",  
+        "lid"  
+    ],  
+    "height": 0.8,  
+    "madeOf": "plastic",  
+    "modelName": "C1",  
+    "name": "Dumpster_Brute_2009_Plastic_Green",  
+    "width": 0.5,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### WasteContainerModel NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のWasteContainerModelの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainerModel NGSI-LD 正規化例  
+WasteContainerModelをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "type": "WasteContainerModel",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "dumpster"  
+    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+    "type": "WasteContainerModel",  
+    "brandName": {  
+        "type": "Property",  
+        "value": "Brute"  
+    },  
+    "cargoVolume": {  
+        "type": "Property",  
+        "value": 150  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "dumpster"  
+        ]  
+    },  
+    "compliantWith": {  
+        "type": "Property",  
+        "value": [  
+            "UNE-EN 840-2:2013"  
+        ]  
+    },  
+    "depth": {  
+        "type": "Property",  
+        "value": 0.4  
+    },  
+    "features": {  
+        "type": "Property",  
+        "value": [  
+            "wheels",  
+            "lid"  
+        ]  
+    },  
+    "height": {  
+        "type": "Property",  
+        "value": 0.8  
+    },  
+    "madeOf": {  
+        "type": "Property",  
+        "value": "plastic"  
+    },  
+    "modelName": {  
+        "type": "Property",  
+        "value": "C1"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Dumpster_Brute_2009_Plastic_Green"  
+    },  
+    "width": {  
+        "type": "Property",  
+        "value": 0.5  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
     ]  
-  },  
-  "cargoVolume": {  
-    "type": "Property",  
-    "value": 150  
-  },  
-  "modelName": {  
-    "type": "Property",  
-    "value": "C1"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Dumpster_Brute_2009_Plastic_Green"  
-  },  
-  "compliantWith": {  
-    "type": "Property",  
-    "value": [  
-      "UNE-EN 840-2:2013"  
-    ]  
-  },  
-  "madeOf": {  
-    "type": "Property",  
-    "value": "plastic"  
-  },  
-  "height": {  
-    "type": "Property",  
-    "value": 0.8  
-  },  
-  "width": {  
-    "type": "Property",  
-    "value": 0.5  
-  },  
-  "depth": {  
-    "type": "Property",  
-    "value": 0.4  
-  },  
-  "brandName": {  
-    "type": "Property",  
-    "value": "Brute"  
-  },  
-  "features": {  
-    "type": "Property",  
-    "value": [  
-      "wheels",  
-      "lid"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
