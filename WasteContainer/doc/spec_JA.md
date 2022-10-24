@@ -1,15 +1,31 @@
-エンティティウェストコンテナ  
-==============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティWasteContainer  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**ゴミ箱  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**ゴミ箱**。  
+バージョン: 0.3.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `RFID`: RFIDリーダーのIDを示す。  - `actuationHours`: 容器の上で動作を行うのに適した時間。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `binCapacity`: ビンが収容できるゴミの量を示す総容量。  - `binColor`: ビンの色。廃棄物の種類を示すために使用される可能性がある。色分けは、ビンが設置されている地理的エリアに適用される慣例に従うべきである。  - `binFullnessThreshold`: ビンの満杯しきい値は、ビンが満杯になったときにアラートや通知が発生するレベル（パーセンテージ）として定義されます。  - `binId`: 廃棄物運搬用ビンの形状  - `binLoggedTime`: ビンのレベルが最後にログに記録された時間。  - `binMaxLoad`: ゴミ箱が保持できる最大荷重（重量）。  - `binRecommendedLoad`: この観測に対応するゴミ箱が保持できる推奨荷重（重量）。  - `cargoWeight`: コンテナロードの重量  - `category`: Enum:'固定、地面、その他、ポータブル、地下'  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastCleaning`: 前回、容器を洗浄したとき。  - `dateLastEmptying`: コンテナが最後に空になった時刻を示すタイムスタンプ。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateServiceStarted`: コンテナがサービスを開始した日。  - `description`: このアイテムの説明  - `fillingLevel`: 容器の充填レベル  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `isleId`: コンテナが置かれているアイルの識別子（または名前）です。この属性は、`WasteContainerIsle`タイプのエンティティが具体的にモデル化されていない場合に使用する必要があります。そうでない場合は、`refWasteContainerIsle` を使用してください。  - `license_plate`: 車両のライセンスプレート番号を示す。SameAs:GTFS Realtime message-VehicleDescriptor（https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor）の「license_plate」フィールド。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `methaneConcentration`: 容器内のメタン（CH4）濃度。  - `name`: このアイテムの名前です。  - `nextActuationDeadline`: 次のアクチュエーション（空にする、拾うなど）を実行するための期限。  - `nextCleaningDeadline`: 次回のクリーニングの締め切り  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refDevice`: このコンテナをモニターするために使用されるデバイスの参照先  - `refWasteContainerIsle`: コンテナが置かれているアイル  - `refWasteContainerModel`: コンテナのモデル  - `regulation`: コンテナが運用されている規制  - `responsible`: 容器の責任者、すなわち作動（空にする、回収するなど）を担当する団体  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `serialNumber`: コンテナのシリアルナンバー。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status`: 安全性の観点から見たコンテナの状態を示す。Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  - `ok` です。コンテナはあるべき場所にあり、きちんと立っています。`lidOpen`.コンテナの蓋が開かれ、一定の時間が経過しても閉まらない。`dropped`.コンテナが何らかの理由で落とされた。移動した``。コンテナが定位置から移動されて、戻ってこない。`破壊された`.コンテナが破壊行為によって、破損したり破壊されたりした。`燃えている`.コンテナが燃えているので、早急に対処する必要があります。`unknown`.コンテナの状態はシステムに知らされていません。  - `storedWasteCode`: 対象となる規制による。欧州の場合は、[欧州の廃棄物リスト](http://ec.europa.eu/environment/waste/framework/list.htm)をご確認ください。  - `storedWasteKind`: コンテナに保管されている廃棄物の種類/s。Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other'.または、前者に当てはまらないその他の値。  - `storedWasteOrigin`: 保管されている廃棄物の起源。Enum:'home, municipal, industrial, construction, hostelry, agriculture, other'.  - `temperature`: 容器内の温度  - `timeInstant`: ペイロードのタイムスタンプ。本番環境では、属性タイプが `ISO8601` の文字列と同じである場合があります。その場合は、`DateTime` の同義語として考えなければなりません。この属性は、古いFIWAREリファレンスの実装との下位互換性のために残されています。  - `type`: NGSI Entity Typeです。WasteContainerでなければならない。  - `wardId`: Ward この観測に対応するエンティティのId。    
-必須項目  
-- `id`  - `location`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `RFID[string]`: RFIDリーダーのIDを付与する。  . Model: [https://schema.org/Text](https://schema.org/Text)- `actuationHours[string]`: 容器の上でアクチュエーションを行うのに適した時間。  . Model: [openingHours](openingHours)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `binCapacity[number]`: ゴミ箱に入れることができるゴミの量を表す総容量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `binColor[string]`: ビンの色。廃棄物の種類を示すために使用され得る。色分けは、ごみ箱が設置されている地理的地域に適用される慣例に従うべきである。  . Model: [https://schema.org/Text](https://schema.org/Text)- `binFullnessThreshold[number]`: ビンが満杯のアラートまたは通知が生成されるレベル（パーセンテージで）として定義されるビンの満杯しきい値レベルです。  . Model: [https://schema.org/Number](https://schema.org/Number)- `binId[string]`: ゴミ箱の中身  . Model: [https://schema.org/Text](https://schema.org/Text)- `binLoggedTime[string]`: ビンのレベルが最後にログに記録された時間。  . Model: [https://schema.org/Text](https://schema.org/Text)- `binMaxLoad[number]`: ゴミ箱に載せることができる最大荷重（重量）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `binRecommendedLoad[number]`: この観測に対応する廃棄物容器が保持できる推奨荷重（重量）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `cargoWeight[number]`: コンテナの積み荷の重量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `category[array]`: Enum:' 固定、地上、その他、携帯、地下'。  . Model: [https://schema.org/Text Containers category](https://schema.org/Text Containers category)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastCleaning[string]`: 前回、容器を洗浄したとき。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateLastEmptying[string]`: コンテナが前回空になった時刻を示すタイムスタンプ。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateServiceStarted[string]`: コンテナがサービスを開始した日付。  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: このアイテムの説明  - `fillingLevel[number]`: 容器の充填レベル  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意な識別子  - `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `isleId[string]`: コンテナが置かれるアイルの識別子（または名前）。この属性は `WasteContainerIsle` 型のエンティティを具体的にモデル化していない場合に使用する必要があります。そうでない場合は、 `refWasteContainerIsle` を使用する必要があります。  - `license_plate[string]`: 車両のナンバーを付与する。と同じです。GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)の 'license_plate' フィールド。  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `methaneConcentration[number]`: 容器内のメタン（CH4）濃度。  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: このアイテムの名称です。  - `nextActuationDeadline[string]`: 次に実行される動作の期限（エンプティ、ピックアップなど）。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `nextCleaningDeadline[string]`: 次回のクリーニングの締切日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refDevice[array]`: このコンテナを監視するために使用されるデバイス（複数可）への参照  . Model: [http://schema.org/URL](http://schema.org/URL)- `refWasteContainerIsle[*]`: 容器が置かれるアイル  . Model: [http://schema.org/URL](http://schema.org/URL)- `refWasteContainerModel[*]`: コンテナのモデル  . Model: [http://schema.org/URL](http://schema.org/URL)- `regulation[string]`: コンテナが運用されている規制  . Model: [http://schema.org/Text](http://schema.org/Text)- `responsible[string]`: 容器の責任者、すなわち作動（空、回収など）を担当する主体  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `serialNumber[string]`: 容器のシリアル番号。  . Model: [https://schema.org/serialNumber](https://schema.org/serialNumber)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status[string]`: 安全性の観点から見た容器の状態。Enum:'ok , lidOpen , drop , move , vandalized , burning , unknown'.  - OK`。容器はあるべき場所にあり、きちんと立っています。lidOpen`.コンテナの蓋が開けられ、一定時間経過しても閉まらない状態です。`dropped`.コンテナが何らかの理由で落とされた。moved`.容器が定位置から移動され、戻ってきません。荒らされた`.コンテナは破壊行為によって損傷または破壊されました。燃えている`.コンテナが燃えています。すぐに対処する必要があります。不明`.コンテナの状態は、システムにはわからない。  - `storedWasteCode[string]`: 対象規制により異なる。欧州の場合、[欧州の廃棄物リスト](http://ec.europa.eu/environment/waste/framework/list.htm)を確認する。  . Model: [https://schema.org/Text As per the regulation, waste codes which precisely identifies waste origin and kind](https://schema.org/Text As per the regulation, waste codes which precisely identifies waste origin and kind)- `storedWasteKind[string]`: コンテナで保管されている廃棄物の種類。Enum:'organic, inorganic, glass, oil, plastic, metal, paper, batteries, electronics, hazardous, other' （有機物、無機物、ガラス、油、プラスチック、金属、紙、電池、電子機器、危険物、その他）。または、前者に当てはまらないその他の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `storedWasteOrigin[string]`: 保管されている廃棄物の起源。Enum:'household, municipal, industrial, construction, hostelry, agriculture, other'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `temperature[number]`: 容器内温度  . Model: [http://schema.org/Number](http://schema.org/Number)- `timeInstant[string]`: ペイロードのタイムスタンプ。実運用環境では、属性の型が `ISO8601` 文字列と等しい場合もあり得る。その場合、`DateTime` のシノニムと考える必要がある。この属性は、古いFIWAREリファレンスの実装との後方互換性のために残されている。  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `type[string]`: NGSI エンティティタイプ。WasteContainerでなければならない  - `wardId[string]`: 区 この観測に対応するエンティティの ID。  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WasteContainer:    
@@ -576,9 +592,14 @@ WasteContainer:
   x-version: 0.3.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### WasteContainer NGSI-v2 キーバリューの例  
-ここでは、WasteContainerをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WasteContainer NGSI-v2 key-value の例。  
+以下はWasteContainerをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
@@ -605,8 +626,10 @@ WasteContainer:
   "binLoggedTime": "2021-03-01T15:51:02+05:30"  
 }  
 ```  
-#### WasteContainer NGSI-v2 正規化された例。  
-ここでは、正規化されたJSON-LD形式のWasteContainerの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainer NGSI-v2 正規化例  
+以下は、WasteContainerをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
@@ -675,116 +698,128 @@ WasteContainer:
   }  
 }  
 ```  
-#### WasteContainer NGSI-LDのキーバリューの例。  
-ここでは、WasteContainerをJSON-LD形式でkey-valuesにした例を紹介します。これは、`options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainer NGSI-LD キー値例  
+WasteContainerをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
-  "@context": [  
-    "iudx:WmgmtBin",  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "type": "WasteContainer",  
-  "location": {  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
-    ],  
-    "type": "Point"  
-  },  
-  "binCapacity": 43,  
-  "binColor": "Green",  
-  "binClearedTime": "2021-03-11T15:51:02+05:30",  
-  "wardId": "21",  
-  "binCategory": "Household Bin",  
-  "license_plate": "KA23F2345",  
-  "RFID": "67855734",  
-  "binFillingLevel": 0.65,  
-  "binFullnessThreshold": 80,  
-  "binRecommendedLoad": 30,  
-  "binId": "12",  
-  "binMaxLoad": 75,  
-  "binLoggedTime": "2021-03-01T15:51:02+05:30"  
+    "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
+    "type": "WasteContainer",  
+    "RFID": "67855734",  
+    "binCapacity": 43,  
+    "binCategory": "Household Bin",  
+    "binClearedTime": "2021-03-11T15:51:02+05:30",  
+    "binColor": "Green",  
+    "binFillingLevel": 0.65,  
+    "binFullnessThreshold": 80,  
+    "binId": "12",  
+    "binLoggedTime": "2021-03-01T15:51:02+05:30",  
+    "binMaxLoad": 75,  
+    "binRecommendedLoad": 30,  
+    "license_plate": "KA23F2345",  
+    "location": {  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ],  
+        "type": "Point"  
+    },  
+    "wardId": "21",  
+    "@context": [  
+        "iudx:WmgmtBin",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### WasteContainer NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のWasteContainerの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### WasteContainer NGSI-LD 正規化例  
+以下は、WasteContainerをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
-  "type": "WasteContainer",  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "coordinates": [  
-        -8.768460000000001,  
-        42.60214472222222  
-      ],  
-      "type": "Point"  
-    }  
-  },  
-  "binCapacity": {  
-    "type": "Property",  
-    "value": 43  
-  },  
-  "binColor": {  
-    "type": "Text",  
-    "value": "Green"  
-  },  
-  "binClearedTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-11T15:51:02+05:30"  
-    }  
-  },  
-  "wardId": {  
-    "type": "Property",  
-    "value": "21"  
-  },  
-  "binCategory": {  
-    "type": "Property",  
-    "value": "Household Bin"  
-  },  
-  "license_plate": {  
-    "type": "Property",  
-    "value": "KA23F2345"  
-  },  
-  "RFID": {  
-    "type": "Property",  
-    "value": "67855734"  
-  },  
-  "binFillingLevel": {  
-    "type": "Property",  
-    "value": 0.65  
-  },  
-  "binFullnessThreshold": {  
-    "type": "Property",  
-    "value": 80  
-  },  
-  "binRecommendedLoad": {  
-    "type": "Property",  
-    "value": 30  
-  },  
-  "binId": {  
-    "type": "Property",  
-    "value": "12"  
-  },  
-  "binMaxLoad": {  
-    "type": "Property",  
-    "value": 75  
-  },  
-  "binLoggedTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-11T15:51:02+05:30"  
-    }  
-  },  
-  "@context": [  
-    "iudx:WmgmtBin",  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
+    "type": "WasteContainer",  
+    "RFID": {  
+        "type": "Property",  
+        "value": "67855734"  
+    },  
+    "binCapacity": {  
+        "type": "Property",  
+        "value": 43  
+    },  
+    "binCategory": {  
+        "type": "Property",  
+        "value": "Household Bin"  
+    },  
+    "binClearedTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "binColor": {  
+        "type": "Text",  
+        "value": "Green"  
+    },  
+    "binFillingLevel": {  
+        "type": "Property",  
+        "value": 0.65  
+    },  
+    "binFullnessThreshold": {  
+        "type": "Property",  
+        "value": 80  
+    },  
+    "binId": {  
+        "type": "Property",  
+        "value": "12"  
+    },  
+    "binLoggedTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "binMaxLoad": {  
+        "type": "Property",  
+        "value": 75  
+    },  
+    "binRecommendedLoad": {  
+        "type": "Property",  
+        "value": 30  
+    },  
+    "license_plate": {  
+        "type": "Property",  
+        "value": "KA23F2345"  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ],  
+            "type": "Point"  
+        }  
+    },  
+    "wardId": {  
+        "type": "Property",  
+        "value": "21"  
+    },  
+    "@context": [  
+        "iudx:WmgmtBin",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
