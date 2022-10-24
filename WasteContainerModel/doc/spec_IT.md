@@ -1,15 +1,31 @@
-Entità: WasteContainerModel  
-===========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: WasteContainerModel  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Un modello di contenitore di rifiuti che cattura le proprietà statiche di una classe di contenitori.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Un modello di contenitore di rifiuti che cattura le proprietà statiche di una classe di contenitori **.  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `alternateName`: Un nome alternativo per questa voce  - `annotations`: Annotazioni sull'elemento  - `brandName`: Nome della marca  - `cargoVolume`: Volume totale che il contenitore può contenere  - `category`: Categoria del contenitore. Enum:'dumpster, trashCan, wheelieBin, other'. dumpster . Vedere [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color`: Il colore del prodotto  - `compliantWith`: Una lista di norme alle quali il contenitore è conforme (es. UNE-EN 840-2:2013).  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `depth`: Profondità del contenitore  - `description`: Una descrizione di questo articolo  - `features`: Una lista di caratteristiche del contenitore. Enum:'wheels, lid, roundedLid, insertHoles, lockable'. Qualsiasi altro valore significativo per l'applicazione.  - `height`: Altezza del contenitore  - `id`: Identificatore unico dell'entità  - `image`: Un'immagine dell'oggetto  - `insertHolesNumber`: Numero di fori di inserimento del contenitore  - `madeOf`: Materiale di cui è fatto il contenitore. Enum:' plastica, legno, metallo, altro '  - `madeOfCode`: Codice materiale come da tabelle standard.  - `manufacturerName`: Nome del produttore.  - `maximumLoad`: Carico massimo che il contenitore può contenere in sicurezza. Unità:'Kilogrammo'.  - `modelName`: Nome del modello dato dal produttore. Questo attributo è diverso dal nome che è solo un nome in codice dato di solito dai comuni.  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `recommendedLoad`: Carico raccomandato dal produttore per il contenitore. Unità:'Kilogrammo'.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI: Deve essere WasteContainerModel  - `weight`: Peso del contenitore  - `width`: Larghezza del contenitore    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `annotations[array]`: Annotazioni sull'elemento  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: Nome del marchio  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: Volume totale che il contenitore può contenere  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `category[array]`: Categoria del contenitore. Enum:'dumpster, trashCan, wheelieBin, other'. dumpster . Vedere [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color[string]`: Il colore del prodotto  . Model: [https://schema.org/color](https://schema.org/color)- `compliantWith[array]`: Un elenco di norme a cui il contenitore è conforme (es. UNE-EN 840-2:2013).  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `depth[number]`: Profondità del contenitore  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: Descrizione dell'articolo  - `features[array]`: Un elenco di caratteristiche del contenitore. Enum:'ruote, coperchio, coperchio arrotondato, fori di inserimento, chiusura a chiave'. Qualsiasi altro valore significativo per l'applicazione.  - `height[number]`: Altezza del contenitore  . Model: [https://schema.org/heigth](https://schema.org/heigth)- `id[*]`: Identificatore univoco dell'entità  - `image[string]`: Un'immagine dell'articolo  . Model: [https://schema.org/URL](https://schema.org/URL)- `insertHolesNumber[number]`: Numero di fori di inserimento del contenitore  . Model: [https://schema.org/Number](https://schema.org/Number)- `madeOf[string]`: Materiale di cui è fatto il contenitore. Enum:' plastica, legno, metallo, altro '  - `madeOfCode[string]`: Codice materiale come da tabelle standard.  - `manufacturerName[string]`: Nome del produttore.  - `maximumLoad[number]`: Carico massimo che il container può contenere in sicurezza. Unità:'Chilogrammo'  . Model: [https://schema.org/Number](https://schema.org/Number)- `modelName[string]`: Nome del modello fornito dal produttore. Questo attributo è diverso dal nome, che è solo un nome in codice solitamente fornito dai comuni.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `recommendedLoad[number]`: Carico raccomandato dal produttore per il contenitore. Unità:'Chilogrammo'  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI: Deve essere WasteContainerModel  - `weight[number]`: Peso del contenitore  . Model: [https://schema.org/weigth](https://schema.org/weigth)- `width[number]`: Larghezza del contenitore  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `name`  - `type`  ## Descrizione del modello di dati delle proprietà  
+- `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WasteContainerModel:    
@@ -256,9 +272,14 @@ WasteContainerModel:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### WasteContainerModel NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un WasteContainerModel in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### WasteContainerModel NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di WasteContainerModel in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -276,8 +297,10 @@ WasteContainerModel:
   "category": ["dumpster"]  
 }  
 ```  
+</details>  
 #### WasteContainerModel NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un WasteContainerModel in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di WasteContainerModel in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "wastecontainermodel:c1",  
@@ -335,97 +358,109 @@ WasteContainerModel:
   }  
 }  
 ```  
-#### WasteContainerModel NGSI-LD valori chiave Esempio  
-Ecco un esempio di un WasteContainerModel in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### WasteContainerModel NGSI-LD valori-chiave Esempio  
+Ecco un esempio di WasteContainerModel in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "brandName": "Brute",  
-  "cargoVolume": 150,  
-  "category": [  
-    "dumpster"  
-  ],  
-  "compliantWith": [  
-    "UNE-EN 840-2:2013"  
-  ],  
-  "depth": 0.4,  
-  "features": [  
-    "wheels",  
-    "lid"  
-  ],  
-  "height": 0.8,  
-  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "madeOf": "plastic",  
-  "modelName": "C1",  
-  "name": "Dumpster_Brute_2009_Plastic_Green",  
-  "type": "WasteContainerModel",  
-  "width": 0.5  
+    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+    "type": "WasteContainerModel",  
+    "brandName": "Brute",  
+    "cargoVolume": 150,  
+    "category": [  
+        "dumpster"  
+    ],  
+    "compliantWith": [  
+        "UNE-EN 840-2:2013"  
+    ],  
+    "depth": 0.4,  
+    "features": [  
+        "wheels",  
+        "lid"  
+    ],  
+    "height": 0.8,  
+    "madeOf": "plastic",  
+    "modelName": "C1",  
+    "name": "Dumpster_Brute_2009_Plastic_Green",  
+    "width": 0.5,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### WasteContainerModel NGSI-LD normalizzato Esempio  
-Ecco un esempio di un WasteContainerModel in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di WasteContainerModel in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "type": "WasteContainerModel",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "dumpster"  
+    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
+    "type": "WasteContainerModel",  
+    "brandName": {  
+        "type": "Property",  
+        "value": "Brute"  
+    },  
+    "cargoVolume": {  
+        "type": "Property",  
+        "value": 150  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "dumpster"  
+        ]  
+    },  
+    "compliantWith": {  
+        "type": "Property",  
+        "value": [  
+            "UNE-EN 840-2:2013"  
+        ]  
+    },  
+    "depth": {  
+        "type": "Property",  
+        "value": 0.4  
+    },  
+    "features": {  
+        "type": "Property",  
+        "value": [  
+            "wheels",  
+            "lid"  
+        ]  
+    },  
+    "height": {  
+        "type": "Property",  
+        "value": 0.8  
+    },  
+    "madeOf": {  
+        "type": "Property",  
+        "value": "plastic"  
+    },  
+    "modelName": {  
+        "type": "Property",  
+        "value": "C1"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Dumpster_Brute_2009_Plastic_Green"  
+    },  
+    "width": {  
+        "type": "Property",  
+        "value": 0.5  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
     ]  
-  },  
-  "cargoVolume": {  
-    "type": "Property",  
-    "value": 150  
-  },  
-  "modelName": {  
-    "type": "Property",  
-    "value": "C1"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Dumpster_Brute_2009_Plastic_Green"  
-  },  
-  "compliantWith": {  
-    "type": "Property",  
-    "value": [  
-      "UNE-EN 840-2:2013"  
-    ]  
-  },  
-  "madeOf": {  
-    "type": "Property",  
-    "value": "plastic"  
-  },  
-  "height": {  
-    "type": "Property",  
-    "value": 0.8  
-  },  
-  "width": {  
-    "type": "Property",  
-    "value": 0.5  
-  },  
-  "depth": {  
-    "type": "Property",  
-    "value": 0.4  
-  },  
-  "brandName": {  
-    "type": "Property",  
-    "value": "Brute"  
-  },  
-  "features": {  
-    "type": "Property",  
-    "value": [  
-      "wheels",  
-      "lid"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
