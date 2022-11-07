@@ -10,10 +10,12 @@ The following entity types are available:
 
 - [WasteContainerModel](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerModel/README.md). A model of waste container which captures the static properties of a class of containers.
 
+- [WasteObserved](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteObserved/README.md). This entity models a single collection of Waste.
+
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/CONTRIBUTORS.yaml) to the 7 current contributors of the data models of this Subject.
 
 
 ### Contribution
