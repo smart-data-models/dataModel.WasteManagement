@@ -1,0 +1,2 @@
+"id_", "type_", "tareWeight_", "address__addressCountry_", "address__postalCode_", "address__streetAddress_", "dateObserved_", "grossWeight_", "location__coordinates__0_", "location__coordinates__1_", "location__type_", "refServiceOrderId_", "weight_", "@context__0_"
+"ngsi-ld:WasteObserved:001", "WasteObserved", "2.0", "BE", "2018", "Lange Kievitstraat n°70", "2022-10-19T14:57:39.000Z", "8.85", "4.421732917", "51.21301073", "Point", "ngsi-ld:WorkOrder1234", "6.85", "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
