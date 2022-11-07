@@ -1,29 +1,29 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entity: WasteContainerModel  
-===========================<!-- /10-Header -->  
+实体。废物容器模型（WasteContainerModel  
+=============================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Open License](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Global description: **A model of waste container which captures the static properties of a class of containers.**  
-version: 0.0.1  
+全局描述。**一个废物容器的模型，它捕捉了一类容器的静态属性。  
+版本：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## List of properties  
+##属性列表  
 
-<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `alternateName[string]`: An alternative name for this item  - `annotations[array]`: Annotations about the item  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: Name of the brand  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: Total volume the container can hold  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `category[array]`: Container’s category. Enum:'dumpster, trashCan, wheelieBin, other'.  dumpster . See [https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color[string]`: The color of the product  . Model: [https://schema.org/color](https://schema.org/color)- `compliantWith[array]`: A list of standards to which the container is compliant  with (ex. UNE-EN 840-2:2013).   - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `depth[number]`: Depth of the container  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: A description of this item  - `features[array]`: A list of container features. Enum:'wheels, lid, roundedLid, insertHoles, lockable'. Any other value meaningful for the application.  - `height[number]`: Height of the container  . Model: [https://schema.org/heigth](https://schema.org/heigth)- `id[*]`: Unique identifier of the entity  - `image[string]`: An image of the item  . Model: [https://schema.org/URL](https://schema.org/URL)- `insertHolesNumber[number]`: Number of insert holes the container has  . Model: [https://schema.org/Number](https://schema.org/Number)- `madeOf[string]`: Material the container is made of. Enum:' plastic , wood, metal, other '  - `madeOfCode[string]`: Material Code as per standard tables.   - `manufacturerName[string]`: Name of the manufacturer.   - `maximumLoad[number]`: Maximum load the container can hold safely. Unit:'Kilogram'  . Model: [https://schema.org/Number](https://schema.org/Number)- `modelName[string]`: Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities.  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `recommendedLoad[number]`: Manufacturer recommended load for the container. Unit:'Kilogram'  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity Type: It has to be WasteContainerModel  - `weight[number]`: Weight of the container  . Model: [https://schema.org/weigth](https://schema.org/weigth)- `width[number]`: Width of the container  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `alternateName[string]`: 这个项目的一个替代名称  - `annotations[array]`: 关于该项目的注释  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: 品牌名称  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: 容器可容纳的总体积  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `category[array]`: 容器的类别。Enum:'dumpster, trashCan, wheelieBin, other'. dumpster .见[https://en.wikipedia.org/wiki/Dumpster](https://en.wikipedia.org/wiki/Dumpster)  - `color[string]`: 产品的颜色  . Model: [https://schema.org/color](https://schema.org/color)- `compliantWith[array]`: 容器符合的标准列表（例如：UNE-EN 840-2:2013）。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `depth[number]`: 容器的深度  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: 对这个项目的描述  - `features[array]`: 容器特征的列表。枚举：'轮子、盖子、圆形的盖子、插入孔、可锁'。任何其他对应用有意义的值。  - `height[number]`: 容器的高度  . Model: [https://schema.org/heigth](https://schema.org/heigth)- `id[*]`: 实体的唯一标识符  - `image[string]`: 该物品的图像  . Model: [https://schema.org/URL](https://schema.org/URL)- `insertHolesNumber[number]`: 容器有多少个插入孔  . Model: [https://schema.org/Number](https://schema.org/Number)- `madeOf[string]`: 容器是由什么材料制成的。Enum:' 塑料、木头、金属、其他 '。  - `madeOfCode[string]`: 按照标准表格的材料代码。  - `manufacturerName[string]`: 制造商的名称。  - `maximumLoad[number]`: 集装箱可安全容纳的最大负荷。单位:'公斤  . Model: [https://schema.org/Number](https://schema.org/Number)- `modelName[string]`: 制造商给出的模型名称。这个属性与名称不同，后者只是一个通常由市政当局给出的代号。  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `recommendedLoad[number]`: 厂家推荐的集装箱装载量。单位:'公斤  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI实体类型。它必须是WasteContainerModel。  - `weight[number]`: 容器的重量  . Model: [https://schema.org/weigth](https://schema.org/weigth)- `width[number]`: 容器的宽度  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Required properties  
+所需属性  
 - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -276,9 +276,9 @@ WasteContainerModel:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Example payloads    
-#### WasteContainerModel NGSI-v2 key-values Example    
-Here is an example of a WasteContainerModel in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## ＃＃＃＃有效载荷的例子  
+#### WasteContainerModel NGSI-v2关键值示例  
+这里是一个以JSON-LD格式作为关键值的WasteContainerModel的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -298,8 +298,8 @@ WasteContainerModel:
 }  
 ```  
 </details>  
-#### WasteContainerModel NGSI-v2 normalized Example    
-Here is an example of a WasteContainerModel in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### WasteContainerModel NGSI-v2规范化示例  
+下面是一个以JSON-LD格式规范化的WasteContainerModel的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -359,8 +359,8 @@ WasteContainerModel:
 }  
 ```  
 </details>  
-#### WasteContainerModel NGSI-LD key-values Example    
-Here is an example of a WasteContainerModel in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### WasteContainerModel NGSI-LD关键值示例  
+这里是一个以JSON-LD格式作为关键值的WasteContainerModel的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -391,8 +391,8 @@ WasteContainerModel:
 }  
 ```  
 </details>  
-#### WasteContainerModel NGSI-LD normalized Example    
-Here is an example of a WasteContainerModel in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### WasteContainerModel NGSI-LD规范化示例  
+下面是一个以JSON-LD格式规范化的WasteContainerModel的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -459,7 +459,7 @@ WasteContainerModel:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

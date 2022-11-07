@@ -1,26 +1,41 @@
-Entidad: WasteContainer  
-=======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: WasteContainer  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Un contenedor de residuos**  
+versión: 0.3.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `TimeInstant`: Puede haber entornos de producción en los que el tipo de atributo sea igual a la cadena `ISO8601`. Si es así, debe considerarse como un sinónimo de `DateTime`.  - `actuationHours`: Horas adecuadas para realizar actuaciones sobre el contenedor.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `cargoWeight`: Peso de la carga del contenedor.  - `category`:   - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastCleaning`: Cuando se limpió el contenedor por última vez.  - `dateLastEmptying`: Marca de tiempo que representa cuándo se vació el contenedor por última vez.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateServiceStarted`: Fecha en la que el contenedor comenzó a dar servicio.  - `description`: Una descripción de este artículo  - `fillingLevel`: Nivel de llenado del contenedor  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `isleId`: Identificador (o nombre) de la isla donde se encuentra el contenedor. Este atributo debe utilizarse cuando las entidades de tipo `WasteContainerIsle` no están siendo modeladas específicamente. En caso contrario, debe utilizarse `refWasteContainerIsle`.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `methaneConcentration`: Concentración de metano (CH4) en el interior del contenedor.  - `name`: El nombre de este artículo.  - `nextActuationDeadline`: Fecha límite para realizar la siguiente actuación (vaciado, recogida, etc.).  - `nextCleaningDeadline`: Fecha límite para la próxima limpieza.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refDevice`: Referencia al dispositivo o dispositivos utilizados para supervisar este contenedor  - `refWasteContainerIsle`: Isla en la que se encuentra el contenedor  - `refWasteContainerModel`: Modelo de contenedor  - `regulation`: Reglamento bajo el cual opera el contenedor  - `responsible`: Responsable del contenedor, es decir, entidad encargada de actuar (vaciar, recoger, etc.)  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `serialNumber`: Número de serie del contenedor.  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `status`: Estado del contenedor desde el punto de vista de la seguridad. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  - `ok`. El contenedor está donde debe estar y se encuentra correctamente. `lidOpen`. La tapa del contenedor se ha abierto y no se ha cerrado después de un tiempo determinado. `dropped`. El contenedor se ha caído por alguna razón. `moved`. El contenedor se ha movido de su posición habitual y no ha vuelto. `vandalizado`. El contenedor ha sido dañado o destruido debido al vandalismo. `quemado`. El contenedor está ardiendo y hay que tomar una medida inmediata. `desconocido`. El sistema desconoce el estado del contenedor.  - `storedWasteCode`: Depende de la normativa de destino. Para Europa, consulte [Lista europea de residuos](http://ec.europa.eu/environment/waste/framework/list.htm).  - `storedWasteKind`: Tipo/s de residuos almacenados por el contenedor. Enum:'orgánicos, inorgánicos, vidrio, aceite, plástico, metal, papel, pilas, electrónicos, peligrosos, otros'. O cualquier otro valor que no encaje en el anterior.  - `storedWasteOrigin`: Origen de los residuos almacenados. Enum:'doméstico, municipal, industrial, construcción, hostelería, agricultura, otros'  - `temperature`: Temperatura en el interior del contenedor  - `type`: Tipo de entidad NGSI: Tiene que ser WasteContainer    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `RFID[string]`: Proporciona el ID del lector RFID.  . Model: [https://schema.org/Text](https://schema.org/Text)- `actuationHours[string]`: Horas adecuadas para realizar actuaciones sobre el contenedor.  . Model: [openingHours](openingHours)- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `annotations[array]`: Anotaciones sobre el artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `binCapacity[number]`: Capacidad total en términos de volumen de residuos que puede contener el contenedor.  . Model: [https://schema.org/Number](https://schema.org/Number)- `binColor[string]`: Color del contenedor. Puede utilizarse para indicar el tipo de residuos. El código de colores debe seguir las convenciones aplicables a la zona geográfica en la que se encuentran los contenedores.  . Model: [https://schema.org/Text](https://schema.org/Text)- `binFullnessThreshold[number]`: El nivel de umbral de llenado del contenedor definido como el nivel (en términos de porcentaje) en el que se generará la alerta o notificación de contenedor lleno.  . Model: [https://schema.org/Number](https://schema.org/Number)- `binId[string]`: Identificación del contenedor de residuos  . Model: [https://schema.org/Text](https://schema.org/Text)- `binLoggedTime[string]`: Hora en que se registró por última vez el nivel del contenedor.  . Model: [https://schema.org/Text](https://schema.org/Text)- `binMaxLoad[number]`: Carga máxima (peso) que puede soportar la papelera.  . Model: [https://schema.org/Number](https://schema.org/Number)- `binRecommendedLoad[number]`: Carga recomendada (peso) que puede soportar la papelera correspondiente a esta observación.  . Model: [https://schema.org/Number](https://schema.org/Number)- `cargoWeight[number]`: Peso de la carga del contenedor.  . Model: [https://schema.org/Number](https://schema.org/Number)- `category[array]`: Enum:' fijo, suelo, otro, portátil, subterráneo'  . Model: [https://schema.org/Text Containers category](https://schema.org/Text Containers category)- `color[string]`: El color del producto  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastCleaning[string]`: Cuando se limpió el contenedor por última vez.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateLastEmptying[string]`: Marca de tiempo que representa cuándo se vació el contenedor por última vez.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateServiceStarted[string]`: Fecha en la que el contenedor comenzó a dar servicio.  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: Una descripción de este artículo  - `fillingLevel[number]`: Nivel de llenado del contenedor  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `image[string]`: Una imagen del artículo  . Model: [https://schema.org/URL](https://schema.org/URL)- `isleId[string]`: Identificador (o nombre) de la isla donde se encuentra el contenedor. Este atributo debe utilizarse cuando las entidades de tipo `WasteContainerIsle` no están siendo modeladas específicamente. En caso contrario, debe utilizarse `refWasteContainerIsle`.  - `license_plate[string]`: Indica el número de matrícula del vehículo. Igual que: campo 'license_plate' de GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `methaneConcentration[number]`: Concentración de metano (CH4) en el interior del contenedor.  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: El nombre de este artículo.  - `nextActuationDeadline[string]`: Fecha límite para realizar la siguiente actuación (vaciado, recogida, etc.).  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `nextCleaningDeadline[string]`: Fecha límite para la próxima limpieza.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refDevice[array]`: Referencia al dispositivo o dispositivos utilizados para supervisar este contenedor  . Model: [http://schema.org/URL](http://schema.org/URL)- `refWasteContainerIsle[*]`: Isla en la que se encuentra el contenedor  . Model: [http://schema.org/URL](http://schema.org/URL)- `refWasteContainerModel[*]`: Modelo de contenedor  . Model: [http://schema.org/URL](http://schema.org/URL)- `regulation[string]`: Reglamento bajo el cual opera el contenedor  . Model: [http://schema.org/Text](http://schema.org/Text)- `responsible[string]`: Responsable del contenedor, es decir, entidad encargada de actuar (vaciar, recoger, etc.)  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `serialNumber[string]`: Número de serie del contenedor.  . Model: [https://schema.org/serialNumber](https://schema.org/serialNumber)- `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `status[string]`: Estado del contenedor desde el punto de vista de la seguridad. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  - `ok`. El contenedor está donde debe estar y se encuentra correctamente. `lidOpen`. La tapa del contenedor se ha abierto y no se ha cerrado después de un tiempo determinado. `dropped`. El contenedor se ha caído por alguna razón. `moved`. El contenedor se ha movido de su posición habitual y no ha vuelto. `vandalizado`. El contenedor ha sido dañado o destruido debido al vandalismo. `quemado`. El contenedor está ardiendo y hay que tomar una medida inmediata. `desconocido`. El sistema desconoce el estado del contenedor.  - `storedWasteCode[string]`: Depende de la normativa de destino. Para Europa, consulte [Lista europea de residuos](http://ec.europa.eu/environment/waste/framework/list.htm).  . Model: [https://schema.org/Text As per the regulation, waste codes which precisely identifies waste origin and kind](https://schema.org/Text As per the regulation, waste codes which precisely identifies waste origin and kind)- `storedWasteKind[string]`: Tipo/s de residuos almacenados por el contenedor. Enum:'orgánicos, inorgánicos, vidrio, aceite, plástico, metal, papel, pilas, electrónicos, peligrosos, otros'. O cualquier otro valor que no encaje en el anterior.  . Model: [https://schema.org/Text](https://schema.org/Text)- `storedWasteOrigin[string]`: Origen de los residuos almacenados. Enum:'doméstico, municipal, industrial, construcción, hostelería, agricultura, otros'  . Model: [https://schema.org/Text](https://schema.org/Text)- `temperature[number]`: Temperatura en el interior del contenedor  . Model: [http://schema.org/Number](http://schema.org/Number)- `timeInstant[string]`: Marca de tiempo de la carga útil . Puede haber entornos de producción en los que el tipo de atributo sea igual a la cadena `ISO8601`. Si es así, debe considerarse como un sinónimo de `DateTime`. Este atributo se mantiene por compatibilidad con las antiguas implementaciones de referencia de FIWARE.  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `type[string]`: Tipo de entidad NGSI: Tiene que ser WasteContainer  - `wardId[string]`: Id de sala de la entidad correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WasteContainer:    
   description: 'A waste container'    
   properties:    
-    TimeInstant:    
-      description: 'There can be production environmments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.'    
-      format: date-time    
+    RFID:    
+      description: 'Gives the ID of the RFID reader.'    
       type: string    
       x-ngsi:    
-        model: https://schema.org/DateTime    
+        model: https://schema.org/Text    
         type: Property    
     actuationHours:    
       description: 'Hours suitable for performing actuations over the container.'    
@@ -72,6 +87,49 @@ WasteContainer:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    binCapacity:    
+      description: 'Total capacity in terms of the volume of waste the bin can hold.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    binColor:    
+      description: 'Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    binFullnessThreshold:    
+      description: 'The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    binId:    
+      description: 'Id of the waste carrying bin'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    binLoggedTime:    
+      description: 'Time when the bin''s level was last logged.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    binMaxLoad:    
+      description: 'Maximum load (weight) that the waste bin can hold.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    binRecommendedLoad:    
+      description: 'Recommended load (weight) that the waste bin corresponding to this observation can hold.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
     cargoWeight:    
       description: 'Weight of the container load.'    
       minimum: 0    
@@ -80,20 +138,20 @@ WasteContainer:
         model: https://schema.org/Number    
         type: Property    
     category:    
-      description: ""    
+      description: 'Enum:'' fixed, ground, other, portable, underground'''    
       items:    
         enum:    
           - fixed    
-          - underground    
           - ground    
-          - portable    
           - other    
+          - portable    
+          - underground    
         type: string    
       minItems: 1    
       type: array    
       uniqueItems: true    
       x-ngsi:    
-        model: 'https://schema.org/Text Containers category.'    
+        model: 'https://schema.org/Text Containers category'    
         type: Property    
     color:    
       description: 'The color of the product'    
@@ -177,10 +235,16 @@ WasteContainer:
       type: string    
       x-ngsi:    
         type: Property    
+    license_plate:    
+      description: "Gives the License Plate number of the vehicle. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)"    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'Geoproperty. Geojson reference to the item. Point'    
+        - description: 'GeoProperty. Geojson reference to the item. Point'    
           properties:    
             bbox:    
               items:    
@@ -201,7 +265,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+        - description: 'GeoProperty. Geojson reference to the item. LineString'    
           properties:    
             bbox:    
               items:    
@@ -225,7 +289,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
           properties:    
             bbox:    
               items:    
@@ -251,7 +315,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
           properties:    
             bbox:    
               items:    
@@ -274,7 +338,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
           properties:    
             bbox:    
               items:    
@@ -300,7 +364,7 @@ WasteContainer:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
           properties:    
             bbox:    
               items:    
@@ -329,7 +393,7 @@ WasteContainer:
           title: 'GeoJSON MultiPolygon'    
           type: object    
       x-ngsi:    
-        type: Geoproperty    
+        type: GeoProperty    
     methaneConcentration:    
       description: 'Methane (CH4) concentration inside the container.'    
       minimum: 0    
@@ -495,6 +559,13 @@ WasteContainer:
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
+    timeInstant:    
+      description: 'Timestamp of the payload . There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. This attribute is kept for backwards compatibility with old FIWARE reference implementations.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Datetime    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be WasteContainer'    
       enum:    
@@ -502,200 +573,253 @@ WasteContainer:
       type: string    
       x-ngsi:    
         type: Property    
+    wardId:    
+      description: 'Ward Id of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
   required:    
     - id    
     - type    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainer/schema.json    
+  x-model-tags: ""    
+  x-version: 0.3.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Ejemplo de valores clave de WasteContainer NGSI-v2  
 Aquí hay un ejemplo de un WasteContainer en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "wastecontainer:Fleming:12a",  
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
   "type": "WasteContainer",  
-  "refWasteContainerModel": "wastecontainermodel:c1",  
-  "refWasteContainerIsle": "wastecontainerisle:Fleming:12",  
-  "serialNumber": "ab56kjl",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [-3.164485591715449, 40.62785133667262]  
-  },  
-  "temperature": 23,  
-  "fillingLevel": 0.4,  
-  "dateLastEmptying": "2016-06-21T15:05:59.408Z",  
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
-  "status": "ok",  
-  "category": ["underground"],  
-  "refDevice": ["device-Fleming:12a:1"]  
-}  
-```  
-#### WasteContainer NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un WasteContainer en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "id": "wastecontainer:Fleming:12a",  
-  "type": "WasteContainer",  
-  "status": {  
-    "type": "Text",  
-    "value": "ok"  
-  },  
-  "category": {  
-    "type": "array",  
-    "value": [  
-      "underground"  
-    ]  
-  },  
-  "dateLastEmptying": {  
-    "type": "DateTime",  
-    "value": "2016-06-21T15:05:59.408Z"  
-  },  
-  "serialNumber": {  
-    "type": "Text",  
-    "value": "ab56kjl"  
-  },  
-  "nextActuationDeadline": {  
-    "type": "DateTime",  
-    "value": "2016-06-28T15:05:59.408Z"  
-  },  
-  "refWasteContainerIsle": {  
-    "type": "Relationship",  
-    "value": "wastecontainerisle:Fleming:12"  
-  },  
-  "refDevice": {  
-    "type": "Relationship",  
-    "value": [  
-      "device-Fleming:12a:1"  
-    ]  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
-    }  
-  },  
-  "temperature": {  
-    "type": "Number",  
-    "value": 23  
-  },  
-  "fillingLevel": {  
-    "type": "Number",  
-    "value": 0.4  
-  },  
-  "refWasteContainerModel": {  
-    "type": "Relationship",  
-    "value": "wastecontainermodel:c1"  
-  }  
-}  
-```  
-#### WasteContainer NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un WasteContainer en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "underground"  
-  ],  
-  "dateLastEmptying": {  
-    "@type": "DateTime",  
-    "@value": "2016-06-21T15:05:59.408Z"  
-  },  
-  "fillingLevel": 0.4,  
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
   "location": {  
     "coordinates": [  
-      -3.164485591715449,  
-      40.62785133667262  
+      -8.768460000000001,  
+      42.60214472222222  
     ],  
     "type": "Point"  
   },  
-  "nextActuationDeadline": "2016-06-28T15:05:59.408Z",  
-  "refDevice": [  
-    "urn:ngsi-ld:Device:device-Fleming:12a:1"  
-  ],  
-  "refWasteContainerIsle": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12",  
-  "refWasteContainerModel": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",  
-  "serialNumber": "ab56kjl",  
-  "status": "ok",  
-  "temperature": 23,  
-  "type": "WasteContainer"  
+  "binCapacity": 43,  
+  "binColor": "Green",  
+  "binClearedTime": "2021-03-11T15:51:02+05:30",  
+  "wardId": "21",  
+  "binCategory": "Household Bin",  
+  "license_plate": "KA23F2345",  
+  "RFID": "67855734",  
+  "binFillingLevel": 0.65,  
+  "binFullnessThreshold": 80,  
+  "binRecommendedLoad": 30,  
+  "binId": "12",  
+  "binMaxLoad": 75,  
+  "binLoggedTime": "2021-03-01T15:51:02+05:30"  
 }  
 ```  
-#### WasteContainer NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un WasteContainer en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+</details>  
+#### WasteContainer NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un WasteContainer en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:WasteContainer:wastecontainer:Fleming:12a",  
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
   "type": "WasteContainer",  
-  "status": {  
-    "type": "Property",  
-    "value": "ok"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "underground"  
-    ]  
-  },  
-  "dateLastEmptying": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-06-21T15:05:59.408Z"  
-    }  
-  },  
-  "serialNumber": {  
-    "type": "Property",  
-    "value": "ab56kjl"  
-  },  
-  "nextActuationDeadline": {  
-    "type": "Property",  
-    "value": "2016-06-28T15:05:59.408Z"  
-  },  
-  "refWasteContainerIsle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WasteContainerIsle:wastecontainerisle:Fleming:12"  
-  },  
-  "refDevice": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Device:device-Fleming:12a:1"  
-    ]  
-  },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
-      "type": "Point",  
       "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
+        -8.768460000000001,  
+        42.60214472222222  
+      ],  
+      "type": "Point"  
     }  
   },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 23  
+  "binCapacity": {  
+    "type": "number",  
+    "value": 43  
   },  
-  "fillingLevel": {  
-    "type": "Property",  
-    "value": 0.4  
+  "binColor": {  
+    "type": "Text",  
+    "value": "Green"  
   },  
-  "refWasteContainerModel": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1"  
+  "binClearedTime": {  
+    "type": "DateTime",  
+    "value": "2021-03-11T15:51:02+05:30"  
   },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+  "wardId": {  
+    "type": "Text",  
+    "value": "21"  
+  },  
+  "binCategory": {  
+    "type": "Text",  
+    "value": "Household Bin"  
+  },  
+  "license_plate": {  
+    "type": "Text",  
+    "value": "KA23F2345"  
+  },  
+  "RFID": {  
+    "type": "Text",  
+    "value": "67855734"  
+  },  
+  "binFillingLevel": {  
+    "type": "number",  
+    "value": 0.65  
+  },  
+  "binFullnessThreshold": {  
+    "type": "number",  
+    "value": 80  
+  },  
+  "binRecommendedLoad": {  
+    "type": "number",  
+    "value": 30  
+  },  
+  "binId": {  
+    "type": "Text",  
+    "value": "12"  
+  },  
+  "binMaxLoad": {  
+    "type": "number",  
+    "value": 75  
+  },  
+  "binLoggedTime": {  
+    "type": "DateTime",  
+    "value": "2021-03-01T15:51:02+05:30"  
+  }  
 }  
 ```  
+</details>  
+#### WasteContainer NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un WasteContainer en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
+    "type": "WasteContainer",  
+    "RFID": "67855734",  
+    "binCapacity": 43,  
+    "binCategory": "Household Bin",  
+    "binClearedTime": "2021-03-11T15:51:02+05:30",  
+    "binColor": "Green",  
+    "binFillingLevel": 0.65,  
+    "binFullnessThreshold": 80,  
+    "binId": "12",  
+    "binLoggedTime": "2021-03-01T15:51:02+05:30",  
+    "binMaxLoad": 75,  
+    "binRecommendedLoad": 30,  
+    "license_plate": "KA23F2345",  
+    "location": {  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ],  
+        "type": "Point"  
+    },  
+    "wardId": "21",  
+    "@context": [  
+        "iudx:WmgmtBin",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### WasteContainer NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un WasteContainer en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",  
+    "type": "WasteContainer",  
+    "RFID": {  
+        "type": "Property",  
+        "value": "67855734"  
+    },  
+    "binCapacity": {  
+        "type": "Property",  
+        "value": 43  
+    },  
+    "binCategory": {  
+        "type": "Property",  
+        "value": "Household Bin"  
+    },  
+    "binClearedTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "binColor": {  
+        "type": "Text",  
+        "value": "Green"  
+    },  
+    "binFillingLevel": {  
+        "type": "Property",  
+        "value": 0.65  
+    },  
+    "binFullnessThreshold": {  
+        "type": "Property",  
+        "value": 80  
+    },  
+    "binId": {  
+        "type": "Property",  
+        "value": "12"  
+    },  
+    "binLoggedTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "binMaxLoad": {  
+        "type": "Property",  
+        "value": 75  
+    },  
+    "binRecommendedLoad": {  
+        "type": "Property",  
+        "value": 30  
+    },  
+    "license_plate": {  
+        "type": "Property",  
+        "value": "KA23F2345"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ],  
+            "type": "Point"  
+        }  
+    },  
+    "wardId": {  
+        "type": "Property",  
+        "value": "21"  
+    },  
+    "@context": [  
+        "iudx:WmgmtBin",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
