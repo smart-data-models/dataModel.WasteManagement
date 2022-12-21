@@ -1,0 +1,3 @@
+/* (Beta) Export of data model WasteObserved of the subject dataModel.WasteManagement for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE WasteObserved_type AS ENUM ('WasteObserved');
+CREATE TABLE WasteObserved (address json, alternateName text, annotations json, areaServed text, color text, dataProvider text, dateCreated timestamp, dateModified timestamp, dateObserved timestamp, description text, grossWeight text, id text, image text, location json, name text, owner json, refGarbageTruck text, refServiceOrderId text, refWeighingDevice text, seeAlso json, source text, tareWeight text, type WasteObserved_type, weight text);
