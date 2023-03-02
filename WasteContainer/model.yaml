@@ -1,20 +1,20 @@
 WasteContainer:
-  description: 'A waste container'
+  description: A waste container
   properties:
     RFID:
-      description: 'Gives the ID of the RFID reader.'
+      description: Gives the ID of the RFID reader.
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     actuationHours:
-      description: 'Hours suitable for performing actuations over the container.'
+      description: Hours suitable for performing actuations over the container.
       type: string
       x-ngsi:
         model: openingHours
         type: Property
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -25,6 +25,9 @@ WasteContainer:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -34,17 +37,20 @@ WasteContainer:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     annotations:
-      description: 'Annotations about the item'
+      description: Annotations about the item
       items:
         type: string
       type: array
@@ -52,56 +58,56 @@ WasteContainer:
         model: https://schema.org/Text
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     binCapacity:
-      description: 'Total capacity in terms of the volume of waste the bin can hold.'
+      description: Total capacity in terms of the volume of waste the bin can hold.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     binColor:
-      description: 'Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located.'
+      description: Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located.
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     binFullnessThreshold:
-      description: 'The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.'
+      description: The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     binId:
-      description: 'Id of the waste carrying bin'
+      description: Id of the waste carrying bin
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     binLoggedTime:
-      description: 'Time when the bin''s level was last logged.'
+      description: Time when the bin's level was last logged.
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     binMaxLoad:
-      description: 'Maximum load (weight) that the waste bin can hold.'
+      description: Maximum load (weight) that the waste bin can hold.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     binRecommendedLoad:
-      description: 'Recommended load (weight) that the waste bin corresponding to this observation can hold.'
+      description: Recommended load (weight) that the waste bin corresponding to this observation can hold.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     cargoWeight:
-      description: 'Weight of the container load.'
+      description: Weight of the container load.
       minimum: 0
       type: number
       x-ngsi:
@@ -124,18 +130,18 @@ WasteContainer:
         model: 'https://schema.org/Text Containers category'
         type: Property
     color:
-      description: 'The color of the product'
+      description: The color of the product
       type: string
       x-ngsi:
         model: https://schema.org/color
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
@@ -148,32 +154,32 @@ WasteContainer:
         model: https://schema.org/DateTime
         type: Property
     dateLastEmptying:
-      description: 'Timestamp which represents when the container was emptied last time.'
+      description: Timestamp which represents when the container was emptied last time.
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateServiceStarted:
-      description: 'Date at which the container started giving service.'
+      description: Date at which the container started giving service.
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/Date
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     fillingLevel:
-      description: 'Filling level of the container'
+      description: Filling level of the container
       maximum: 1
       minimum: 0
       type: number
@@ -182,19 +188,19 @@ WasteContainer:
         type: Property
     id:
       anyOf: &wastecontainer_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     image:
-      description: 'An image of the item'
+      description: An image of the item
       format: uri
       type: string
       x-ngsi:
@@ -214,7 +220,7 @@ WasteContainer:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -233,9 +239,9 @@ WasteContainer:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -257,9 +263,9 @@ WasteContainer:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -283,9 +289,9 @@ WasteContainer:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -306,9 +312,9 @@ WasteContainer:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -332,9 +338,9 @@ WasteContainer:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -360,19 +366,19 @@ WasteContainer:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     methaneConcentration:
-      description: 'Methane (CH4) concentration inside the container.'
+      description: Methane (CH4) concentration inside the container.
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
@@ -384,25 +390,25 @@ WasteContainer:
         model: https://schema.org/DateTime
         type: Property
     nextCleaningDeadline:
-      description: 'Deadline for next cleaning.'
+      description: Deadline for next cleaning.
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     refDevice:
-      description: 'Reference to the device(s) used to monitor this container'
+      description: Reference to the device(s) used to monitor this container
       items:
         anyOf: *wastecontainer_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       minItems: 1
       type: array
       uniqueItems: true
@@ -411,34 +417,34 @@ WasteContainer:
         type: Relationship
     refWasteContainerIsle:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Isle where the container is placed'
+      description: Isle where the container is placed
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
     refWasteContainerModel:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Container''s model'
+      description: Container's model
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
     regulation:
-      description: 'Regulation under which the container is operating'
+      description: Regulation under which the container is operating
       type: string
       x-ngsi:
         model: http://schema.org/Text
@@ -450,7 +456,7 @@ WasteContainer:
         model: https://schema.org/Text
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -462,7 +468,7 @@ WasteContainer:
       x-ngsi:
         type: Property
     serialNumber:
-      description: 'Serial number of the container.'
+      description: Serial number of the container.
       type: string
       x-ngsi:
         model: https://schema.org/serialNumber
@@ -524,7 +530,7 @@ WasteContainer:
         model: https://schema.org/Text
         type: Property
     temperature:
-      description: 'Temperature inside the container'
+      description: Temperature inside the container
       type: number
       x-ngsi:
         model: http://schema.org/Number
@@ -544,7 +550,7 @@ WasteContainer:
       x-ngsi:
         type: Property
     wardId:
-      description: 'Ward Id of the entity corresponding to this observation.'
+      description: Ward Id of the entity corresponding to this observation.
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -555,7 +561,7 @@ WasteContainer:
     - location
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainer/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainer/schema.json
   x-model-tags: ""
