@@ -1,6 +1,10 @@
 {
     "@context": {
         "RFID": "https://smartdatamodels.org/dataModel.WasteManagement/RFID",
+        "WasteContainer": "https://smartdatamodels.org/dataModel.WasteManagement/WasteContainer",
+        "WasteContainerIsle": "https://smartdatamodels.org/dataModel.WasteManagement/WasteContainerIsle",
+        "WasteContainerModel": "https://smartdatamodels.org/dataModel.WasteManagement/WasteContainerModel",
+        "WasteObserved": "https://smartdatamodels.org/dataModel.WasteManagement/WasteObserved",
         "actuationHours": "https://smartdatamodels.org/dataModel.WasteManagement/actuationHours",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
