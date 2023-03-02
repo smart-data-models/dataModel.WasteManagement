@@ -1,13 +1,13 @@
 WasteContainerModel:
-  description: 'A model of waste container which captures the static properties of a class of containers.'
+  description: A model of waste container which captures the static properties of a class of containers.
   properties:
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     annotations:
-      description: 'Annotations about the item'
+      description: Annotations about the item
       items:
         type: string
       type: array
@@ -15,13 +15,13 @@ WasteContainerModel:
         model: https://schema.org/Text
         type: Property
     brandName:
-      description: 'Name of the brand'
+      description: Name of the brand
       type: string
       x-ngsi:
         model: https://schema.org/brand
         type: Property
     cargoVolume:
-      description: 'Total volume the container can hold'
+      description: Total volume the container can hold
       minimum: 0
       type: number
       x-ngsi:
@@ -42,7 +42,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
     color:
-      description: 'The color of the product'
+      description: The color of the product
       type: string
       x-ngsi:
         model: https://schema.org/color
@@ -57,24 +57,24 @@ WasteContainerModel:
       x-ngsi:
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     depth:
-      description: 'Depth of the container'
+      description: Depth of the container
       minimum: 0
       type: number
       x-ngsi:
@@ -82,7 +82,7 @@ WasteContainerModel:
         type: Property
         units: Meters
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -103,7 +103,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
     height:
-      description: 'Height of the container'
+      description: Height of the container
       minimum: 0
       type: number
       x-ngsi:
@@ -112,26 +112,26 @@ WasteContainerModel:
         units: Meters
     id:
       anyOf: &wastecontainermodel_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     image:
-      description: 'An image of the item'
+      description: An image of the item
       format: uri
       type: string
       x-ngsi:
         model: https://schema.org/URL
         type: Property
     insertHolesNumber:
-      description: 'Number of insert holes the container has'
+      description: Number of insert holes the container has
       minimum: 0
       type: number
       x-ngsi:
@@ -165,20 +165,20 @@ WasteContainerModel:
         model: https://schema.org/Number
         type: Property
     modelName:
-      description: 'Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities.'
+      description: Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities.
       type: string
       x-ngsi:
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *wastecontainermodel_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -190,7 +190,7 @@ WasteContainerModel:
         model: https://schema.org/Number
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -214,7 +214,7 @@ WasteContainerModel:
       x-ngsi:
         type: Property
     weight:
-      description: 'Weight of the container'
+      description: Weight of the container
       minimum: 0
       type: number
       x-ngsi:
@@ -222,7 +222,7 @@ WasteContainerModel:
         type: Property
         units: Kilograms
     width:
-      description: 'Width of the container'
+      description: Width of the container
       minimum: 0
       type: number
       x-ngsi:
@@ -235,7 +235,7 @@ WasteContainerModel:
     - name
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteContainerModel/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.WasteManagement/WasteContainerModel/schema.json
   x-model-tags: ""
