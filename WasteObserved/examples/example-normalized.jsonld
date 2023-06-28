@@ -1,8 +1,8 @@
 {
-  "id": "ngsi-ld:WasteObserved:0001",
+  "id": "urn:ngsi-ld:WasteObserved:0001",
   "type": "WasteObserved",
   "location": {
-    "type": "Geoproperty",
+    "type": "GeoProperty",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -40,6 +40,6 @@
   },
   "refServiceOrderId": {
     "type": "Relationship",
-    "value": "ngsi-ld:WorkOrder1234"
+    "object": "urn:ngsi-ld:ngsi-ld:WorkOrder1234"
   }
 }
