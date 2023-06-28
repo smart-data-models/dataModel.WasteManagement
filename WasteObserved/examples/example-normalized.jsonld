@@ -41,5 +41,8 @@
   "refServiceOrderId": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:ngsi-ld:WorkOrder1234"
-  }
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
+  ]
 }
