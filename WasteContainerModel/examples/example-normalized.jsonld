@@ -1,59 +1,58 @@
 {
-    "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",
-    "type": "WasteContainerModel",
-    "brandName": {
-        "type": "Property",
-        "value": "Brute"
-    },
-    "cargoVolume": {
-        "type": "Property",
-        "value": 150
-    },
-    "category": {
-        "type": "Property",
-        "value": [
-            "dumpster"
-        ]
-    },
-    "compliantWith": {
-        "type": "Property",
-        "value": [
-            "UNE-EN 840-2:2013"
-        ]
-    },
-    "depth": {
-        "type": "Property",
-        "value": 0.4
-    },
-    "features": {
-        "type": "Property",
-        "value": [
-            "wheels",
-            "lid"
-        ]
-    },
-    "height": {
-        "type": "Property",
-        "value": 0.8
-    },
-    "madeOf": {
-        "type": "Property",
-        "value": "plastic"
-    },
-    "modelName": {
-        "type": "Property",
-        "value": "C1"
-    },
-    "name": {
-        "type": "Property",
-        "value": "Dumpster_Brute_2009_Plastic_Green"
-    },
-    "width": {
-        "type": "Property",
-        "value": 0.5
-    },
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
+  "id": "urn:ngsi-ld:WasteContainerModel:wastecontainermodel:c1",
+  "type": "WasteContainerModel",
+  "brandName": {
+    "type": "Property",
+    "value": "Brute"
+  },
+  "cargoVolume": {
+    "type": "Property",
+    "value": 150
+  },
+  "category": {
+    "type": "Property",
+    "value": [
+      "dumpster"
     ]
+  },
+  "compliantWith": {
+    "type": "Property",
+    "value": [
+      "UNE-EN 840-2:2013"
+    ]
+  },
+  "depth": {
+    "type": "Property",
+    "value": 0.4
+  },
+  "features": {
+    "type": "Property",
+    "value": [
+      "wheels",
+      "lid"
+    ]
+  },
+  "height": {
+    "type": "Property",
+    "value": 0.8
+  },
+  "madeOf": {
+    "type": "Property",
+    "value": "plastic"
+  },
+  "modelName": {
+    "type": "Property",
+    "value": "C1"
+  },
+  "name": {
+    "type": "Property",
+    "value": "Dumpster_Brute_2009_Plastic_Green"
+  },
+  "width": {
+    "type": "Property",
+    "value": 0.5
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
+  ]
 }
