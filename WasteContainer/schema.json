@@ -50,7 +50,7 @@
                 "cargoWeight": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Weight of the container load."
+                    "description": "Property. Model:'https://schema.org/Number'. Weight of the container load"
                 },
                 "temperature": {
                     "type": "number",
@@ -59,7 +59,7 @@
                 "methaneConcentration": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Methane (CH4) concentration inside the container."
+                    "description": "Property. Model:'https://schema.org/Number'. Methane (CH4) concentration inside the container"
                 },
                 "storedWasteKind": {
                     "type": "string",
@@ -93,11 +93,11 @@
                 },
                 "storedWasteCode": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text' As per the regulation, waste codes which precisely identifies waste origin and kind. Depend on the target regulation. For Europe, check [Europe's List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm)."
+                    "description": "Property. Model:'https://schema.org/Text' As per the regulation, waste codes which precisely identifies waste origin and kind. Depend on the target regulation. For Europe, check [Europe's List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm)"
                 },
                 "serialNumber": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/serialNumber'. Serial number of the container."
+                    "description": "Property. Model:'https://schema.org/serialNumber'. Serial number of the container"
                 },
                 "regulation": {
                     "type": "string",
@@ -110,21 +110,21 @@
                 "dateServiceStarted": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Date'. Date at which the container started giving service."
+                    "description": "Property. Model:'https://schema.org/Date'. Date at which the container started giving service"
                 },
                 "dateLastEmptying": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. Timestamp which represents when the container was emptied last time."
+                    "description": "Property. Model:'https://schema.org/DateTime'. Timestamp which represents when the container was emptied last time"
                 },
                 "nextActuationDeadline": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. Deadline for next actuation to be performed (emptying, picking up, etc.)."
+                    "description": "Property. Model:'https://schema.org/DateTime'. Deadline for next actuation to be performed (emptying, picking up, etc.)"
                 },
                 "actuationHours": {
                     "type": "string",
-                    "description": "Property. Model:'openingHours'. Hours suitable for performing actuations over the container."
+                    "description": "Property. Model:'openingHours'. Hours suitable for performing actuations over the container"
                 },
                 "dateLastCleaning": {
                     "type": "string",
@@ -134,11 +134,11 @@
                 "nextCleaningDeadline": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. Deadline for next cleaning."
+                    "description": "Property. Model:'https://schema.org/DateTime'. Deadline for next cleaning"
                 },
                 "isleId": {
                     "type": "string",
-                    "description": "Property. Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used."
+                    "description": "Property. Identifier (or name) of the isle where the container is placed. This attribute should be used when entities of type `WasteContainerIsle` are not being modelled specifically. Otherwise, `refWasteContainerIsle` should be used"
                 },
                 "status": {
                     "type": "string",
@@ -151,7 +151,7 @@
                         "burning",
                         "unknown"
                     ],
-                    "description": "Property. Container's status from the point of view of safety. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container's lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system."
+                    "description": "Property. Container's status from the point of view of safety. Enum:'ok , lidOpen , dropped , moved , vandalized , burning , unknown'.  -   `ok`. Container is where it must be and stands properly. `lidOpen`. Container's lid has been opened and not closed after a certain amount of time. `dropped`. Container has been dropped for some reason. `moved`. Container has been moved from its regular position and has not come back. `vandalized`. Container has been damaged or destroyed due to vandalism. `burning`. Container is burning and an immediate action has to be taken. `unknown`. The status of the container is not known to the system"
                 },
                 "refWasteContainerModel": {
                     "anyOf": [
@@ -201,15 +201,15 @@
                 },
                 "binCapacity": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Total capacity in terms of the volume of waste the bin can hold."
+                    "description": "Property. Model:'https://schema.org/Number'. Total capacity in terms of the volume of waste the bin can hold"
                 },
                 "binColor": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located."
+                    "description": "Property. Model:'https://schema.org/Text'. Color of the bin. Could be used for indicating the type of waste. The color coding should follow the conventions applicable to the geographical area the bins are located"
                 },
                 "wardId": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text. Ward Id of the entity corresponding to this observation."
+                    "description": "Property. Model:'https://schema.org/Text. Ward Id of the entity corresponding to this observation"
                 },
                 "license_plate": {
                     "type": "string",
@@ -217,15 +217,15 @@
                 },
                 "RFID": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text. Gives the ID of the RFID reader."
+                    "description": "Property. Model:'https://schema.org/Text. Gives the ID of the RFID reader"
                 },
                 "binFullnessThreshold": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated."
+                    "description": "Property. Model:'https://schema.org/Number'. The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated"
                 },
                 "binRecommendedLoad": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Recommended load (weight) that the waste bin corresponding to this observation can hold."
+                    "description": "Property. Model:'https://schema.org/Number'. Recommended load (weight) that the waste bin corresponding to this observation can hold"
                 },
                 "binId": {
                     "type": "string",
@@ -233,12 +233,12 @@
                 },
                 "binMaxLoad": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Maximum load (weight) that the waste bin can hold."
+                    "description": "Property. Model:'https://schema.org/Number'. Maximum load (weight) that the waste bin can hold"
                 },
                 "binLoggedTime": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Text'. Time when the bin's level was last logged."
+                    "description": "Property. Model:'https://schema.org/Text'. Time when the bin's level was last logged"
                 }
             }
         }
