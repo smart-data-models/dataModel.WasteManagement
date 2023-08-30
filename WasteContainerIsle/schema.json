@@ -24,7 +24,7 @@
                 },
                 "features": {
                     "type": "array",
-                    "description": "Property. A list of features provided by the isle.",
+                    "description": "Property. A list of features provided by the isle",
                     "items": {
                         "type": "string",
                         "enum": [
@@ -49,7 +49,7 @@
                     },
                     "minItems": 1,
                     "uniqueItems": true,
-                    "description": "Property. List of containers present in the isle. Model:'http://schema.org/URL'."
+                    "description": "Property. List of containers present in the isle. Model:'http://schema.org/URL'"
                 }
             }
         }
