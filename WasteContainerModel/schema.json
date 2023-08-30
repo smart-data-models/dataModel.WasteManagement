@@ -97,7 +97,7 @@
                 },
                 "modelName": {
                     "type": "string",
-                    "description": "Property. Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities."
+                    "description": "Property. Name of the model as given by the manufacturer. This attribute is different than name which is just a codename usually given by municipalities"
                 },
                 "manufacturerName": {
                     "type": "string",
@@ -127,7 +127,7 @@
                     },
                     "minItems": 1,
                     "uniqueItems": true,
-                    "description": "Property. A list of container features. Enum:'wheels, lid, roundedLid, insertHoles, lockable'. Any other value meaningful for the application."
+                    "description": "Property. A list of container features. Enum:'wheels, lid, roundedLid, insertHoles, lockable'. Any other value meaningful for the application"
                 }
             }
         }
