@@ -33,7 +33,7 @@
                 },
                 "category": {
                     "type": "array",
-                    "description": "Property. Model:'https://schema.org/Text' Container's category. Enum:' fixed, ground, other, portable, underground'",
+                    "description": "Property. Model:'https://schema.org/Text'. Container's category. Enum:' fixed, ground, other, portable, underground'",
                     "items": {
                         "type": "string",
                         "enum": [
