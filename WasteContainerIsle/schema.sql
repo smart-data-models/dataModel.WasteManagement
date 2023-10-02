@@ -1,3 +1,3 @@
-/* (Beta) Export of data model WasteContainerIsle of the subject dataModel.WasteManagement for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model WasteContainerIsle of the subject dataModel.WasteManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE WasteContainerIsle_type AS ENUM ('WasteContainerIsle');
-CREATE TABLE WasteContainerIsle (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, features json, id text, insertHolesNumber text, location json, name text, owner json, refWasteContainer json, seeAlso json, source text, type WasteContainerIsle_type);
+CREATE TABLE WasteContainerIsle (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, features JSON, insertHolesNumber NUMERIC, name TEXT, owner JSON, refWasteContainer JSON, source TEXT, type WasteContainerIsle_type);
