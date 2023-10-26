@@ -22,6 +22,8 @@ Link alla [specifica](https://github.com/smart-data-models/dataModel.WasteManage
 [仕様へのリンク](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteObserved/doc/spec_JA.md)
 
 [链接到规范](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteObserved/doc/spec_ZH.md)
+
+[사양 링크](https://github.com/smart-data-models/dataModel.WasteManagement/blob/master/WasteObserved/doc/spec_KO.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.WasteManagement/WasteObserved/examples/example.json) (keyvalues) for NGSI v2
