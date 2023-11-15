@@ -12,7 +12,7 @@
     }
   },
   "binCapacity": {
-    "type": "number",
+    "type": "Number",
     "value": 43
   },
   "binColor": {
@@ -40,15 +40,15 @@
     "value": "67855734"
   },
   "binFillingLevel": {
-    "type": "number",
+    "type": "Number",
     "value": 0.65
   },
   "binFullnessThreshold": {
-    "type": "number",
+    "type": "Number",
     "value": 80
   },
   "binRecommendedLoad": {
-    "type": "number",
+    "type": "Number",
     "value": 30
   },
   "binId": {
@@ -56,12 +56,11 @@
     "value": "12"
   },
   "binMaxLoad": {
-    "type": "number",
+    "type": "Number",
     "value": 75
   },
   "binLoggedTime": {
     "type": "DateTime",
     "value": "2021-03-01T15:51:02+05:30"
   }
-
 }
