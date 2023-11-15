@@ -2,7 +2,7 @@
   "id": "wastecontainermodel:c1",
   "type": "WasteContainerModel",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "dumpster"
     ]
@@ -20,7 +20,7 @@
     "value": "Dumpster_Brute_2009_Plastic_Green"
   },
   "compliantWith": {
-    "type": "array>",
+    "type": "StructuredValue",
     "value": [
       "UNE-EN 840-2:2013"
     ]
@@ -46,7 +46,7 @@
     "value": "Brute"
   },
   "features": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "wheels",
       "lid"
