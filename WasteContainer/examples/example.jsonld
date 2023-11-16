@@ -1,27 +1,27 @@
 {
-    "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",
-    "type": "WasteContainer",
-    "RFID": "67855734",
-    "binCapacity": 43,
-    "binCategory": "Household Bin",
-    "binClearedTime": "2021-03-11T15:51:02+05:30",
-    "binColor": "Green",
-    "binFillingLevel": 0.65,
-    "binFullnessThreshold": 80,
-    "binId": "12",
-    "binLoggedTime": "2021-03-01T15:51:02+05:30",
-    "binMaxLoad": 75,
-    "binRecommendedLoad": 30,
-    "license_plate": "KA23F2345",
-    "location": {
-        "coordinates": [
-            -8.768460000000001,
-            42.60214472222222
-        ],
-        "type": "Point"
-    },
-    "wardId": "21",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",
+  "type": "WasteContainer",
+  "RFID": "67855734",
+  "binCapacity": 43,
+  "binCategory": "Household Bin",
+  "binClearedTime": "2021-03-11T15:51:02+05:30",
+  "binColor": "Green",
+  "binFillingLevel": 0.65,
+  "binFullnessThreshold": 80,
+  "binId": "12",
+  "binLoggedTime": "2021-03-01T15:51:02+05:30",
+  "binMaxLoad": 75,
+  "binRecommendedLoad": 30,
+  "license_plate": "KA23F2345",
+  "location": {
+    "coordinates": [
+      -8.768460000000001,
+      42.60214472222222
+    ],
+    "type": "Point"
+  },
+  "wardId": "21",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
+  ]
 }
