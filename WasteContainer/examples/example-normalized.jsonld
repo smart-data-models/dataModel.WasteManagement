@@ -9,24 +9,9 @@
     "type": "Property",
     "value": 43
   },
-  "binCategory": {
-    "type": "Property",
-    "value": "Household Bin"
-  },
-  "binClearedTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-11T15:51:02+05:30"
-    }
-  },
   "binColor": {
     "type": "Property",
     "value": "Green"
-  },
-  "binFillingLevel": {
-    "type": "Property",
-    "value": 0.65
   },
   "binFullnessThreshold": {
     "type": "Property",
