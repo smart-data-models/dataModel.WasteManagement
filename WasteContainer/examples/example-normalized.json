@@ -19,17 +19,9 @@
     "type": "Text",
     "value": "Green"
   },
-  "binClearedTime": {
-    "type": "DateTime",
-    "value": "2021-03-11T15:51:02+05:30"
-  },
   "wardId": {
     "type": "Text",
     "value": "21"
-  },
-  "binCategory": {
-    "type": "Text",
-    "value": "Household Bin"
   },
   "license_plate": {
     "type": "Text",
@@ -38,10 +30,6 @@
   "RFID": {
     "type": "Text",
     "value": "67855734"
-  },
-  "binFillingLevel": {
-    "type": "Number",
-    "value": 0.65
   },
   "binFullnessThreshold": {
     "type": "Number",
