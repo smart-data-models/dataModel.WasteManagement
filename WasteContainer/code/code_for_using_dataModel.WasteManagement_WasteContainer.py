@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "WasteContainer"
 subject = "dataModel.WasteManagement"
-RFID = "{'type': 'Property', 'value': '67855734'}"
+RFID = "67855734"
 attribute = "RFID"
 value = RFID
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-binCapacity = {'type': 'Property', 'value': 43}
+binCapacity = 43
 attribute = "binCapacity"
 value = binCapacity
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-binColor = "{'type': 'Property', 'value': 'Green'}"
+binColor = "Green"
 attribute = "binColor"
 value = binColor
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-binFullnessThreshold = {'type': 'Property', 'value': 80}
+binFullnessThreshold = 80
 attribute = "binFullnessThreshold"
 value = binFullnessThreshold
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
