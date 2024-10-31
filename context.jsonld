@@ -15,7 +15,7 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "binCapacity": "https://smartdatamodels.org/dataModel.WasteManagement/binCapacity",
         "binColor": "https://smartdatamodels.org/dataModel.WasteManagement/binColor",
@@ -32,7 +32,7 @@
         "compliantWith": "https://smartdatamodels.org/dataModel.WasteManagement/compliantWith",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
@@ -46,7 +46,7 @@
         "district": "https://smartdatamodels.org/district",
         "features": {
             "@container": "@set",
-            "@id": "geojson:features"
+            "@id": "https://purl.org/geojson/vocab#features"
         },
         "fillingLevel": "https://smartdatamodels.org/dataModel.WasteManagement/fillingLevel",
         "grossWeight": "https://smartdatamodels.org/dataModel.WasteManagement/grossWeight",
@@ -56,7 +56,7 @@
         "insertHolesNumber": "https://smartdatamodels.org/dataModel.WasteManagement/insertHolesNumber",
         "isleId": "https://smartdatamodels.org/dataModel.WasteManagement/isleId",
         "license_plate": "https://smartdatamodels.org/dataModel.WasteManagement/license_plate",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "madeOf": "https://smartdatamodels.org/dataModel.WasteManagement/madeOf",
         "madeOfCode": "https://smartdatamodels.org/dataModel.WasteManagement/madeOfCode",
         "manufacturerName": "https://smartdatamodels.org/dataModel.WasteManagement/manufacturerName",
@@ -83,7 +83,7 @@
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "serialNumber": "https://smartdatamodels.org/dataModel.WasteManagement/serialNumber",
         "source": "https://smartdatamodels.org/source",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "storedWasteCode": "https://smartdatamodels.org/dataModel.WasteManagement/storedWasteCode",
         "storedWasteKind": "https://smartdatamodels.org/dataModel.WasteManagement/storedWasteKind",
         "storedWasteOrigin": "https://smartdatamodels.org/dataModel.WasteManagement/storedWasteOrigin",
