@@ -1,5 +1,5 @@
 /* (Beta) Export of data model WasteContainerModel of the subject dataModel.WasteManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE madeOf_type AS ENUM ('plastic', 'wood', 'metal', 'other');
+CREATE TYPE WasteContainerModel_madeOf_type AS ENUM ('plastic', 'wood', 'metal', 'other');
 CREATE TYPE WasteContainerModel_type AS ENUM ('WasteContainerModel');
 CREATE TABLE WasteContainerModel (
   "alternateName" TEXT,
@@ -19,7 +19,7 @@ CREATE TABLE WasteContainerModel (
   "id" TEXT PRIMARY KEY,
   "image" TEXT,
   "insertHolesNumber" NUMERIC,
-  "madeOf" madeOf_type,
+  "madeOf" WasteContainerModel_madeOf_type,
   "madeOfCode" TEXT,
   "manufacturerName" TEXT,
   "maximumLoad" NUMERIC,
