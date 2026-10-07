@@ -1,7 +1,7 @@
 /* (Beta) Export of data model WasteContainer of the subject dataModel.WasteManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE status_type AS ENUM ('ok', 'lidOpen', 'dropped', 'moved', 'vandalized', 'burning', 'unknown');
-CREATE TYPE storedWasteKind_type AS ENUM ('organic', 'inorganic', 'glass', 'oil', 'plastic', 'metal', 'paper', 'batteries', 'electronics', 'hazardous', 'other');
-CREATE TYPE storedWasteOrigin_type AS ENUM ('household', 'municipal', 'industrial', 'construction', 'hostelry', 'agriculture', 'other');
+CREATE TYPE WasteContainer_status_type AS ENUM ('ok', 'lidOpen', 'dropped', 'moved', 'vandalized', 'burning', 'unknown');
+CREATE TYPE WasteContainer_storedWasteKind_type AS ENUM ('organic', 'inorganic', 'glass', 'oil', 'plastic', 'metal', 'paper', 'batteries', 'electronics', 'hazardous', 'other');
+CREATE TYPE WasteContainer_storedWasteOrigin_type AS ENUM ('household', 'municipal', 'industrial', 'construction', 'hostelry', 'agriculture', 'other');
 CREATE TYPE WasteContainer_type AS ENUM ('WasteContainer');
 CREATE TABLE WasteContainer (
   "RFID" TEXT,
@@ -46,10 +46,10 @@ CREATE TABLE WasteContainer (
   "seeAlso" JSON,
   "serialNumber" TEXT,
   "source" TEXT,
-  "status" status_type,
+  "status" WasteContainer_status_type,
   "storedWasteCode" TEXT,
-  "storedWasteKind" storedWasteKind_type,
-  "storedWasteOrigin" storedWasteOrigin_type,
+  "storedWasteKind" WasteContainer_storedWasteKind_type,
+  "storedWasteOrigin" WasteContainer_storedWasteOrigin_type,
   "temperature" NUMERIC,
   "timeInstant" TIMESTAMP,
   "type" WasteContainer_type,
